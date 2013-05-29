@@ -23,7 +23,7 @@ class Landing
 
   listenScroll: ->
     @mainWrap.bind 'mousewheel', (event, delta, deltaX, deltaY) =>
-      #@handleScroll(deltaY)
+      @handleScroll(deltaY)
     
   handleScroll: (deltaY) =>
     if deltaY > 0 
