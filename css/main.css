@@ -79,7 +79,7 @@ body {
 
 #main-wrap {
     width: 100%;
-    height: 100%;
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@ body {
 }
     .view {
         width: 1056px;
-        height: 900px;
+        height: 800px;
         position: relative;
         margin: 0 auto;
     }
@@ -96,12 +96,13 @@ body {
         
     }
     .detail-view {
-        
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .details-btn {
         position: fixed;
-        bottom: 0px;
+        bottom: 0;
         left: 38%;
         margin-left: 70px;
         background: url(../img/details_btn.png);

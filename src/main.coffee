@@ -4,11 +4,12 @@ class Landing
   returnBtn = ''
   scrollNum: 0
   scrollThreshold: 20
+  detailOffset: '-800px'
+  previewOffset: '-200px'
   isDetailOpen: false
 
   constructor: ->
     @mainWrap = $('#main-wrap')
-    @returnBtn = $('.return-btn')
     @detailView = $('.detail-view')
     @landingView = $('.landing-view')
     @detailsBtn = $('.details-btn')
@@ -16,8 +17,9 @@ class Landing
     @detailsBtn.bind 'click', @openDetail
     @returnBtn.bind 'click', @closeDetail
     @listenScroll()
-    @setUpdatePositionInterval(500)
-    
+    @delay 2000, @openPreview
+    @delay 2700, @closePreview
+    #@setUpdatePositionInterval(500)
 
   listenScroll: ->
     @mainWrap.bind 'mousewheel', (event, delta, deltaX, deltaY) =>
@@ -30,21 +32,21 @@ class Landing
       @negativeScroll(deltaY)
 
   positiveScroll: (deltaY) =>
-    @scrollNum = @scrollNum + deltaY
-    if @scrollNum >= @scrollThreshold 
+    @scrollNum += deltaY
+    if @scrollNum >= @scrollThreshold and @isDetailOpen
       @closeDetail()
       @scrollNum = 0
     #console.log('positive: ' + deltaY)
 
   negativeScroll: (deltaY) =>
-    @scrollNum = @scrollNum + deltaY
-    if @scrollNum <= -@scrollThreshold 
+    @scrollNum += deltaY
+    if @scrollNum <= -@scrollThreshold and !@isDetailOpen
       @openDetail()
       @scrollNum = 0
     #console.log('negative: ' + @scrollNum)
 
   openDetail: =>
-    @detailView.css('top', '-900px')
+    @detailView.css('top', @detailOffset)
     @isDetailOpen = true
 
   closeDetail: =>
@@ -54,12 +56,28 @@ class Landing
   decrementScroll: =>
     if @scrollNum < 0
       @scrollNum += 5
+    else if @scrollNum > 0
+      @scrollNum -= 5
       
-    console.log @scrollNum
+    console.log 'scrollNum: ' + @scrollNum
 
+  openPreview: =>
+    
+    @detailView.css('top', @previewOffset)
+    @detailsBtn.css('bottom', parseInt(@previewOffset) * -1 + 'px')
+
+  closePreview: =>
+    @detailView.css('top', '0')
+    @detailsBtn.css('bottom', '0')
+
+
+  delay: (time, fn, args...) ->
+    setTimeout fn, time, args...
+    
+    
   setUpdatePositionInterval: (intervalMs) =>
     setInterval @decrementScroll, intervalMs
     
 
 $(document).ready ->
-  landing = new Landing
+  window.landing = new Landing
