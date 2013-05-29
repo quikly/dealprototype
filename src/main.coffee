@@ -1,18 +1,23 @@
 class Landing
   mainWrap = detailView = landingView = ''
-  detailsButton = '' 
+  detailsBtn = ''
+  returnBtn = ''
   scrollNum: 0
   scrollThreshold: 20
   isDetailOpen: false
 
   constructor: ->
     @mainWrap = $('#main-wrap')
+    @returnBtn = $('.return-btn')
     @detailView = $('.detail-view')
     @landingView = $('.landing-view')
-    @detailsButton = $('.details-btn')
-    @detailsButton.bind 'click', @openDetail
+    @detailsBtn = $('.details-btn')
+    @returnBtn = $('.return-btn')
+    @detailsBtn.bind 'click', @openDetail
+    @returnBtn.bind 'click', @closeDetail
     @listenScroll()
     @setUpdatePositionInterval(500)
+    
 
   listenScroll: ->
     @mainWrap.bind 'mousewheel', (event, delta, deltaX, deltaY) =>

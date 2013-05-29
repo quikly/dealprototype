@@ -4,11 +4,13 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var detailView, detailsButton, landingView, mainWrap;
+    var detailView, detailsBtn, landingView, mainWrap, returnBtn;
 
     mainWrap = detailView = landingView = '';
 
-    detailsButton = '';
+    detailsBtn = '';
+
+    returnBtn = '';
 
     Landing.prototype.scrollNum = 0;
 
@@ -24,10 +26,13 @@
       this.negativeScroll = __bind(this.negativeScroll, this);
       this.positiveScroll = __bind(this.positiveScroll, this);
       this.handleScroll = __bind(this.handleScroll, this);      this.mainWrap = $('#main-wrap');
+      this.returnBtn = $('.return-btn');
       this.detailView = $('.detail-view');
       this.landingView = $('.landing-view');
-      this.detailsButton = $('.details-btn');
-      this.detailsButton.bind('click', this.openDetail);
+      this.detailsBtn = $('.details-btn');
+      this.returnBtn = $('.return-btn');
+      this.detailsBtn.bind('click', this.openDetail);
+      this.returnBtn.bind('click', this.closeDetail);
       this.listenScroll();
       this.setUpdatePositionInterval(500);
     }

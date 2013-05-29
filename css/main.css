@@ -110,16 +110,16 @@ body {
         cursor: pointer;
     }
 
-
-
-
-
-
-
-
-
-
-
+    .return-btn {
+        position: absolute;
+        top: 79px;
+        left: 38%;
+        margin-left: 70px;
+        background: url(../img/return_btn.png);
+        width: 140px;
+        height: 31px;
+        cursor: pointer;
+    }
 
 
 /* ==========================================================================
