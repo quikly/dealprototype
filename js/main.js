@@ -4,19 +4,30 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    Landing.prototype.mainWrap = '';
+    var detailView, detailsButton, landingView, mainWrap;
 
-    Landing.prototype.detailView = '';
+    mainWrap = detailView = landingView = '';
 
-    Landing.prototype.openThreshold = 10;
+    detailsButton = '';
 
     Landing.prototype.scrollNum = 0;
+
+    Landing.prototype.scrollThreshold = 20;
+
+    Landing.prototype.isDetailOpen = false;
 
     function Landing() {
       this.setUpdatePositionInterval = __bind(this.setUpdatePositionInterval, this);
       this.decrementScroll = __bind(this.decrementScroll, this);
-      this.openDetail = __bind(this.openDetail, this);      this.mainWrap = $('#main-wrap');
+      this.closeDetail = __bind(this.closeDetail, this);
+      this.openDetail = __bind(this.openDetail, this);
+      this.negativeScroll = __bind(this.negativeScroll, this);
+      this.positiveScroll = __bind(this.positiveScroll, this);
+      this.handleScroll = __bind(this.handleScroll, this);      this.mainWrap = $('#main-wrap');
       this.detailView = $('.detail-view');
+      this.landingView = $('.landing-view');
+      this.detailsButton = $('.details-btn');
+      this.detailsButton.bind('click', this.openDetail);
       this.listenScroll();
       this.setUpdatePositionInterval(500);
     }
@@ -26,19 +37,44 @@
 
       console.log('listen for scroll');
       return this.mainWrap.bind('mousewheel', function(event, delta, deltaX, deltaY) {
-        return _this.openDetail(deltaY);
+        return _this.handleScroll(deltaY);
       });
     };
 
-    Landing.prototype.openDetail = function(deltaY) {
-      if (deltaY < 0) {
-        this.scrollNum = this.scrollNum + deltaY;
-        this.detailView.css('top', '-' + deltaY + 'px');
+    Landing.prototype.handleScroll = function(deltaY) {
+      if (deltaY > 0) {
+        return this.positiveScroll(deltaY);
+      } else {
+        return this.negativeScroll(deltaY);
       }
-      if (this.scrollNum < -100) {
-        this.detailView.css('top', '-900px');
+    };
+
+    Landing.prototype.positiveScroll = function(deltaY) {
+      this.scrollNum = this.scrollNum + deltaY;
+      if (this.scrollNum > this.scrollThreshold) {
+        this.closeDetail();
+        this.scrollNum = 0;
       }
-      return console.log(this.scrollNum);
+      return console.log('positive: ' + deltaY);
+    };
+
+    Landing.prototype.negativeScroll = function(deltaY) {
+      this.scrollNum = this.scrollNum + deltaY;
+      if (this.scrollNum < -this.scrollThreshold) {
+        this.openDetail();
+        this.scrollNum = 0;
+      }
+      return console.log('negative: ' + this.scrollNum);
+    };
+
+    Landing.prototype.openDetail = function() {
+      this.detailView.css('top', '-900px');
+      return this.isDetailOpen = true;
+    };
+
+    Landing.prototype.closeDetail = function() {
+      this.detailView.css('top', '0');
+      return this.isDetailOpen = false;
     };
 
     Landing.prototype.decrementScroll = function() {
