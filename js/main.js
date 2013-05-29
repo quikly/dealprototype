@@ -47,9 +47,7 @@
     Landing.prototype.listenScroll = function() {
       var _this = this;
 
-      return this.mainWrap.bind('mousewheel', function(event, delta, deltaX, deltaY) {
-        return _this.handleScroll(deltaY);
-      });
+      return this.mainWrap.bind('mousewheel', function(event, delta, deltaX, deltaY) {});
     };
 
     Landing.prototype.handleScroll = function(deltaY) {
