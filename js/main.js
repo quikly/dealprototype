@@ -35,7 +35,6 @@
     Landing.prototype.listenScroll = function() {
       var _this = this;
 
-      console.log('listen for scroll');
       return this.mainWrap.bind('mousewheel', function(event, delta, deltaX, deltaY) {
         return _this.handleScroll(deltaY);
       });
@@ -51,20 +50,18 @@
 
     Landing.prototype.positiveScroll = function(deltaY) {
       this.scrollNum = this.scrollNum + deltaY;
-      if (this.scrollNum > this.scrollThreshold) {
+      if (this.scrollNum >= this.scrollThreshold) {
         this.closeDetail();
-        this.scrollNum = 0;
+        return this.scrollNum = 0;
       }
-      return console.log('positive: ' + deltaY);
     };
 
     Landing.prototype.negativeScroll = function(deltaY) {
       this.scrollNum = this.scrollNum + deltaY;
-      if (this.scrollNum < -this.scrollThreshold) {
+      if (this.scrollNum <= -this.scrollThreshold) {
         this.openDetail();
-        this.scrollNum = 0;
+        return this.scrollNum = 0;
       }
-      return console.log('negative: ' + this.scrollNum);
     };
 
     Landing.prototype.openDetail = function() {

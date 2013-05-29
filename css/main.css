@@ -91,10 +91,7 @@ body {
         position: relative;
         margin: 0 auto;
     }
-    .view img {
-
-    }
-
+    
     .landing-view {
         
     }
@@ -103,8 +100,8 @@ body {
     }
 
     .details-btn {
-        position: absolute;
-        bottom: 30px;
+        position: fixed;
+        bottom: 0px;
         left: 38%;
         margin-left: 70px;
         background: url(../img/details_btn.png);

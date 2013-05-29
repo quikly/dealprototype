@@ -15,7 +15,6 @@ class Landing
     @setUpdatePositionInterval(500)
 
   listenScroll: ->
-    console.log('listen for scroll')
     @mainWrap.bind 'mousewheel', (event, delta, deltaX, deltaY) =>
       @handleScroll(deltaY)
     
@@ -27,17 +26,17 @@ class Landing
 
   positiveScroll: (deltaY) =>
     @scrollNum = @scrollNum + deltaY
-    if @scrollNum > @scrollThreshold 
+    if @scrollNum >= @scrollThreshold 
       @closeDetail()
       @scrollNum = 0
-    console.log('positive: ' + deltaY)
+    #console.log('positive: ' + deltaY)
 
   negativeScroll: (deltaY) =>
     @scrollNum = @scrollNum + deltaY
-    if @scrollNum < -@scrollThreshold 
+    if @scrollNum <= -@scrollThreshold 
       @openDetail()
       @scrollNum = 0
-    console.log('negative: ' + @scrollNum)
+    #console.log('negative: ' + @scrollNum)
 
   openDetail: =>
     @detailView.css('top', '-900px')
@@ -50,6 +49,7 @@ class Landing
   decrementScroll: =>
     if @scrollNum < 0
       @scrollNum += 5
+      
     console.log @scrollNum
 
   setUpdatePositionInterval: (intervalMs) =>
