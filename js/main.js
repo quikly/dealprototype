@@ -27,12 +27,10 @@
     };
 
     Landing.prototype.initWaypoint = function() {
-      return $('.details').waypoint(function(direction) {
-        if (direction === 'down') {
-          return console.log('PING Down!');
-        } else {
-          return console.log('PING Down!');
-        }
+      return $('.detail').waypoint(function(direction) {
+        return console.log('PING Down!');
+      }, {
+        context: '#main-wrap'
       });
     };
 

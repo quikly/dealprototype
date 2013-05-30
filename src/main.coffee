@@ -15,12 +15,11 @@ class Landing
       @onClick(e, $(e.currentTarget))
 
   initWaypoint: ->
-    $('.details').waypoint( (direction) ->
-      if direction == 'down'
-        console.log 'PING Down!'
-      else
-        console.log 'PING Down!'
-    )
+    $('.detail').waypoint( (direction) ->
+      console.log 'PING Down!'
+    , {
+        context: '#main-wrap'
+    })
 
   onClick: (e, el) =>
     e.preventDefault()
