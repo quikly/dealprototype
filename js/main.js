@@ -4,16 +4,23 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var detailsBtn, returnBtn;
+    var detailsBtn, handleBar, handlebarSmall, returnBtn;
 
     detailsBtn = '';
 
     returnBtn = '';
 
+    handleBar = '';
+
+    handlebarSmall = '';
+
     function Landing() {
+      this.onReturn = __bind(this.onReturn, this);
       this.onClick = __bind(this.onClick, this);
       this.bindButtons = __bind(this.bindButtons, this);      this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
+      this.handleBar = $('.handlebar');
+      this.handlebarSmall = $('.handlebar-small');
       this.initWaypoint();
       this.bindButtons();
     }
@@ -21,16 +28,32 @@
     Landing.prototype.bindButtons = function() {
       var _this = this;
 
-      return this.detailsBtn.bind('click', function(e) {
+      this.detailsBtn.bind('click', function(e) {
         return _this.onClick(e, $(e.currentTarget));
+      });
+      return this.returnBtn.bind('click', function(e) {
+        return _this.onReturn(e, $(e.currentTarget));
       });
     };
 
     Landing.prototype.initWaypoint = function() {
-      return $('.detail').waypoint(function(direction) {
-        return console.log('PING Down!');
+      var _this = this;
+
+      return this.handleBar.waypoint(function(direction) {
+        if (direction === 'down') {
+          _this.handleBar.fadeOut('fast');
+          _this.detailsBtn.fadeOut('fast');
+          _this.handlebarSmall.fadeIn('fast');
+          return _this.returnBtn.fadeIn('fast');
+        } else {
+          _this.handleBar.fadeIn('fast');
+          _this.detailsBtn.fadeIn('fast');
+          _this.returnBtn.fadeOut('fast');
+          return _this.handlebarSmall.fadeOut('fast');
+        }
       }, {
-        context: '#main-wrap'
+        context: '#main-wrap',
+        offset: '-200px'
       });
     };
 
@@ -40,9 +63,15 @@
       e.preventDefault();
       href = el.attr('href');
       offsetTop = $(href).offset().top + 1;
-      console.log(offsetTop);
       return el.parent().parent().stop().animate({
         scrollTop: offsetTop
+      }, 300);
+    };
+
+    Landing.prototype.onReturn = function(e, el) {
+      e.preventDefault();
+      return el.parent().parent().stop().animate({
+        scrollTop: 0
       }, 300);
     };
 
