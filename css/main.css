@@ -103,8 +103,16 @@ body {
         width: 100%;
     }
 
+    .landing .handlebar-small {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: none;
+    }
+
     .detail {
-        background-color: rgba(0, 0, 0, 0.75);
+        /*background-color: rgba(0, 0, 0, 0.75);*/
+        background-color: #FFF;
         position: relative;
         margin: 0 auto;
         text-align: center;

@@ -13,6 +13,10 @@ class Landing
      @detailsBtn.bind 'click', (e) =>
       @onClick(e, $(e.currentTarget))
 
+  initWaypoint: ->
+    brands = this
+      $('.with-quikly-a').waypoint((direction) ->
+      
 
   onClick: (e, el) =>
     e.preventDefault()
@@ -22,6 +26,8 @@ class Landing
     el.parent().parent().stop().animate({ 
         scrollTop: offsetTop
     }, 300)
+    
+    
 
 $(document).ready ->
   window.landing = new Landing
