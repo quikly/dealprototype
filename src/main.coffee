@@ -14,11 +14,11 @@ class Landing
     @landingView = $('.landing-view')
     @detailsBtn = $('.details-btn')
     @returnBtn = $('.return-btn')
-    @detailsBtn.bind 'click', @openDetail
-    @returnBtn.bind 'click', @closeDetail
-    @listenScroll()
-    @delay 2000, @openPreview
-    @delay 2700, @closePreview
+    #@detailsBtn.bind 'click', @openDetail
+    #@returnBtn.bind 'click', @closeDetail
+    #@listenScroll()
+    #@delay 2000, @openPreview
+    #@delay 2700, @closePreview
     #@setUpdatePositionInterval(500)
 
   listenScroll: ->

@@ -37,11 +37,6 @@
       this.landingView = $('.landing-view');
       this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
-      this.detailsBtn.bind('click', this.openDetail);
-      this.returnBtn.bind('click', this.closeDetail);
-      this.listenScroll();
-      this.delay(2000, this.openPreview);
-      this.delay(2700, this.closePreview);
     }
 
     Landing.prototype.listenScroll = function() {
