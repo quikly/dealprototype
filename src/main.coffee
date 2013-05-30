@@ -7,6 +7,7 @@ class Landing
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn = $('.return-btn')
+    @initWaypoint()
     @bindButtons()
 
   bindButtons: =>
@@ -14,9 +15,12 @@ class Landing
       @onClick(e, $(e.currentTarget))
 
   initWaypoint: ->
-    brands = this
-      $('.with-quikly-a').waypoint((direction) ->
-      
+    $('.details').waypoint( (direction) ->
+      if direction == 'down'
+        console.log 'PING Down!'
+      else
+        console.log 'PING Down!'
+    )
 
   onClick: (e, el) =>
     e.preventDefault()

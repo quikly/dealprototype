@@ -14,6 +14,7 @@
       this.onClick = __bind(this.onClick, this);
       this.bindButtons = __bind(this.bindButtons, this);      this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
+      this.initWaypoint();
       this.bindButtons();
     }
 
@@ -22,6 +23,16 @@
 
       return this.detailsBtn.bind('click', function(e) {
         return _this.onClick(e, $(e.currentTarget));
+      });
+    };
+
+    Landing.prototype.initWaypoint = function() {
+      return $('.details').waypoint(function(direction) {
+        if (direction === 'down') {
+          return console.log('PING Down!');
+        } else {
+          return console.log('PING Down!');
+        }
       });
     };
 
