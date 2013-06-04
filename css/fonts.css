@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('https://quikly-fonts.s3.amazonaws.com/leaguegothic-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('https://quikly-fonts.s3.amazonaws.com/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://quikly-fonts.s3.amazonaws.com/leaguegothic-regular-webfont.woff') format('woff'), /* Modern Browsers */
+         url('https://quikly-fonts.s3.amazonaws.com/leaguegothic-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('https://quikly-fonts.s3.amazonaws.com/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
