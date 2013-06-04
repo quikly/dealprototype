@@ -125,26 +125,38 @@ body {
     height: 80px;
     background-color: #343434; }
     .handlebar .bar .circlebtn {
+      position: relative;
       width: 42px;
       height: 42px;
+      margin-top: 16px;
+      overflow: hidden;
       color: #767676;
       border-color: #767676;
       border-radius: 50px;
       border: 3px solid;
       text-align: center;
-      text-indent: -999px;
-      overflow: hidden;
-      margin-top: 16px; }
+      text-transform: uppercase; }
+      .handlebar .bar .circlebtn .title {
+        font-family: 'League Gothic';
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 18px;
+        color: #FFF;
+        position: absolute; }
       .handlebar .bar .circlebtn.right {
         float: right;
-        background: url(../img//native/chevron_rgt.gif) #343434 center right no-repeat;
+        background: url(../img//native/chevron_rgt.gif) #343434 right center no-repeat;
         background-position: 0px;
         margin-right: 16px; }
+        .handlebar .bar .circlebtn.right .title {
+          right: 48px; }
       .handlebar .bar .circlebtn.left {
         float: left;
         background: url(../img//native/chevron_lft.gif) #343434 center left no-repeat;
         background-position: -1px;
         margin-left: 16px; }
+        .handlebar .bar .circlebtn.left .title {
+          left: 48px; }
       .handlebar .bar .circlebtn:hover {
         width: 180px;
         border-radius: 10px;

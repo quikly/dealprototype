@@ -13,23 +13,36 @@
     background-color: $ligthBlack;
   
     .circlebtn {
+      position:relative;
       width: 42px;
       height: 42px;
+      margin-top: 16px;
+      overflow: hidden;
       color: $lightGrey;
       border-color: $lightGrey;
       border-radius: 50px;
       border: 3px solid;
       text-align: center;
-      text-indent: -999px;
-      overflow: hidden;
-      margin-top: 16px;
+      text-transform: uppercase;
+      
+      .title {
+        font-family: 'League Gothic';
+        font-weight: 100; 
+        font-size: 20px;
+        line-height: 18px;
+        color: #FFF;
+        position: absolute;
+      }     
 
       &.right {
         float:right;
-        background: url(../img//native/chevron_rgt.gif) $ligthBlack center right no-repeat;
+        background: url(../img//native/chevron_rgt.gif) $ligthBlack right center no-repeat;
         background-position: 0px;
         margin-right: 16px;
-        
+
+        .title  {
+          right:48px;
+        }
       }
 
       &.left {
@@ -37,6 +50,11 @@
         background: url(../img//native/chevron_lft.gif) $ligthBlack center left no-repeat;
         background-position: -1px;
         margin-left: 16px;
+
+        .title {
+          left: 48px;
+        }
+        
       }
 
       &:hover {
