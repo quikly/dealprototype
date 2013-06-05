@@ -1,10 +1,17 @@
 .wheel-outer {
   position: relative;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 5px 0 26px;
   top:  -78px;
 
-
+  .pointer {
+    background: url(../img/pointer.png) top left no-repeat;
+    width: 50px;
+    height: 37px;
+    position: absolute;
+    top: 98px;
+    left: -12px;
+  }
 
   .wheel {
     width: 216px;
@@ -29,30 +36,31 @@
     .price-window {
       width: 100%;
       position: relative;
-      top: -510px; // offset by number of price childs 3*160
+      top: -10px; // offset by number of price childs 3*160
 
-      .price {
-        width: 216px;
-        height: 160px;
-        padding-top: 20px;
-        border-top: 1px solid #323232;
-        text-align: center;
-
-        .tier {
+      // Tier is a child of price, placed here so price-next tier can extend it
+      .tier { 
           width: 100%;
-          margin:0 0 13px 0;
+          margin:0 0 4px 0;
           color: $yellow;
           font-size: 18px;
-          line-height: 14px;
+          line-height: 12px;
           letter-spacing: 1px;
           text-transform: uppercase;
 
           @include leaguge-gothic;
-        }
+      }
+      
+      .price {
+        width: 216px;
+        height: 160px;
+        padding-top: 25px;
+        border-top: 1px solid #323232;
+        text-align: center;  
 
         .dollar {
           width: 100%;
-          margin:0 0 15px 0;
+          margin:0 0 8px 0;
           font-size: 62px;
           line-height: 62px;
           
@@ -63,7 +71,7 @@
           margin:0;
           color: $discountGrey;
           font-size: 18px;
-          line-height: 0;
+          line-height: 18px;
           font-style: italic;
 
           @include opensans-semi;
@@ -75,6 +83,30 @@
         } // close discount
 
       } //end price
+
+      .price-next {
+        text-align: center;
+        position: relative;
+        margin: 0 0 15px 0;
+
+        .tier {
+          @extend tier;
+          line-height: 25px;
+          display: inline;
+        }
+
+        .dollar {
+            display: inline;
+            position: relative;
+            top: 2px;
+            color: #FFF;
+            font-size: 25px;
+            line-height: 25px;
+            @include opensans-light;
+        }
+
+
+      }
 
     } // end price-window
 

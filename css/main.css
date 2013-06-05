@@ -130,7 +130,7 @@ body {
     height: 80px;
     background-color: #343434; }
     .handlebar .bar .wheel-wrap {
-      width: 580px;
+      width: 595px;
       position: absolute;
       left: 0;
       right: 0;
@@ -274,8 +274,15 @@ body {
 .wheel-outer {
   position: relative;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 5px 0 26px;
   top: -78px; }
+  .wheel-outer .pointer {
+    background: url(../img/pointer.png) top left no-repeat;
+    width: 50px;
+    height: 37px;
+    position: absolute;
+    top: 98px;
+    left: -12px; }
   .wheel-outer .wheel {
     width: 216px;
     height: 216px;
@@ -304,26 +311,26 @@ body {
     .wheel-outer .wheel .price-window {
       width: 100%;
       position: relative;
-      top: -510px; }
+      top: -10px; }
+      .wheel-outer .wheel .price-window .tier {
+        width: 100%;
+        margin: 0 0 4px 0;
+        color: #ffe57e;
+        font-size: 18px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: 'League Gothic';
+        font-weight: 200; }
       .wheel-outer .wheel .price-window .price {
         width: 216px;
         height: 160px;
-        padding-top: 20px;
+        padding-top: 25px;
         border-top: 1px solid #323232;
         text-align: center; }
-        .wheel-outer .wheel .price-window .price .tier {
-          width: 100%;
-          margin: 0 0 13px 0;
-          color: #ffe57e;
-          font-size: 18px;
-          line-height: 14px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          font-family: 'League Gothic';
-          font-weight: 200; }
         .wheel-outer .wheel .price-window .price .dollar {
           width: 100%;
-          margin: 0 0 15px 0;
+          margin: 0 0 8px 0;
           font-size: 62px;
           line-height: 62px;
           font-family: 'Open Sans';
@@ -332,12 +339,28 @@ body {
           margin: 0;
           color: #9d9d9d;
           font-size: 18px;
-          line-height: 0;
+          line-height: 18px;
           font-style: italic;
           font-family: 'Open Sans';
           font-weight: 400; }
           .wheel-outer .wheel .price-window .price .discount .percent {
             color: #FFF; }
+      .wheel-outer .wheel .price-window .price-next {
+        text-align: center;
+        position: relative;
+        margin: 0 0 15px 0; }
+        .wheel-outer .wheel .price-window .price-next .tier {
+          line-height: 25px;
+          display: inline; }
+        .wheel-outer .wheel .price-window .price-next .dollar {
+          display: inline;
+          position: relative;
+          top: 2px;
+          color: #FFF;
+          font-size: 25px;
+          line-height: 25px;
+          font-family: 'Open Sans';
+          font-weight: 200; }
 
 /* ==========================================================================
    Media Queries
