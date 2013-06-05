@@ -48,14 +48,7 @@
           top:  -78px;
         }
 
-        .want-button {
-          background: url(../img/want_btn_temp.png);
-          width:  183px;
-          height: 59px;
-          margin-top: 8px;
-          display: inline-block;
-          vertical-align: top;
-        }
+        @import "wantbutton";
 
         .title {
           font-size: 36px;

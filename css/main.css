@@ -157,12 +157,63 @@ body {
         display: inline-block;
         top: -78px; }
       .handlebar .bar .wheel-wrap .want-button {
-        background: url(../img/want_btn_temp.png);
-        width: 183px;
-        height: 59px;
+        width: 180px;
+        height: 60px;
         margin-top: 8px;
         display: inline-block;
-        vertical-align: top; }
+        vertical-align: top;
+        padding-top: 16px;
+        -webkit-box-sizing: border-box;
+        /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;
+        /* Firefox, other Gecko */
+        box-sizing: border-box;
+        /* Opera/IE 8+ */
+        font-family: 'Open Sans';
+        font-size: 26px;
+        text-shadow: 1px 1px 0px rgba(25, 78, 93, 0.5);
+        filter: dropshadow(color=#194e5d, offx=1, offy=1);
+        color: #FFF;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        background: #82d5ec;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #82d5ec 0%, #54adcb 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #82d5ec 0%, #54adcb 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #82d5ec 0%, #54adcb 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #82d5ec 0%, #54adcb 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, #82d5ec 0%, #54adcb 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 );
+        /* IE6-9 */
+        -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
+        .handlebar .bar .wheel-wrap .want-button:hover {
+          border: 4px solid;
+          padding-top: 14px;
+          background: -moz-linear-gradient(top, #82d5ec 0%, #48889e 100%);
+          /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #48889e));
+          /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #82d5ec 0%, #48889e 100%);
+          /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #82d5ec 0%, #48889e 100%);
+          /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #82d5ec 0%, #48889e 100%);
+          /* IE10+ */
+          background: linear-gradient(to bottom, #82d5ec 0%, #48889e 100%);
+          /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 );
+          /* IE6-9 */ }
       .handlebar .bar .wheel-wrap .title {
         font-size: 36px;
         width: 100%;
