@@ -71,17 +71,15 @@ body {
 
 
 .transition {
- -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-     -ms-transition: all 0.15s ease-out;
-      -o-transition: all 0.15s ease-out; 
-         transition: all 0.15s ease-out;
+ -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+     -ms-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 
 // ****** VARS *****
-
-
 
 $ligthBlack: #343434;
 $lightGrey:  #767676;

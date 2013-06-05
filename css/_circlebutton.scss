@@ -1,0 +1,81 @@
+.circlebtn {
+      position:absolute;
+      width: 42px;
+      height: 42px;
+      margin-top: 16px;
+      overflow: hidden;
+      color: $lightGrey;
+      border-color: $lightGrey;
+      border-radius: 50px;
+      border: 3px solid;
+      text-align: center;
+      text-transform: uppercase;
+
+      -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+         -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+          -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+           -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); 
+              transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+      
+      .title {
+        font-family: 'League Gothic';
+        font-weight: 100; 
+        font-size: 20px;
+        line-height: 18px;
+        color: #FFF;
+        position: absolute;
+        width: 118px;
+        top: -60px;
+        -webkit-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+         -moz-transition: all 0.25s  0.15s cubic-bezier(0.19, 1, 0.22, 1);
+          -ms-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+           -o-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1); 
+              transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &.right {
+        float:right;
+        background: url(../img/chevron_rgt.png) $ligthBlack no-repeat;
+        background-position: 60% 0%;
+        right: 16px;
+
+        .title  {
+          right: 50px;
+        }
+      }
+
+      &:hover.right {
+        background-position: 91.7666666667% -48px;
+        .title {
+          top: 0px;
+          
+        }
+      }
+
+      &.left {
+        float:left;
+        background: url(../img/chevron_lft.png) $ligthBlack no-repeat;
+        background-position: 12px 0px;
+        left: 16px;
+
+        .title {
+          left: 48px;
+        }
+        
+      }
+
+      &:hover.left {
+        background-position: 12px -48px;
+        .title {
+          top: 0px;
+        }
+      }
+
+      &:hover {
+        width:180px;
+        border-radius:10px;
+        border-color: #FFF;
+
+      }
+
+    }
