@@ -7,7 +7,7 @@
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75); 
-  font-family: 'Open Sans';
+  
 
   .bar {
     width: 100%;
@@ -23,6 +23,7 @@
       margin-right:auto;
       text-align:center;
 
+
         .retail {
           font-size: 22px;
           font-weight: 600;
@@ -31,22 +32,14 @@
           display: inline-block;
           vertical-align: top;
 
+          @include opensans-reg;
+
           .price {
             color: $redd;
             text-decoration: line-through;
           }
 
-        }// close retail 
-
-        .wheel {
-          background: url(../img/wheel_temp.png) center center no-repeat;
-          width: 232px;
-          height: 231px;
-          margin: 0 5px;
-          position: relative;
-          display: inline-block;
-          top:  -78px;
-        }
+        } // close retail 
 
         @import "wantbutton";
 
@@ -55,7 +48,8 @@
           width: 100%;
           margin: 0 auto;
           position: relative;
-          top: -50px;
+          top: -55px;
+          @include opensans-reg;
         }
 
     } // close wheel wrap

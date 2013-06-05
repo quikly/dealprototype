@@ -79,11 +79,34 @@ body {
 }
 
 
-// ****** VARS *****
+// ========= Mixins =========
+
+@mixin opensans-reg {
+  font-family: 'Open Sans';
+}
+
+@mixin opensans-light {
+  font-family: 'Open Sans';
+  font-weight: 200;
+}
+
+@mixin opensans-semi {
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
+@mixin leaguge-gothic {
+    font-family: 'League Gothic';
+    font-weight: 200; 
+}
+
+// ========= VARS ========= 
 
 $ligthBlack: #343434;
 $lightGrey:  #767676;
+$discountGrey: #9d9d9d;
 $redd: #e83a3a;
+$yellow: #ffe57e;
 
 
 /* ==========================================================================
@@ -150,6 +173,7 @@ $redd: #e83a3a;
     }
 
     @import "handlebar";
+    @import "wheel";
 
 
 /* ==========================================================================

@@ -124,8 +124,7 @@ body {
   min-height: 275px;
   position: absolute;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  font-family: 'Open Sans'; }
+  background-color: rgba(0, 0, 0, 0.75); }
   .handlebar .bar {
     width: 100%;
     height: 80px;
@@ -144,18 +143,11 @@ body {
         margin: 25px 0 0 0;
         position: relative;
         display: inline-block;
-        vertical-align: top; }
+        vertical-align: top;
+        font-family: 'Open Sans'; }
         .handlebar .bar .wheel-wrap .retail .price {
           color: #e83a3a;
           text-decoration: line-through; }
-      .handlebar .bar .wheel-wrap .wheel {
-        background: url(../img/wheel_temp.png) center center no-repeat;
-        width: 232px;
-        height: 231px;
-        margin: 0 5px;
-        position: relative;
-        display: inline-block;
-        top: -78px; }
       .handlebar .bar .wheel-wrap .want-button {
         width: 180px;
         height: 60px;
@@ -169,7 +161,6 @@ body {
         /* Firefox, other Gecko */
         box-sizing: border-box;
         /* Opera/IE 8+ */
-        font-family: 'Open Sans';
         font-size: 26px;
         text-shadow: 1px 1px 0px rgba(25, 78, 93, 0.5);
         filter: dropshadow(color=#194e5d, offx=1, offy=1);
@@ -196,7 +187,8 @@ body {
         -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
         -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
         -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
+        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        font-family: 'Open Sans'; }
         .handlebar .bar .wheel-wrap .want-button:hover {
           border: 4px solid;
           padding-top: 14px;
@@ -219,7 +211,8 @@ body {
         width: 100%;
         margin: 0 auto;
         position: relative;
-        top: -50px; }
+        top: -55px;
+        font-family: 'Open Sans'; }
     .handlebar .bar .circlebtn {
       position: absolute;
       width: 42px;
@@ -239,7 +232,7 @@ body {
       transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
       .handlebar .bar .circlebtn .title {
         font-family: 'League Gothic';
-        font-weight: 100;
+        font-weight: 200;
         font-size: 20px;
         line-height: 18px;
         color: #FFF;
@@ -277,6 +270,74 @@ body {
         width: 180px;
         border-radius: 10px;
         border-color: #FFF; }
+
+.wheel-outer {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  top: -78px; }
+  .wheel-outer .wheel {
+    width: 216px;
+    height: 216px;
+    overflow: hidden;
+    border: 8px solid #5d5d5d;
+    border-radius: 216px;
+    background: #4e4e4e;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #4e4e4e 0%, black 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e4e4e), color-stop(100%, black));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4e4e4e 0%, black 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4e4e4e 0%, black 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4e4e4e 0%, black 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #4e4e4e 0%, black 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 );
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.4); }
+    .wheel-outer .wheel .price-window {
+      width: 100%;
+      position: relative;
+      top: -510px; }
+      .wheel-outer .wheel .price-window .price {
+        width: 216px;
+        height: 160px;
+        padding-top: 20px;
+        border-top: 1px solid #323232;
+        text-align: center; }
+        .wheel-outer .wheel .price-window .price .tier {
+          width: 100%;
+          margin: 0 0 13px 0;
+          color: #ffe57e;
+          font-size: 18px;
+          line-height: 14px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: 'League Gothic';
+          font-weight: 200; }
+        .wheel-outer .wheel .price-window .price .dollar {
+          width: 100%;
+          margin: 0 0 15px 0;
+          font-size: 62px;
+          line-height: 62px;
+          font-family: 'Open Sans';
+          font-weight: 200; }
+        .wheel-outer .wheel .price-window .price .discount {
+          margin: 0;
+          color: #9d9d9d;
+          font-size: 18px;
+          line-height: 0;
+          font-style: italic;
+          font-family: 'Open Sans';
+          font-weight: 400; }
+          .wheel-outer .wheel .price-window .price .discount .percent {
+            color: #FFF; }
 
 /* ==========================================================================
    Media Queries
