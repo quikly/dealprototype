@@ -1,0 +1,32 @@
+.pointer {
+    background: url(../img/pointer.png) top left no-repeat;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 37px;
+    position: absolute;
+    top: 98px;
+    left: -12px;
+    z-index: 100;
+    @include transform-origin(17px 18px);  
+}
+
+.pointer {
+  @include animation-name(pointerRotate);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease);
+  @include animation-iteration-count(infinite);
+}
+
+
+@include keyframes(pointerRotate) {
+  0% {
+    
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(35deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}

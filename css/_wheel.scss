@@ -4,21 +4,14 @@
   margin: 0 5px 0 26px;
   top:  -78px;
 
-  .pointer {
-    background: url(../img/pointer.png) top left no-repeat;
-    width: 50px;
-    height: 37px;
-    position: absolute;
-    top: 98px;
-    left: -12px;
-  }
+  
 
   .wheel {
     width: 204px;
     height: 204px;
     overflow: hidden;
     border: 8px solid #5d5d5d;
-    border-radius: 220px;
+    border-radius: 516px;
 
 
     background: #4e4e4e; /* Old browsers */
@@ -34,13 +27,11 @@
        -moz-box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
             box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
 
-
     .price-window {
       width: 100%;
       position: relative;
-      top: -10px; // offset by number of price childs 3*160
+      top: -20px; // offset by number of price childs 3*160
       
-
       // Tier is a child of price, placed here so price-next tier can extend it
       .tier { 
           width: 100%;
@@ -59,7 +50,7 @@
         height: 160px;
         padding-top: 25px;
         border-top: 1px solid #323232;
-        text-align: center;  
+        text-align: center;
 
         .dollar {
           width: 100%;
@@ -120,23 +111,24 @@
 
   @include animation-name(wheelbounce);
   @include animation-duration(2s);
-  @include animation-timing-function(ease);
+  @include animation-timing-function(ease-in-out);
   @include animation-iteration-count(infinite);
-  
 
 } 
 
 @include keyframes(wheelbounce) {
   0% {
-    @include transform(translateY(0px));
+    top: -10px;
   }
   50% {
-   @include transform(translateY(50px));
+   top: 50px;
   }
   100% {
-    @include transform(translateY(0px));
+    top: -10px;
   }
 }
+
+@import "pointer";
 
 
 
