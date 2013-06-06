@@ -46,8 +46,6 @@
       }
       
       .price {
-        width: 216px;
-        height: 160px;
         padding-top: 25px;
         border-top: 1px solid #323232;
         text-align: center;
@@ -118,13 +116,13 @@
 
 @include keyframes(wheelbounce) {
   0% {
-    top: -10px;
+    top: -20px;
   }
   50% {
-   top: 50px;
+   top: 10px;
   }
   100% {
-    top: -10px;
+    top: -20px;
   }
 }
 

@@ -8,7 +8,7 @@ input,
 select,
 textarea {
     color: #FFF;
-    webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased;
 }
 
 body {
@@ -99,6 +99,11 @@ body {
   font-weight: 400;
 }
 
+@mixin opensans-bold {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
 @mixin leaguge-gothic {
     font-family: 'League Gothic';
     font-weight: 200; 
@@ -144,7 +149,7 @@ $yellow: #ffe57e;
     }
 
     .detail {
-        /*background-color: rgba(0, 0, 0, 0.75);*/
+        
         background-color: #FFF;
         position: relative;
         margin: 0 auto;
@@ -178,6 +183,7 @@ $yellow: #ffe57e;
 
     @import "handlebar";
     @import "wheel";
+    @import "nav";
 
 
 /* ==========================================================================
@@ -259,75 +265,4 @@ $yellow: #ffe57e;
 
 .clearfix {
     *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
