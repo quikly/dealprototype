@@ -179,7 +179,7 @@ body {
         /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #82d5ec 0%, #54adcb 100%);
         /* IE10+ */
-        background: linear-gradient(to bottom, #82d5ec 0%, #54adcb 100%);
+        background: linear, to bottom, #82d5ec 0%, #54adcb 100%;
         /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 );
         /* IE6-9 */
@@ -202,7 +202,7 @@ body {
           /* Opera 11.10+ */
           background: -ms-linear-gradient(top, #82d5ec 0%, #48889e 100%);
           /* IE10+ */
-          background: linear-gradient(to bottom, #82d5ec 0%, #48889e 100%);
+          background: linear, to bottom, #82d5ec 0%, #48889e 100%;
           /* W3C */
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 );
           /* IE6-9 */ }
@@ -284,11 +284,11 @@ body {
     top: 98px;
     left: -12px; }
   .wheel-outer .wheel {
-    width: 216px;
-    height: 216px;
+    width: 204px;
+    height: 204px;
     overflow: hidden;
     border: 8px solid #5d5d5d;
-    border-radius: 216px;
+    border-radius: 220px;
     background: #4e4e4e;
     /* Old browsers */
     background: -moz-linear-gradient(top, #4e4e4e 0%, black 100%);
@@ -301,7 +301,7 @@ body {
     /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #4e4e4e 0%, black 100%);
     /* IE10+ */
-    background: linear-gradient(to bottom, #4e4e4e 0%, black 100%);
+    background: linear, to bottom, #4e4e4e 0%, black 100%;
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 );
     /* IE6-9 */
@@ -361,6 +361,60 @@ body {
           line-height: 25px;
           font-family: 'Open Sans';
           font-weight: 200; }
+
+.price-window {
+  -webkit-animation-name: wheelbounce;
+  -moz-animation-name: wheelbounce;
+  animation-name: wheelbounce;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes wheelbounce {
+  0% {
+    -webkit-transform: translateY(0px); }
+
+  50% {
+    -webkit-transform: translateY(50px); }
+
+  100% {
+    -webkit-transform: translateY(0px); } }
+
+@-moz-keyframes wheelbounce {
+  0% {
+    -moz-transform: translateY(0px); }
+
+  50% {
+    -moz-transform: translateY(50px); }
+
+  100% {
+    -moz-transform: translateY(0px); } }
+
+@-o-keyframes wheelbounce {
+  0% {
+    -o-transform: translateY(0px); }
+
+  50% {
+    -o-transform: translateY(50px); }
+
+  100% {
+    -o-transform: translateY(0px); } }
+
+@keyframes wheelbounce {
+  0% {
+    transform: translateY(0px); }
+
+  50% {
+    transform: translateY(50px); }
+
+  100% {
+    transform: translateY(0px); } }
 
 /* ==========================================================================
    Media Queries
