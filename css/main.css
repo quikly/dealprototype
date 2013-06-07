@@ -77,7 +77,7 @@ body {
 
 .landing {
   width: 100%;
-  min-width: 960px;
+  min-width: 800px;
   height: 100%;
   min-height: 100%;
   position: relative; }
@@ -284,6 +284,7 @@ body {
     .wheel-outer .wheel .price-window {
       width: 100%;
       position: relative;
+      overflow: hidden;
       top: -20px; }
       .wheel-outer .wheel .price-window .tier {
         width: 100%;
@@ -337,9 +338,9 @@ body {
   -webkit-animation-name: wheelbounce;
   -moz-animation-name: wheelbounce;
   animation-name: wheelbounce;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
@@ -401,20 +402,6 @@ body {
   -ms-transform-origin: 17px 18px;
   -o-transform-origin: 17px 18px;
   transform-origin: 17px 18px; }
-
-.pointer {
-  -webkit-animation-name: pointerRotate;
-  -moz-animation-name: pointerRotate;
-  animation-name: pointerRotate;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
 
 @-webkit-keyframes pointerRotate {
   0% {

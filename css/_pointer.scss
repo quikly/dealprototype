@@ -11,10 +11,10 @@
 }
 
 .pointer {
-  @include animation-name(pointerRotate);
-  @include animation-duration(2s);
-  @include animation-timing-function(ease);
-  @include animation-iteration-count(infinite);
+  //@include animation-name(pointerRotate);
+  //@include animation-duration(2s);
+  //@include animation-timing-function(ease);
+  //@include animation-iteration-count(infinite);
 }
 
 

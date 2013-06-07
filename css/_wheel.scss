@@ -30,6 +30,7 @@
     .price-window {
       width: 100%;
       position: relative;
+      overflow: hidden;
       top: -20px; // offset by number of price childs 3*160
       
       // Tier is a child of price, placed here so price-next tier can extend it
@@ -108,7 +109,7 @@
 .price-window {
 
   @include animation-name(wheelbounce);
-  @include animation-duration(2s);
+  @include animation-duration(3s);
   @include animation-timing-function(ease-in-out);
   @include animation-iteration-count(infinite);
 
