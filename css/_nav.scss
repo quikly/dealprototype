@@ -1,0 +1,94 @@
+@mixin nav-grad {
+  @include linear-gradient(#4E4E4E, #000, $fallback: #4E4E4E);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 ); /* IE6-9 */
+}
+
+
+.nav {
+  
+  position: absolute;
+  right: 0;
+  height: 42px;
+
+  .share {
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $discountGrey;
+    vertical-align: top;
+    width: 99px;
+    border-right: 1px solid #000;
+    padding: 11px 0 13px 0;
+    margin: 0;
+    z-index: 10;
+    position: relative;
+    float: left;
+
+    @include opensans-bold;
+    @include nav-grad;
+
+    .icon {
+      background: url(../img/share_icon.png) top left no-repeat;
+      background-size: 36px 16px;
+      background-position:0px 0px;
+      width: 18px;
+      height: 16px;
+      margin: 0 8px 0 0;      
+      display: inline-block;
+
+    }
+    &:hover {
+      color: #FFF;
+      background: #000;
+      .icon {
+        background-position:-18px 0px;
+      }
+    }
+  } // end share
+
+  .bars {
+    margin: 0;
+    padding: 9px 12px 12px 12px;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+
+    @include nav-grad;
+
+    .bar {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: $discountGrey;
+      margin: 3px 0;
+      padding: 0;
+    }
+
+    &:hover {
+      background: #000;
+      .bar {
+        background: #FFF;
+      }
+    }
+  } // end bars
+
+  .share-items {
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100px;
+    height:  42px;
+    margin: 0;
+    padding: 0;
+    background: $middleBlack;
+    @include transition (all 0.3s cubic-bezier(0.19, 1, 0.22, 1));
+    
+  }
+
+  .slide-down {
+    @include transform(translateY(42px));
+  }
+  
+} // end nav

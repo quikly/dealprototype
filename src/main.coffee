@@ -2,14 +2,15 @@ class Landing
   
   detailsBtn = ''
   returnBtn = ''
+  shareBtn = ''
   handleBar = ''
   handlebarSmall = ''
   
-
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
     @handleBar  = $('.handlebar')
+    @shareBtn   = $('.share')
     @handlebarSmall  = $('.handlebar-small')
     @initWaypoint()
     @bindButtons()
@@ -19,6 +20,8 @@ class Landing
         @onClick(e, $(e.currentTarget))
     @returnBtn.bind 'click', (e) =>
         @onReturn(e, $(e.currentTarget))
+    @shareBtn.hover (e) =>
+        @shareHover($(e.currentTarget))
 
 
   initWaypoint: ->
@@ -54,6 +57,9 @@ class Landing
     el.parent().parent().stop().animate({ 
         scrollTop: 0
     }, 300)
+
+  shareHover: (el) =>
+    $('.share-items').toggleClass('slide-down');
 
     
     

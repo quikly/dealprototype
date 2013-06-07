@@ -4,22 +4,26 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var detailsBtn, handleBar, handlebarSmall, returnBtn;
+    var detailsBtn, handleBar, handlebarSmall, returnBtn, shareBtn;
 
     detailsBtn = '';
 
     returnBtn = '';
+
+    shareBtn = '';
 
     handleBar = '';
 
     handlebarSmall = '';
 
     function Landing() {
+      this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
       this.onClick = __bind(this.onClick, this);
       this.bindButtons = __bind(this.bindButtons, this);      this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
       this.handleBar = $('.handlebar');
+      this.shareBtn = $('.share');
       this.handlebarSmall = $('.handlebar-small');
       this.initWaypoint();
       this.bindButtons();
@@ -31,8 +35,11 @@
       this.detailsBtn.bind('click', function(e) {
         return _this.onClick(e, $(e.currentTarget));
       });
-      return this.returnBtn.bind('click', function(e) {
+      this.returnBtn.bind('click', function(e) {
         return _this.onReturn(e, $(e.currentTarget));
+      });
+      return this.shareBtn.hover(function(e) {
+        return _this.shareHover($(e.currentTarget));
       });
     };
 
@@ -73,6 +80,10 @@
       return el.parent().parent().stop().animate({
         scrollTop: 0
       }, 300);
+    };
+
+    Landing.prototype.shareHover = function(el) {
+      return $('.share-items').toggleClass('slide-down');
     };
 
     return Landing;
