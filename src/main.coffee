@@ -60,6 +60,7 @@ class Landing
 
   shareHover: (el) =>
     $('.share-items').toggleClass('slide-down');
+    
 
     
     

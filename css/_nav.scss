@@ -36,9 +36,8 @@
       height: 16px;
       margin: 0 8px 0 0;      
       display: inline-block;
-
     }
-    &:hover {
+    &:hover, &.active {
       color: #FFF;
       background: #000;
       .icon {
@@ -79,16 +78,38 @@
     top:0;
     left: 0;
     width: 100px;
-    height:  42px;
+    height:  34px;
     margin: 0;
-    padding: 0;
+    padding: 8px 0 0 0;
+    text-align: center;
     background: $middleBlack;
     @include transition (all 0.3s cubic-bezier(0.19, 1, 0.22, 1));
     
+    &:hover { @include transform(translateY(42px));}
   }
 
   .slide-down {
     @include transform(translateY(42px));
   }
+
+  .share-items {
+
+   .item-icon {
+      width: 24px;
+      height: 24px;
+      border-radius:2px;
+      background: url(../img/social_icons.png) top left no-repeat;
+      background-size: 72px 48px;
+      text-indent: -9999px;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover{ background-position-y: -24px; }
+      &.pine {}
+      &.twt { background-position-x: -24px; }
+      &.fb { background-position-x: -48px; }
+   }
+
+  } // end share item
   
 } // end nav
