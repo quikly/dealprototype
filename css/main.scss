@@ -113,10 +113,11 @@ body {
 
 $ligthBlack: #343434;
 $middleBlack: #4B4B4B;
+$darkBlack: #5D5D5D;
 $lightGrey:  #767676;
-$discountGrey: #9d9d9d;
-$redd: #e83a3a;
-$yellow: #ffe57e;
+$discountGrey: #9D9D9D;
+$redd: #E83A3A;
+$yellow: #FFE57E;
 
 
 /* ==========================================================================
@@ -142,19 +143,6 @@ $yellow: #ffe57e;
         position: relative;
     }
 
-    .detail .handlebar-small {
-        width: 100%;
-        display: none;
-        position: relative;
-        left: 0;
-    }
-
-    .detail {
-        background-color: #FFF;
-        position: relative;
-        margin: 0 auto;
-        text-align: center;
-    }
 
     .details-btn {
         position:absolute;
@@ -171,10 +159,9 @@ $yellow: #ffe57e;
     }
 
     .return-btn {
-        display: none;
-        position: absolute;
-        left: 38%;
-        margin-left: 70px;
+        display: inline-block;
+        position: relative;
+        margin: 0 auto;
         background: url(../img/return_btn.png);
         background-size: 140px 30px;
         width: 140px;
@@ -185,6 +172,7 @@ $yellow: #ffe57e;
     @import "handlebar";
     @import "wheel";
     @import "nav";
+    @import "detail";
 
 
 /* ==========================================================================

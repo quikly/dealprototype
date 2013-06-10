@@ -24,26 +24,26 @@ class Landing
 
   initWaypoint: ->
     @handleBar.waypoint( (direction) =>
+      console.log 'hello'
       @handleBar.toggleClass('collapse')
       $('.wheel-wrap').toggleClass('collapse')
       
       if direction is 'down'
-        @detailsBtn.fadeOut('fast')
-        @returnBtn.fadeIn('fast')
+        @detailsBtn.hide()
+        #@returnBtn.fadeIn('fast')
       else
         @detailsBtn.fadeIn('fast')
-        @returnBtn.fadeOut('fast')
-        
+        #@returnBtn.fadeOut('fast')
     , {
         context: '#main-wrap',
-        offset: '0px'
-           #(-$(this).height()) + 80 + 'px'
+        offset: ->
+           (-$(this).height() + 77 )
     })
 
   onClick: (e, el) =>
     e.preventDefault()
     href = el.attr('href')
-    offsetTop = $(href).offset().top+1;
+    offsetTop = $(href).offset().top-77;
     
     el.parent().parent().stop().animate({ 
         scrollTop: offsetTop

@@ -38,7 +38,7 @@
   }
 
   // FOR Collapse Animation
-  @include transition (transition-property-names((transform), moz) 1.0s ease-in 0.25s);
+  @include transition (transition-property-names((transform), moz) 1.0s ease-in);
   @include transform(scale(1));
 }
 

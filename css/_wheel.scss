@@ -4,7 +4,6 @@
   margin: 0 5px 0 26px;
   top:  -78px;
 
-  
 
   .wheel {
     width: 204px;
@@ -105,7 +104,7 @@
   } // end wheel
 
   // collapse animation 
-  @include transition (all 0.25s ease-in);
+  @include transition (all 0.45s ease);
   @include transform(scale(1));
 
 } // end wheel-outer

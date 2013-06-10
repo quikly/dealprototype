@@ -44,18 +44,19 @@
       var _this = this;
 
       return this.handleBar.waypoint(function(direction) {
+        console.log('hello');
         _this.handleBar.toggleClass('collapse');
         $('.wheel-wrap').toggleClass('collapse');
         if (direction === 'down') {
-          _this.detailsBtn.fadeOut('fast');
-          return _this.returnBtn.fadeIn('fast');
+          return _this.detailsBtn.hide();
         } else {
-          _this.detailsBtn.fadeIn('fast');
-          return _this.returnBtn.fadeOut('fast');
+          return _this.detailsBtn.fadeIn('fast');
         }
       }, {
         context: '#main-wrap',
-        offset: '0px'
+        offset: function() {
+          return -$(this).height() + 77;
+        }
       });
     };
 
@@ -64,7 +65,7 @@
 
       e.preventDefault();
       href = el.attr('href');
-      offsetTop = $(href).offset().top + 1;
+      offsetTop = $(href).offset().top - 77;
       return el.parent().parent().stop().animate({
         scrollTop: offsetTop
       }, 300);

@@ -7,10 +7,12 @@
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75); 
-  @include transition (all 0.15s ease-in 0.75s);
+  
+  @include transition (all 0.3s ease-out 0.75s);
+
   
   &.collapse {
-    height: auto;
+    height: 80px;
     min-height: 0;
   }
 }
@@ -43,7 +45,7 @@
           @include opensans-reg;
 
           // Used for Collapsed Animation
-          @include transition (all 0.15s ease-in 0.25s);
+          
           @include transform(scale(1));
 
           .price {
@@ -62,7 +64,8 @@
           position: relative;
           top: -55px;
           @include opensans-reg;
-          @include transition (all 0.25s ease-out 0.45s);
+          @include transition (all 0.25s ease);
+          
         }
         
     } // close wheel wrap
@@ -80,6 +83,8 @@
 }
 
 .wheel-wrap.collapse .title {
-  @include transform(translateY(-135px));
+  //@include transform(translateY(-135px));
+  top: -195px;
+  font-size: 28px;
 }
 
