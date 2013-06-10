@@ -4,12 +4,14 @@ class Landing
   returnBtn = ''
   shareBtn = ''
   handleBar = ''
+  mainWrap = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
     @handleBar  = $('.handlebar')
     @shareBtn   = $('.share')
+    @mainWrap   = $('#main-wrap')
     @initWaypoint()
     @bindButtons()
 
@@ -29,23 +31,21 @@ class Landing
       $('.wheel-wrap').toggleClass('collapse')
       
       if direction is 'down'
-        @detailsBtn.hide()
-        #@returnBtn.fadeIn('fast')
+        @detailsBtn.toggle()
       else
-        @detailsBtn.fadeIn('fast')
-        #@returnBtn.fadeOut('fast')
+        @detailsBtn.toggle()
     , {
         context: '#main-wrap',
-        offset: ->
-           (-$(this).height() + 77 )
+        offset: '0px'
+           #(-$(this).height() + 80 )
     })
 
   onClick: (e, el) =>
     e.preventDefault()
     href = el.attr('href')
-    offsetTop = $(href).offset().top-77;
+    offsetTop = $(href).offset().top+1;
     
-    el.parent().parent().stop().animate({ 
+    @mainWrap.stop().animate({ 
         scrollTop: offsetTop
     }, 300)
 

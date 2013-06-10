@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var detailsBtn, handleBar, returnBtn, shareBtn;
+    var detailsBtn, handleBar, mainWrap, returnBtn, shareBtn;
 
     detailsBtn = '';
 
@@ -14,6 +14,8 @@
 
     handleBar = '';
 
+    mainWrap = '';
+
     function Landing() {
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
@@ -22,6 +24,7 @@
       this.returnBtn = $('.return-btn');
       this.handleBar = $('.handlebar');
       this.shareBtn = $('.share');
+      this.mainWrap = $('#main-wrap');
       this.initWaypoint();
       this.bindButtons();
     }
@@ -48,15 +51,13 @@
         _this.handleBar.toggleClass('collapse');
         $('.wheel-wrap').toggleClass('collapse');
         if (direction === 'down') {
-          return _this.detailsBtn.hide();
+          return _this.detailsBtn.toggle();
         } else {
-          return _this.detailsBtn.fadeIn('fast');
+          return _this.detailsBtn.toggle();
         }
       }, {
         context: '#main-wrap',
-        offset: function() {
-          return -$(this).height() + 77;
-        }
+        offset: '0px'
       });
     };
 
@@ -65,8 +66,8 @@
 
       e.preventDefault();
       href = el.attr('href');
-      offsetTop = $(href).offset().top - 77;
-      return el.parent().parent().stop().animate({
+      offsetTop = $(href).offset().top + 1;
+      return this.mainWrap.stop().animate({
         scrollTop: offsetTop
       }, 300);
     };
