@@ -110,7 +110,6 @@ body {
 .return-btn {
   display: none;
   position: absolute;
-  top: 77px;
   left: 38%;
   margin-left: 70px;
   background: url(../img/return_btn.png);
@@ -125,139 +124,197 @@ body {
   min-height: 275px;
   position: absolute;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75); }
-  .handlebar .bar {
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.15s ease-in 0.75s;
+  -moz-transition: all 0.15s ease-in 0.75s;
+  transition: all 0.15s ease-in 0.75s; }
+  .handlebar.collapse {
+    height: auto;
+    min-height: 0; }
+
+.bar {
+  width: 100%;
+  height: 80px;
+  background-color: #343434; }
+  .bar .circlebtn {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    margin-top: 16px;
+    overflow: hidden;
+    color: #767676;
+    border-color: #767676;
+    border-radius: 50px;
+    border: 3px solid;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
+    .bar .circlebtn .title {
+      font-family: 'League Gothic';
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 18px;
+      color: #FFF;
+      position: absolute;
+      width: 118px;
+      top: -60px;
+      -webkit-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+      -moz-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+      -ms-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1); }
+    .bar .circlebtn.right {
+      float: right;
+      background: url(../img/chevron_rgt.png) #343434 no-repeat;
+      background-position: 60% 0%;
+      right: 16px; }
+      .bar .circlebtn.right .title {
+        right: 50px; }
+    .bar .circlebtn:hover.right {
+      background-position: 91.7666666667% -48px; }
+      .bar .circlebtn:hover.right .title {
+        top: 0px; }
+    .bar .circlebtn.left {
+      float: left;
+      background: url(../img/chevron_lft.png) #343434 no-repeat;
+      background-position: 12px 0px;
+      left: 16px; }
+      .bar .circlebtn.left .title {
+        left: 48px; }
+    .bar .circlebtn:hover.left {
+      background-position: 12px -48px; }
+      .bar .circlebtn:hover.left .title {
+        top: 0px; }
+    .bar .circlebtn:hover {
+      width: 180px;
+      border-radius: 10px;
+      border-color: #FFF; }
+
+.wheel-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .wheel-wrap .retail {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 25px 0 0 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Open Sans';
+    -webkit-transition: all 0.15s ease-in 0.25s;
+    -moz-transition: all 0.15s ease-in 0.25s;
+    transition: all 0.15s ease-in 0.25s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+    .wheel-wrap .retail .price {
+      color: #e83a3a;
+      text-decoration: line-through; }
+  .wheel-wrap .want-button {
+    width: 180px;
+    height: 60px;
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 16px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    font-size: 26px;
+    text-shadow: 1px 1px 0px rgba(25, 78, 93, 0.5);
+    filter: dropshadow(color=#194e5d, offx=1, offy=1);
+    color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    background-color: #82d5ec;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
+    background-image: -webkit-linear-gradient(#82d5ec, #54adcb);
+    background-image: linear-gradient(#82d5ec, #54adcb);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 );
+    /* IE6-9 */
+    font-family: 'Open Sans';
+    -webkit-transition: -moz-transform 1s ease-in 0.25s;
+    -moz-transition: -moz-transform 1s ease-in 0.25s;
+    transition: -moz-transform 1s ease-in 0.25s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+    .wheel-wrap .want-button:hover {
+      border: 4px solid;
+      padding-top: 14px;
+      background-color: #82d5ec;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #48889e));
+      background-image: -webkit-linear-gradient(#82d5ec, #48889e);
+      background-image: linear-gradient(#82d5ec, #48889e);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 );
+      /* IE6-9 */ }
+  .wheel-wrap .title {
+    font-size: 36px;
     width: 100%;
-    height: 80px;
-    background-color: #343434; }
-    .handlebar .bar .wheel-wrap {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center; }
-      .handlebar .bar .wheel-wrap .retail {
-        font-size: 22px;
-        font-weight: 600;
-        margin: 25px 0 0 0;
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        font-family: 'Open Sans'; }
-        .handlebar .bar .wheel-wrap .retail .price {
-          color: #e83a3a;
-          text-decoration: line-through; }
-      .handlebar .bar .wheel-wrap .want-button {
-        width: 180px;
-        height: 60px;
-        margin-top: 8px;
-        display: inline-block;
-        vertical-align: top;
-        padding-top: 16px;
-        -webkit-box-sizing: border-box;
-        /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;
-        /* Firefox, other Gecko */
-        box-sizing: border-box;
-        /* Opera/IE 8+ */
-        font-size: 26px;
-        text-shadow: 1px 1px 0px rgba(25, 78, 93, 0.5);
-        filter: dropshadow(color=#194e5d, offx=1, offy=1);
-        color: #FFF;
-        border: 2px solid #FFF;
-        border-radius: 10px;
-        background-color: #82d5ec;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
-        background-image: -webkit-linear-gradient(#82d5ec, #54adcb);
-        background-image: linear-gradient(#82d5ec, #54adcb);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 );
-        /* IE6-9 */
-        -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-        -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-        -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-        -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-        transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-        font-family: 'Open Sans'; }
-        .handlebar .bar .wheel-wrap .want-button:hover {
-          border: 4px solid;
-          padding-top: 14px;
-          background-color: #82d5ec;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #48889e));
-          background-image: -webkit-linear-gradient(#82d5ec, #48889e);
-          background-image: linear-gradient(#82d5ec, #48889e);
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 );
-          /* IE6-9 */ }
-      .handlebar .bar .wheel-wrap .title {
-        font-size: 36px;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        top: -55px;
-        font-family: 'Open Sans'; }
-    .handlebar .bar .circlebtn {
-      position: absolute;
-      width: 42px;
-      height: 42px;
-      margin-top: 16px;
-      overflow: hidden;
-      color: #767676;
-      border-color: #767676;
-      border-radius: 50px;
-      border: 3px solid;
-      text-align: center;
-      text-transform: uppercase;
-      -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-      -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-      -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-      -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-      transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
-      .handlebar .bar .circlebtn .title {
-        font-family: 'League Gothic';
-        font-weight: 200;
-        font-size: 20px;
-        line-height: 18px;
-        color: #FFF;
-        position: absolute;
-        width: 118px;
-        top: -60px;
-        -webkit-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-        -moz-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-        -ms-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-        -o-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-        transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1); }
-      .handlebar .bar .circlebtn.right {
-        float: right;
-        background: url(../img/chevron_rgt.png) #343434 no-repeat;
-        background-position: 60% 0%;
-        right: 16px; }
-        .handlebar .bar .circlebtn.right .title {
-          right: 50px; }
-      .handlebar .bar .circlebtn:hover.right {
-        background-position: 91.7666666667% -48px; }
-        .handlebar .bar .circlebtn:hover.right .title {
-          top: 0px; }
-      .handlebar .bar .circlebtn.left {
-        float: left;
-        background: url(../img/chevron_lft.png) #343434 no-repeat;
-        background-position: 12px 0px;
-        left: 16px; }
-        .handlebar .bar .circlebtn.left .title {
-          left: 48px; }
-      .handlebar .bar .circlebtn:hover.left {
-        background-position: 12px -48px; }
-        .handlebar .bar .circlebtn:hover.left .title {
-          top: 0px; }
-      .handlebar .bar .circlebtn:hover {
-        width: 180px;
-        border-radius: 10px;
-        border-color: #FFF; }
+    margin: 0 auto;
+    position: relative;
+    top: -55px;
+    font-family: 'Open Sans';
+    -webkit-transition: all 0.25s ease-out 0.45s;
+    -moz-transition: all 0.25s ease-out 0.45s;
+    transition: all 0.25s ease-out 0.45s; }
+
+.wheel-wrap.collapse .retail {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+
+.wheel-wrap.collapse .want-button {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+
+.wheel-wrap.collapse .wheel-outer {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+
+.wheel-wrap.collapse .title {
+  -webkit-transform: translateY(-135px);
+  -moz-transform: translateY(-135px);
+  -ms-transform: translateY(-135px);
+  -o-transform: translateY(-135px);
+  transform: translateY(-135px); }
 
 .wheel-outer {
   position: relative;
   display: inline-block;
   margin: 0 5px 0 26px;
-  top: -78px; }
+  top: -78px;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
   .wheel-outer .wheel {
     width: 204px;
     height: 204px;

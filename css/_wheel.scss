@@ -104,6 +104,10 @@
 
   } // end wheel
 
+  // collapse animation 
+  @include transition (all 0.25s ease-in);
+  @include transform(scale(1));
+
 } // end wheel-outer
 
 .price-window {

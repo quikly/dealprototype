@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var detailsBtn, handleBar, handlebarSmall, returnBtn, shareBtn;
+    var detailsBtn, handleBar, returnBtn, shareBtn;
 
     detailsBtn = '';
 
@@ -14,8 +14,6 @@
 
     handleBar = '';
 
-    handlebarSmall = '';
-
     function Landing() {
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
@@ -24,7 +22,6 @@
       this.returnBtn = $('.return-btn');
       this.handleBar = $('.handlebar');
       this.shareBtn = $('.share');
-      this.handlebarSmall = $('.handlebar-small');
       this.initWaypoint();
       this.bindButtons();
     }
@@ -47,20 +44,18 @@
       var _this = this;
 
       return this.handleBar.waypoint(function(direction) {
+        _this.handleBar.toggleClass('collapse');
+        $('.wheel-wrap').toggleClass('collapse');
         if (direction === 'down') {
-          _this.handleBar.fadeOut('fast');
           _this.detailsBtn.fadeOut('fast');
-          _this.handlebarSmall.fadeIn('fast');
           return _this.returnBtn.fadeIn('fast');
         } else {
-          _this.handleBar.fadeIn('fast');
           _this.detailsBtn.fadeIn('fast');
-          _this.returnBtn.fadeOut('fast');
-          return _this.handlebarSmall.fadeOut('fast');
+          return _this.returnBtn.fadeOut('fast');
         }
       }, {
         context: '#main-wrap',
-        offset: '-200px'
+        offset: '0px'
       });
     };
 

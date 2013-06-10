@@ -4,14 +4,12 @@ class Landing
   returnBtn = ''
   shareBtn = ''
   handleBar = ''
-  handlebarSmall = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
     @handleBar  = $('.handlebar')
     @shareBtn   = $('.share')
-    @handlebarSmall  = $('.handlebar-small')
     @initWaypoint()
     @bindButtons()
 
@@ -26,21 +24,20 @@ class Landing
 
   initWaypoint: ->
     @handleBar.waypoint( (direction) =>
+      @handleBar.toggleClass('collapse')
+      $('.wheel-wrap').toggleClass('collapse')
+      
       if direction is 'down'
-        @handleBar.fadeOut('fast')
         @detailsBtn.fadeOut('fast')
-
-        @handlebarSmall.fadeIn('fast')
         @returnBtn.fadeIn('fast')
       else
-        @handleBar.fadeIn('fast')
         @detailsBtn.fadeIn('fast')
-        
         @returnBtn.fadeOut('fast')
-        @handlebarSmall.fadeOut('fast')
+        
     , {
         context: '#main-wrap',
-        offset: '-200px'
+        offset: '0px'
+           #(-$(this).height()) + 80 + 'px'
     })
 
   onClick: (e, el) =>
@@ -60,7 +57,7 @@ class Landing
 
   shareHover: (el) =>
     $('.share-items').toggleClass('slide-down');
-    
+
 
     
     

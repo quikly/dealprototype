@@ -27,12 +27,6 @@
   @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 ); /* IE6-9 */
 
-  -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-         -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-          -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-           -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-              transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-
   @include opensans-reg;
   // HOVER STATE
 
@@ -42,4 +36,11 @@
     @include linear-gradient(#82d5ec, #48889e, $fallback: #82d5ec);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 ); /* IE6-9 */
   }
+
+  // FOR Collapse Animation
+  @include transition (transition-property-names((transform), moz) 1.0s ease-in 0.25s);
+  @include transform(scale(1));
 }
+
+
+
