@@ -37,7 +37,7 @@ class Landing
     , {
         context: '#main-wrap',
         offset: '0px'
-           #(-$(this).height() + 80 )
+           #(-$(this).height())
     })
 
   onClick: (e, el) =>
