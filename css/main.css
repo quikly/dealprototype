@@ -591,7 +591,7 @@ body {
     display: inline-block;
     position: relative;
     text-indent: -9999px;
-    margin: 0 auto 55px auto;
+    margin: 0 auto;
     background: url(../img/return_btn.png) top center no-repeat;
     background-size: 140px 30px;
     width: 140px;
@@ -601,7 +601,8 @@ body {
       position: fixed;
       top: 80px;
       left: 50%;
-      margin-left: -70px; }
+      margin-left: -70px;
+      z-index: 2000; }
   .detail .info {
     font-family: 'Open Sans';
     font-weight: 200;
@@ -610,7 +611,7 @@ body {
     text-align: center;
     color: #5d5d5d;
     width: 900px;
-    margin: 0 auto 0px auto; }
+    margin: 50px auto 0 auto; }
   .detail .want-button {
     width: 180px;
     height: 60px;
