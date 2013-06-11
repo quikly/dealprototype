@@ -124,50 +124,54 @@ $yellow: #FFE57E;
    Author's custom styles
    ========================================================================== */
 
-#main-wrap {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    background: url(../img/hero_bg.jpg) center top no-repeat;
-    background-size: cover;
-    position: fixed;
-    overflow-x: hidden;
-    overflow-y: auto;
+body { 
+  overflow-x: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background: url(../img/hero_bg.jpg) center top no-repeat;
+  background-size: cover;
+  position: absolute;
 }
     
-    .landing {
-        width: 100%;
-        min-width: 800px;
-        height: 100%; &.collapse {
+.landing {
+  width: 100%;
+  min-width: 800px;
+  min-height: 800px;
+  height: 100%; 
+
+  &.collapse {
     position: fixed;
     top: 0;
     height: 80px;
     min-height: 0px;
     z-index: 2000;
   }
-        position: relative;
-    }
+}
 
-    .details-btn {
-        /* position:absolute;
-        left:-25px;
-        right:0;
-        bottom: 0;
-        margin-left:auto;
-        margin-right:auto;
-        */
-        display: inline-block;
-        background: url(../img/details_btn.png);
-        background-size: 140px 30px;
-        width: 140px;
-        height: 30px;
-        cursor: pointer;
-    }
+.details-btn {
+  /* position:absolute;
+  left:-25px;
+  right:0;
+  bottom: 0;
+  margin-left:auto;
+  margin-right:auto;
+  */
+  display: inline-block;
+  background: url(../img/details_btn.png);
+  background-size: 140px 30px;
+  width: 140px;
+  height: 30px;
+  cursor: pointer;
+}
 
-    @import "handlebar";
-    @import "wheel";
-    @import "nav";
-    @import "detail";
+@import "handlebar";
+@import "wheel";
+@import "nav";
+@import "detail";
 
 
 /* ==========================================================================

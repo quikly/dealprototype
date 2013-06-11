@@ -7,6 +7,7 @@ class Landing
   bar = ''
   mainWrap = ''
   detail = ''
+  landing = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
@@ -14,11 +15,18 @@ class Landing
     @shareBtn   = $('.share')
 
     @handleBar  = $('.handlebar')
-    @bar  = $('.bar')
+    @bar        = $('.bar')
     @mainWrap   = $('#main-wrap')
+    @landing    = $('.landing')
+
+    @landing.height(window.innerHeight)
 
     @initWaypoint()
     @bindButtons()
+    $(window).resize((e)->
+      #console.log e.currentTarget
+      landing.height = e.currentTarget.innerHeight
+    )
 
   bindButtons: =>
     @detailsBtn.bind 'click', (e) =>
@@ -33,12 +41,13 @@ class Landing
     @handleBar.waypoint( (direction) =>
       console.log 'hello'
       @bar.toggleClass('collapse')
+      @handleBar.toggleClass('collapse')
       $('.wheel-wrap').toggleClass('collapse')
       @detailsBtn.toggle()
       @returnBtn.toggleClass('invisible')
       
     , {
-        context: '#main-wrap',
+        #context: '#main-wrap',
         offset: '0px'
            #(-$(this).height())
     })
@@ -46,9 +55,9 @@ class Landing
   onClick: (e, el) =>
     e.preventDefault()
     href = el.attr('href')
-    offsetTop = $(href).offset().top+1;
+    offsetTop = $(href).offset().top-80;
     
-    @mainWrap.stop().animate({ 
+    $('body').stop().animate({ 
         scrollTop: offsetTop
     }, 300)
 

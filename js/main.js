@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var bar, detail, detailsBtn, handleBar, mainWrap, returnBtn, shareBtn;
+    var bar, detail, detailsBtn, handleBar, landing, mainWrap, returnBtn, shareBtn;
 
     detailsBtn = '';
 
@@ -20,6 +20,8 @@
 
     detail = '';
 
+    landing = '';
+
     function Landing() {
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
@@ -30,8 +32,13 @@
       this.handleBar = $('.handlebar');
       this.bar = $('.bar');
       this.mainWrap = $('#main-wrap');
+      this.landing = $('.landing');
+      this.landing.height(window.innerHeight);
       this.initWaypoint();
       this.bindButtons();
+      $(window).resize(function(e) {
+        return landing.height = e.currentTarget.innerHeight;
+      });
     }
 
     Landing.prototype.bindButtons = function() {
@@ -54,11 +61,11 @@
       return this.handleBar.waypoint(function(direction) {
         console.log('hello');
         _this.bar.toggleClass('collapse');
+        _this.handleBar.toggleClass('collapse');
         $('.wheel-wrap').toggleClass('collapse');
         _this.detailsBtn.toggle();
         return _this.returnBtn.toggleClass('invisible');
       }, {
-        context: '#main-wrap',
         offset: '0px'
       });
     };
@@ -68,8 +75,8 @@
 
       e.preventDefault();
       href = el.attr('href');
-      offsetTop = $(href).offset().top + 1;
-      return this.mainWrap.stop().animate({
+      offsetTop = $(href).offset().top - 80;
+      return $('body').stop().animate({
         scrollTop: offsetTop
       }, 300);
     };
