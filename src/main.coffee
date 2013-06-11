@@ -18,15 +18,16 @@ class Landing
     @bar        = $('.bar')
     @mainWrap   = $('#main-wrap')
     @landing    = $('.landing')
-
-    @landing.height(window.innerHeight)
+    
 
     @initWaypoint()
     @bindButtons()
-    $(window).resize((e)->
-      #console.log e.currentTarget
-      landing.height = e.currentTarget.innerHeight
-    )
+    $(window).resize (e) => 
+      @resizeLanding()
+
+  resizeLanding: (e) =>
+    @landing.css({'height':($(window).height())+'px'});
+    console.log @landing.height()
 
   bindButtons: =>
     @detailsBtn.bind 'click', (e) =>

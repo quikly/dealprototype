@@ -26,20 +26,30 @@
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
       this.onClick = __bind(this.onClick, this);
-      this.bindButtons = __bind(this.bindButtons, this);      this.detailsBtn = $('.details-btn');
+      this.bindButtons = __bind(this.bindButtons, this);
+      this.resizeLanding = __bind(this.resizeLanding, this);
+      var _this = this;
+
+      this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
       this.shareBtn = $('.share');
       this.handleBar = $('.handlebar');
       this.bar = $('.bar');
       this.mainWrap = $('#main-wrap');
       this.landing = $('.landing');
-      this.landing.height(window.innerHeight);
       this.initWaypoint();
       this.bindButtons();
       $(window).resize(function(e) {
-        return landing.height = e.currentTarget.innerHeight;
+        return _this.resizeLanding();
       });
     }
+
+    Landing.prototype.resizeLanding = function(e) {
+      this.landing.css({
+        'height': ($(window).height()) + 'px'
+      });
+      return console.log(this.landing.height());
+    };
 
     Landing.prototype.bindButtons = function() {
       var _this = this;
