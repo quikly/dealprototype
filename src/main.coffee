@@ -6,14 +6,17 @@ class Landing
   handleBar = ''
   bar = ''
   mainWrap = ''
+  detail = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
+    @shareBtn   = $('.share')
+
     @handleBar  = $('.handlebar')
     @bar  = $('.bar')
-    @shareBtn   = $('.share')
     @mainWrap   = $('#main-wrap')
+
     @initWaypoint()
     @bindButtons()
 

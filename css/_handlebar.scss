@@ -20,17 +20,21 @@
      &.collapse {
       position: fixed;
       top: 0;
+      left: 0;
       z-index: 2000;
     }
+
   }
 
     .wheel-wrap {
       position:absolute;
+      height: 80px;
       left:0;
       right:0;
       margin-left:auto;
       margin-right:auto;
       text-align:center;
+      pointer-events: none;
 
         .retail {
           font-size: 22px;
@@ -43,7 +47,6 @@
           @include opensans-reg;
 
           // Used for Collapsed Animation
-          
           @include transform(scale(1));
 
           .price {

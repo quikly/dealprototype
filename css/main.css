@@ -176,15 +176,18 @@ body {
   .bar.collapse {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 2000; }
 
 .wheel-wrap {
   position: absolute;
+  height: 80px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
+  text-align: center;
+  pointer-events: none; }
   .wheel-wrap .retail {
     font-size: 22px;
     font-weight: 600;

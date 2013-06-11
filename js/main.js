@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var bar, detailsBtn, handleBar, mainWrap, returnBtn, shareBtn;
+    var bar, detail, detailsBtn, handleBar, mainWrap, returnBtn, shareBtn;
 
     detailsBtn = '';
 
@@ -18,15 +18,17 @@
 
     mainWrap = '';
 
+    detail = '';
+
     function Landing() {
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
       this.onClick = __bind(this.onClick, this);
       this.bindButtons = __bind(this.bindButtons, this);      this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
+      this.shareBtn = $('.share');
       this.handleBar = $('.handlebar');
       this.bar = $('.bar');
-      this.shareBtn = $('.share');
       this.mainWrap = $('#main-wrap');
       this.initWaypoint();
       this.bindButtons();
