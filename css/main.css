@@ -80,6 +80,12 @@ body {
   min-width: 800px;
   height: 100%;
   position: relative; }
+  .landing.collapse {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    min-height: 0px;
+    z-index: 2000; }
 
 .details-btn {
   /* position:absolute;
@@ -105,12 +111,6 @@ body {
   -webkit-transition: all 0.3s ease-out 0.75s;
   -moz-transition: all 0.3s ease-out 0.75s;
   transition: all 0.3s ease-out 0.75s; }
-  .handlebar.collapse {
-    position: fixed;
-    top: 0;
-    height: 80px;
-    min-height: 0px;
-    z-index: 2000; }
 
 .bar {
   width: 100%;
@@ -173,6 +173,10 @@ body {
       width: 180px;
       border-radius: 10px;
       border-color: #FFF; }
+  .bar.collapse {
+    position: fixed;
+    top: 0;
+    z-index: 2000; }
 
 .wheel-wrap {
   position: absolute;

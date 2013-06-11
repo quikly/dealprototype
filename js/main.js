@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var detailsBtn, handleBar, mainWrap, returnBtn, shareBtn;
+    var bar, detailsBtn, handleBar, mainWrap, returnBtn, shareBtn;
 
     detailsBtn = '';
 
@@ -13,6 +13,8 @@
     shareBtn = '';
 
     handleBar = '';
+
+    bar = '';
 
     mainWrap = '';
 
@@ -23,6 +25,7 @@
       this.bindButtons = __bind(this.bindButtons, this);      this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
       this.handleBar = $('.handlebar');
+      this.bar = $('.bar');
       this.shareBtn = $('.share');
       this.mainWrap = $('#main-wrap');
       this.initWaypoint();
@@ -48,13 +51,10 @@
 
       return this.handleBar.waypoint(function(direction) {
         console.log('hello');
-        _this.handleBar.toggleClass('collapse');
+        _this.bar.toggleClass('collapse');
         $('.wheel-wrap').toggleClass('collapse');
-        if (direction === 'down') {
-          return _this.detailsBtn.toggle();
-        } else {
-          return _this.detailsBtn.toggle();
-        }
+        _this.detailsBtn.toggle();
+        return _this.returnBtn.toggleClass('invisible');
       }, {
         context: '#main-wrap',
         offset: '0px'

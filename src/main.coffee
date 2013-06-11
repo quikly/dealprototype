@@ -4,12 +4,14 @@ class Landing
   returnBtn = ''
   shareBtn = ''
   handleBar = ''
+  bar = ''
   mainWrap = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
     @handleBar  = $('.handlebar')
+    @bar  = $('.bar')
     @shareBtn   = $('.share')
     @mainWrap   = $('#main-wrap')
     @initWaypoint()
@@ -27,13 +29,11 @@ class Landing
   initWaypoint: ->
     @handleBar.waypoint( (direction) =>
       console.log 'hello'
-      @handleBar.toggleClass('collapse')
+      @bar.toggleClass('collapse')
       $('.wheel-wrap').toggleClass('collapse')
+      @detailsBtn.toggle()
+      @returnBtn.toggleClass('invisible')
       
-      if direction is 'down'
-        @detailsBtn.toggle()
-      else
-        @detailsBtn.toggle()
     , {
         context: '#main-wrap',
         offset: '0px'
