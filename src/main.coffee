@@ -18,12 +18,14 @@ class Landing
     @bar        = $('.bar')
     @mainWrap   = $('#main-wrap')
     @landing    = $('.landing')
+    @detail     = $('.detail')
     
-
-    @initWaypoint()
+    @initDetailWaypoint()
+    @initReturnWaypoint()
     @bindButtons()
     $(window).resize (e) => 
       @resizeLanding()
+    @resizeLanding()
 
   resizeLanding: (e) =>
     @landing.css({'height':($(window).height())+'px'});
@@ -38,18 +40,23 @@ class Landing
         @shareHover($(e.currentTarget))
 
 
-  initWaypoint: ->
+  initDetailWaypoint: ->
     @handleBar.waypoint( (direction) =>
-      console.log 'hello'
       @bar.toggleClass('collapse')
-      @handleBar.toggleClass('collapse')
       $('.wheel-wrap').toggleClass('collapse')
       @detailsBtn.toggle()
       @returnBtn.toggleClass('invisible')
-      
+    , {
+        offset: '0px'
+    })
+
+  initReturnWaypoint: ->
+    @detail.waypoint( (direction) =>
+      console.log('FIXIE')
+      @returnBtn.toggleClass('collapse')
     , {
         #context: '#main-wrap',
-        offset: '0px'
+        offset: '80px'
            #(-$(this).height())
     })
 

@@ -4,7 +4,6 @@
   margin: 0 5px 0 26px;
   top:  -78px;
 
-
   .wheel {
     width: 204px;
     height: 204px;
@@ -12,7 +11,7 @@
     border: 8px solid #5d5d5d;
     border-radius: 516px;
 
-    
+
     @include linear-gradient(#4e4e4e, #000, $fallback: #4e4e4e);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 ); /* IE6-9 */
 

@@ -7,8 +7,8 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75); 
   
+  
   @include transition (all 0.3s ease-out 0.75s);
-}
 
   .bar {
     width: 100%;
@@ -25,6 +25,8 @@
     }
   }
 
+} // End HandleBar
+
     .wheel-wrap {
       position:absolute;
       height: 80px;
@@ -33,27 +35,28 @@
       margin-left:auto;
       margin-right:auto;
       text-align:center;
+      pointer-events: all;
       
 
-        .retail {
-          font-size: 22px;
-          font-weight: 600;
-          margin: 25px 0 0 0;
-          position: relative;
-          display: inline-block;
-          vertical-align: top;
+    .retail {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 25px 0 0 0;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
 
-          @include opensans-reg;
+      @include opensans-reg;
 
-          // Used for Collapsed Animation
-          @include transform(scale(1));
+      // Used for Collapsed Animation
+      @include transform(scale(1));
 
-          .price {
-            color: $redd;
-            text-decoration: line-through;
-          }
+      .price {
+        color: $redd;
+        text-decoration: line-through;
+      }
 
-        } // close retail 
+    } // close retail 
 
         @import "wantbutton"; 
 
@@ -70,12 +73,16 @@
         
     } // close wheel wrap
 
+.wheel-wrap.collapse {
+  pointer-events:none
+}
+
 .wheel-wrap.collapse .retail  {
   @include transform(scale(0));   
 }
 
 .wheel-wrap.collapse .want-button {
-  @include transform(scale(0));   
+  @include transform(scale(0));
 }
 
 .wheel-wrap.collapse .wheel-outer {

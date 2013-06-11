@@ -37,11 +37,14 @@
       this.bar = $('.bar');
       this.mainWrap = $('#main-wrap');
       this.landing = $('.landing');
-      this.initWaypoint();
+      this.detail = $('.detail');
+      this.initDetailWaypoint();
+      this.initReturnWaypoint();
       this.bindButtons();
       $(window).resize(function(e) {
         return _this.resizeLanding();
       });
+      this.resizeLanding();
     }
 
     Landing.prototype.resizeLanding = function(e) {
@@ -65,18 +68,27 @@
       });
     };
 
-    Landing.prototype.initWaypoint = function() {
+    Landing.prototype.initDetailWaypoint = function() {
       var _this = this;
 
       return this.handleBar.waypoint(function(direction) {
-        console.log('hello');
         _this.bar.toggleClass('collapse');
-        _this.handleBar.toggleClass('collapse');
         $('.wheel-wrap').toggleClass('collapse');
         _this.detailsBtn.toggle();
         return _this.returnBtn.toggleClass('invisible');
       }, {
         offset: '0px'
+      });
+    };
+
+    Landing.prototype.initReturnWaypoint = function() {
+      var _this = this;
+
+      return this.detail.waypoint(function(direction) {
+        console.log('FIXIE');
+        return _this.returnBtn.toggleClass('collapse');
+      }, {
+        offset: '80px'
       });
     };
 

@@ -111,73 +111,72 @@ body {
   -webkit-transition: all 0.3s ease-out 0.75s;
   -moz-transition: all 0.3s ease-out 0.75s;
   transition: all 0.3s ease-out 0.75s; }
-
-.bar {
-  width: 100%;
-  height: 80px;
-  background-color: #343434; }
-  .bar .circlebtn {
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    margin-top: 16px;
-    overflow: hidden;
-    color: #767676;
-    border-color: #767676;
-    border-radius: 50px;
-    border: 3px solid;
-    text-align: center;
-    text-transform: uppercase;
-    -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
-    .bar .circlebtn .title {
-      font-family: 'League Gothic';
-      font-weight: 200;
-      font-size: 20px;
-      line-height: 18px;
-      color: #FFF;
+  .handlebar .bar {
+    width: 100%;
+    height: 80px;
+    background-color: #343434; }
+    .handlebar .bar .circlebtn {
       position: absolute;
-      width: 118px;
-      top: -60px;
-      -webkit-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-      -moz-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-      -ms-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-      -o-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-      transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1); }
-    .bar .circlebtn.right {
-      float: right;
-      background: url(../img/chevron_rgt.png) #343434 no-repeat;
-      background-position: 60% 0%;
-      right: 16px; }
-      .bar .circlebtn.right .title {
-        right: 50px; }
-    .bar .circlebtn:hover.right {
-      background-position: 91.7666666667% -48px; }
-      .bar .circlebtn:hover.right .title {
-        top: 0px; }
-    .bar .circlebtn.left {
-      float: left;
-      background: url(../img/chevron_lft.png) #343434 no-repeat;
-      background-position: 12px 0px;
-      left: 16px; }
-      .bar .circlebtn.left .title {
-        left: 48px; }
-    .bar .circlebtn:hover.left {
-      background-position: 12px -48px; }
-      .bar .circlebtn:hover.left .title {
-        top: 0px; }
-    .bar .circlebtn:hover {
-      width: 180px;
-      border-radius: 10px;
-      border-color: #FFF; }
-  .bar.collapse {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000; }
+      width: 42px;
+      height: 42px;
+      margin-top: 16px;
+      overflow: hidden;
+      color: #767676;
+      border-color: #767676;
+      border-radius: 50px;
+      border: 3px solid;
+      text-align: center;
+      text-transform: uppercase;
+      -webkit-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+      -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+      -ms-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1); }
+      .handlebar .bar .circlebtn .title {
+        font-family: 'League Gothic';
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 18px;
+        color: #FFF;
+        position: absolute;
+        width: 118px;
+        top: -60px;
+        -webkit-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+        -moz-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+        -ms-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+        -o-transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1); }
+      .handlebar .bar .circlebtn.right {
+        float: right;
+        background: url(../img/chevron_rgt.png) #343434 no-repeat;
+        background-position: 60% 0%;
+        right: 16px; }
+        .handlebar .bar .circlebtn.right .title {
+          right: 50px; }
+      .handlebar .bar .circlebtn:hover.right {
+        background-position: 91.7666666667% -48px; }
+        .handlebar .bar .circlebtn:hover.right .title {
+          top: 0px; }
+      .handlebar .bar .circlebtn.left {
+        float: left;
+        background: url(../img/chevron_lft.png) #343434 no-repeat;
+        background-position: 12px 0px;
+        left: 16px; }
+        .handlebar .bar .circlebtn.left .title {
+          left: 48px; }
+      .handlebar .bar .circlebtn:hover.left {
+        background-position: 12px -48px; }
+        .handlebar .bar .circlebtn:hover.left .title {
+          top: 0px; }
+      .handlebar .bar .circlebtn:hover {
+        width: 180px;
+        border-radius: 10px;
+        border-color: #FFF; }
+    .handlebar .bar.collapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2000; }
 
 .wheel-wrap {
   position: absolute;
@@ -186,7 +185,8 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
+  text-align: center;
+  pointer-events: all; }
   .wheel-wrap .retail {
     font-size: 22px;
     font-weight: 600;
@@ -256,6 +256,9 @@ body {
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     transition: all 0.25s ease; }
+
+.wheel-wrap.collapse {
+  pointer-events: none; }
 
 .wheel-wrap.collapse .retail {
   -webkit-transform: scale(0);
@@ -587,12 +590,18 @@ body {
   .detail .return-btn {
     display: inline-block;
     position: relative;
+    text-indent: -9999px;
     margin: 0 auto 55px auto;
-    background: url(../img/return_btn.png);
+    background: url(../img/return_btn.png) top center no-repeat;
     background-size: 140px 30px;
     width: 140px;
     height: 30px;
     cursor: pointer; }
+    .detail .return-btn.collapse {
+      position: fixed;
+      top: 80px;
+      left: 50%;
+      margin-left: -70px; }
   .detail .info {
     font-family: 'Open Sans';
     font-weight: 200;
