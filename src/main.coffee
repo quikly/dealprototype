@@ -56,7 +56,7 @@ class Landing
       @returnBtn.toggleClass('collapse')
     , {
         #context: '#main-wrap',
-        offset: '80px'
+        offset: '78px'
            #(-$(this).height())
     })
 

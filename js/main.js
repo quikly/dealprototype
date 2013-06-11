@@ -88,7 +88,7 @@
         console.log('FIXIE');
         return _this.returnBtn.toggleClass('collapse');
       }, {
-        offset: '80px'
+        offset: '78px'
       });
     };
 

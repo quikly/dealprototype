@@ -31,10 +31,14 @@
   // HOVER STATE
 
   &:hover {
-    border: 4px solid;
+    border: 4px solid #70c0d6;
     padding-top: 14px;
-    @include linear-gradient(#82d5ec, #48889e, $fallback: #82d5ec);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 ); /* IE6-9 */
+    background: #FFF;
+    color: #70c0d6;
+    text-shadow: 1px 1px 0px#70c0d6;
+
+    //@include linear-gradient(#82d5ec, #48889e, $fallback: #82d5ec);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82d5ec', endColorstr='#48889e',GradientType=0 ); /* IE6-9 */
   }
 
   // FOR Collapse Animation
