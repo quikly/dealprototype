@@ -680,59 +680,28 @@ body {
     .detail .want-button:hover {
       border: 6px solid #FFF;
       padding-top: 20px; }
-  .detail .items-container {
-    width: 100%;
-    padding-top: 55px;
-    background-color: #c8c8c8;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c8c8c8), color-stop(10%, #e3e3e3), color-stop(25%, white));
-    background-image: -webkit-linear-gradient(#c8c8c8 0%, #e3e3e3 10%, white 25%);
-    background-image: linear-gradient(#c8c8c8 0%, #e3e3e3 10%, white 25%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8c8c8', endColorstr='#FFF',GradientType=0 );
-    /* IE6-9 */ }
 
-.item {
-  border: 3px solid #e6e6e6;
-  background: #70c0d6; }
+.items-container {
+  width: 100%;
+  padding-top: 55px;
+  background-color: #c8c8c8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c8c8c8), color-stop(10%, #e3e3e3), color-stop(25%, white));
+  background-image: -webkit-linear-gradient(#c8c8c8 0%, #e3e3e3 10%, white 25%);
+  background-image: linear-gradient(#c8c8c8 0%, #e3e3e3 10%, white 25%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8c8c8', endColorstr='#FFF',GradientType=0 );
+  /* IE6-9 */ }
+  .items-container .item-grid {
+    width: 95%;
+    margin: 0 auto; }
+    .items-container .item-grid .item {
+      width: 300px;
+      float: left;
+      margin-bottom: 10px;
+      border: 3px solid #e6e6e6;
+      background: #70c0d6; }
+      .items-container .item-grid .item img {
+        width: 100%; }
 
-/* -- FLUID GRID STYLES -- */
-#Grid {
-  margin-bottom: 40px;
-  padding: 0 20px;
-  text-align: justify;
-  font-size: 0.1px; }
-
-#Grid li {
-  display: inline-block;
-  width: 300px;
-  margin-bottom: 2.5%; }
-
-#Grid::after {
-  content: '';
-  display: inline-block;
-  width: 100%; }
-
-#Grid .placeholder {
-  padding: 0; }
-
-/* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
-/* 3 COL */
-@media (max-width: 800px) {
-  #Grid li {
-    width: 31%;
-    padding-top: 31%;
-    margin-bottom: 3%; } }
-/* 2 COL */
-@media (max-width: 600px) {
-  #Grid li {
-    width: 48%;
-    padding-top: 48%;
-    margin-bottom: 4%; } }
-/* SINGLE COL */
-@media (max-width: 400px) {
-  #Grid li {
-    width: 100%;
-    padding-top: 100%;
-    margin-bottom: 5%; } }
 /* ==========================================================================
    Media Queries
    ========================================================================== */

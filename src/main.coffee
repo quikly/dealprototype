@@ -22,6 +22,9 @@ class Landing
     
     @initDetailWaypoint()
     @initReturnWaypoint()
+
+    @makeMason()
+
     @bindButtons()
     $(window).resize (e) => 
       @resizeLanding()
@@ -78,6 +81,12 @@ class Landing
   shareHover: (el) =>
     $('.share-items').toggleClass('slide-down');
 
+  makeMason: ->
+    wall = new Masonry( document.getElementById('masonry'), {
+      columnWidth: 300,
+      gutterWidth: 20,
+      isFitWidth: true
+    });
 
     
     

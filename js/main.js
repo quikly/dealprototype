@@ -40,6 +40,7 @@
       this.detail = $('.detail');
       this.initDetailWaypoint();
       this.initReturnWaypoint();
+      this.makeMason();
       this.bindButtons();
       $(window).resize(function(e) {
         return _this.resizeLanding();
@@ -112,6 +113,16 @@
 
     Landing.prototype.shareHover = function(el) {
       return $('.share-items').toggleClass('slide-down');
+    };
+
+    Landing.prototype.makeMason = function() {
+      var wall;
+
+      return wall = new Masonry(document.getElementById('masonry'), {
+        columnWidth: 300,
+        gutterWidth: 20,
+        isFitWidth: true
+      });
     };
 
     return Landing;
