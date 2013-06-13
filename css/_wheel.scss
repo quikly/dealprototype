@@ -75,7 +75,7 @@
         margin: 0 0 15px 0;
 
         .tier {
-          @extend tier;
+          @extend tier !optional;
           line-height: 25px;
           display: inline;
         }
