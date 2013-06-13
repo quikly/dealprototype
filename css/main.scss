@@ -1,256 +1,35 @@
+
 /* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   Vendor Imports
    ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #FFF;
-    -webkit-font-smoothing:antialiased;
-}
-
-body {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-img {
-    vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
-body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
-}
-
-
-.transition {
- -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    -moz-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-     -ms-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-      -o-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-
-// ========= Imports =========
 
 @import "bourbon/bourbon";
 
-// ========= Mixins =========
 
-@mixin opensans-reg {
-  font-family: 'Open Sans';
-}
+/* ==========================================================================
+   Global Mixins
+   ========================================================================== */
 
-@mixin opensans-light {
-  font-family: 'Open Sans';
-  font-weight: 200;
-}
-
-@mixin opensans-semi {
-  font-family: 'Open Sans';
-  font-weight: 400;
-}
-
-@mixin opensans-bold {
-  font-family: 'Open Sans';
-  font-weight: 700;
-}
-
-@mixin leaguge-gothic {
-    font-family: 'League Gothic';
-    font-weight: 200; 
-}
-
-// ========= VARS ========= 
-
-$ligthBlack: #343434;
-$middleBlack: #4B4B4B;
-$darkBlack: #5D5D5D;
-$lightGrey:  #767676;
-$middleGrey: #e6e6e6; 
-$discountGrey: #9D9D9D;
-$redd: #E83A3A;
-$yellow: #FFE57E;
+@import "global/mixins";
+@import "global/colors";
 
 
 /* ==========================================================================
-   Author's custom styles
+   Main Styles
    ========================================================================== */
 
-body { 
-  overflow-x: hidden;
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  background: url(../img/hero_bg.jpg) center top no-repeat;
-  background-size: cover;
-  position: absolute;
-}
-    
-.landing {
-  width: 100%;
-  min-width: 800px;
-  height: 800px; 
-
-  &.collapse {
-    position: fixed;
-    top: 0;
-    height: 80px;
-    min-height: 0px;
-    z-index: 2000;
-  }
-}
-
-.details-btn {
-  /* position:absolute;
-  left:-25px;
-  right:0;
-  bottom: 0;
-  margin-left:auto;
-  margin-right:auto;
-  */
-  display: inline-block;
-  background: url(../img/details_btn.png);
-  background-size: 140px 30px;
-  width: 140px;
-  height: 30px;
-  cursor: pointer;
-}
-
+@import "boiler_reset";
+@import "landing";
 @import "handlebar";
-@import "wheel";
+@import "circlebutton";
+@import "wantbutton";
+@import "wheel";  
+@import "pointer";
 @import "nav";
-@import "detail";
+@import "detail"; 
+@import "itemgrid";
+@import "media_queries";
+@import "helpers";
 
 
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-
-
-}
-
-@media only screen and (min-width: 768px) {
-
-
-}
-
-@media only screen and (min-width: 1140px) {
-
-
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}

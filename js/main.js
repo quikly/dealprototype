@@ -121,6 +121,7 @@
       return wall = new Masonry(document.getElementById('masonry'), {
         columnWidth: 300,
         gutterWidth: 20,
+        isResizable: true,
         isFitWidth: true
       });
     };

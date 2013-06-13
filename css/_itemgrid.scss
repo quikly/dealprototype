@@ -1,0 +1,68 @@
+.items-container {
+  width: 100%;
+  padding-top: 55px;
+  @include linear-gradient(#c8c8c8 0%, #e3e3e3 10%, #FFF 25%, $fallback: #c8c8c8);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c8', endColorstr='#FFF',GradientType=0 ); /* IE6-9 */
+
+  .item-grid {
+    width: 95%;
+    margin: 0 auto;
+
+    .item {
+      width: 300px;
+      float: left;
+      margin-bottom: 10px;
+      border: 3px solid $middleGrey;
+      background: #70c0d6;
+
+      img { width: 100%;}
+
+    } // item 
+  } //item-grid
+} // item-container
+
+.item .front, .item .back {
+  position: relative;
+  top: 0;
+  left: 0;
+  
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+}
+
+.item .back {
+  @include transform(rotateY(-180deg));
+}
+
+// Masonry Animation
+
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.masonry {
+  -webkit-transition-property: width, height;
+     -moz-transition-property: width, height;
+      -ms-transition-property: width, height;
+       -o-transition-property: width, height;
+          transition-property: width, height;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+
+
+

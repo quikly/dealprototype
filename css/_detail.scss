@@ -41,8 +41,6 @@
     margin: 50px auto 0 auto;
   }
 
-  @import "wantbutton";
-
   .want-button {
     width: 300px;
     height: 75px;
@@ -60,33 +58,5 @@
   }
 
 } // close detail
-
-
-.items-container {
-  width: 100%;
-  padding-top: 55px;
-  @include linear-gradient(#c8c8c8 0%, #e3e3e3 10%, #FFF 25%, $fallback: #c8c8c8);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c8', endColorstr='#FFF',GradientType=0 ); /* IE6-9 */
-
-  .item-grid {
-    width: 95%;
-    margin: 0 auto;
-
-    .item {
-      width: 300px;
-      float: left;
-      margin-bottom: 10px;
-      border: 3px solid $middleGrey;
-      background: #70c0d6;
-
-      img { 
-        width: 100%;
-      }
-    }
-
-  }
-}
-
-
 
 

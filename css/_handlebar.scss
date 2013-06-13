@@ -14,8 +14,6 @@
     height: 80px;
     background-color: $ligthBlack;
 
-    @import "circlebutton";
-
      &.collapse {
       position: fixed;
       top: 0;
@@ -55,10 +53,7 @@
     text-decoration: line-through;
   }
 
-} // close retail 
-
-    @import "wantbutton"; 
-
+} // end retail 
     .title {
       font-size: 36px;
       width: 100%;
@@ -69,7 +64,7 @@
       @include transition (all 0.25s ease);
     }
     
-} // close wheel wrap
+} // end wheel wrap
 
 .terms {
   color: #FFF;
