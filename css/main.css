@@ -103,7 +103,11 @@ body {
   background-size: 140px 30px;
   width: 140px;
   height: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -70px; }
 
 .handlebar {
   width: 100%;
@@ -597,12 +601,16 @@ body {
     text-indent: -9999px;
     display: inline-block;
     cursor: pointer; }
-    .nav .share-items .item-icon:hover {
-      background-position-y: -24px; }
+    .nav .share-items .item-icon.pine:hover {
+      background-position: 0 -24px; }
     .nav .share-items .item-icon.twt {
-      background-position-x: -24px; }
+      background-position: -24px 0; }
+      .nav .share-items .item-icon.twt:hover {
+        background-position: -24px -24px; }
     .nav .share-items .item-icon.fb {
-      background-position-x: -48px; }
+      background-position: -48px 0; }
+      .nav .share-items .item-icon.fb:hover {
+        background-position: -48px -24px; }
 
 .detail {
   position: relative;
@@ -621,13 +629,19 @@ body {
     background-size: 140px 30px;
     width: 140px;
     height: 30px;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 2000; }
     .detail .return-btn.collapse {
       position: fixed;
       top: 80px;
       left: 50%;
       margin-left: -70px;
-      z-index: 2000; }
+      z-index: 2000;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
   .detail .info {
     font-family: 'Open Sans';
     font-weight: 200;
@@ -664,7 +678,8 @@ body {
     .items-container .item-grid .item {
       width: 300px;
       float: left;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      overflow: hidden; }
       .items-container .item-grid .item img {
         width: 100%; }
 
@@ -714,7 +729,14 @@ body {
   font-size: 18px;
   line-height: 84px;
   padding: 31px 21px 32px 21px;
-  color: #70c0d6; }
+  color: #70c0d6;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+  .back .more:hover {
+    color: #FFF;
+    background-color: #70c0d6;
+    border: 3px solid #FFF; }
 
 .item:hover .back {
   -webkit-transform: rotateY(0deg);

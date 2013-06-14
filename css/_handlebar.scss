@@ -15,6 +15,7 @@
     height: 80px;
     background-color: $ligthBlack;
     @include transform(translate3d(0,0,0));
+    
      &.collapse {
       position: fixed;
       top: 0;

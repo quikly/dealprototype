@@ -104,10 +104,23 @@
       display: inline-block;
       cursor: pointer;
 
-      &:hover{ background-position-y: -24px; }
-      &.pine {}
-      &.twt { background-position-x: -24px; }
-      &.fb { background-position-x: -48px; }
+      
+
+      &.pine {
+        &:hover{ background-position: 0 -24px; }
+      }
+      &.twt { 
+        background-position: -24px 0; 
+        &:hover{ 
+          background-position: -24px -24px; 
+        }
+      }
+      &.fb { 
+        background-position: -48px 0;
+        &:hover{ 
+          background-position: -48px -24px;
+        }
+      }
    }
 
   } // end share item

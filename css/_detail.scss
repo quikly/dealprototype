@@ -19,6 +19,8 @@
     width: 140px;
     height: 30px;
     cursor: pointer;
+    z-index: 2000;
+    
 
     &.collapse {
       position: fixed;
@@ -26,6 +28,7 @@
       left: 50%;
       margin-left: -70px;
       z-index: 2000;
+      @include transform(translate3d(0,0,0));
     }
 
   } //close return btn
