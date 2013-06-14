@@ -111,13 +111,19 @@ body {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
   -webkit-transition: all 0.3s ease-out 0.75s;
   -moz-transition: all 0.3s ease-out 0.75s;
   transition: all 0.3s ease-out 0.75s; }
   .handlebar .bar {
     width: 100%;
     height: 80px;
-    background-color: #343434; }
+    background-color: #343434;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
     .handlebar .bar.collapse {
       position: fixed;
       top: 0;
