@@ -41,7 +41,7 @@
   top: 0;
   left: 0;
   bottom:0;
-  background: #70c0d6;
+  background: $turq;
   @include transform(rotateY(-180deg));
 }
 
@@ -70,12 +70,12 @@
     font-size: 18px;
     line-height: 84px;
     padding: 31px 21px 32px 21px;
-    color: #70c0d6;
+    color: $turq;
     @include transition (all 0.25s ease-out);
 
     &:hover {
       color: #FFF;
-      background-color: #70c0d6;
+      background-color: $turq;
       border: 3px solid #FFF;
     }
   }

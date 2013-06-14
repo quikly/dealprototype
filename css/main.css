@@ -109,6 +109,20 @@ body {
   bottom: 0;
   margin-left: -70px; }
 
+.people {
+  position: relative;
+  float: right;
+  bottom: 0;
+  width: 50px;
+  margin-top: 42px;
+  margin-bottom: 275px;
+  background-color: #70c0d6; }
+  .people .person {
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    margin: 10px; }
+
 .handlebar {
   width: 100%;
   min-height: 275px;
