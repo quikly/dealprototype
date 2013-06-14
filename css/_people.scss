@@ -1,0 +1,65 @@
+
+.people {
+  position: relative;
+  float: right;
+  left: 10px;
+  margin-top: 42px;
+  overflow-y: hidden;
+  padding-left:200px;
+  
+  
+  .person {
+    width: 100%;
+    position: relative;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+    
+  
+    .pic {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border: 3px solid #FFF;
+      border-radius: 100px;
+      z-index: 500;
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -moz-transform-style: preserve-3d;
+      -moz-backface-visibility: hidden;
+      @include transition (all 0.4s cubic-bezier(0.19, 1, 0.22, 1));
+    }
+
+    .name {
+      width: 100%;
+      min-width: 130px;
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      margin: 0;
+      padding: 5px 8px;
+      border-radius: 4px;
+      @include opensans-semi;
+      font-size: 14px;
+      line-height: 19px;
+      background-color: $turq;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      @include transition (all 0.4s cubic-bezier(0.19, 1, 0.22, 1));
+
+    }
+
+    &:hover {
+
+      .pic {
+        @include transform(translateX(-12px) scale(1.1));
+
+      }
+      .name {
+        left: -120px;
+      }
+
+    }
+
+  } // person
+} // people
