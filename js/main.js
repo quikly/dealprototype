@@ -23,6 +23,7 @@
     landing = '';
 
     function Landing() {
+      this.peopleHeight = __bind(this.peopleHeight, this);
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
       this.onClick = __bind(this.onClick, this);
@@ -43,16 +44,17 @@
       this.makeMason();
       this.bindButtons();
       $(window).resize(function(e) {
-        return _this.resizeLanding();
+        _this.resizeLanding();
+        return _this.peopleHeight();
       });
+      this.peopleHeight();
       this.resizeLanding();
     }
 
     Landing.prototype.resizeLanding = function(e) {
-      this.landing.css({
+      return this.landing.css({
         'height': ($(window).height()) + 'px'
       });
-      return console.log(this.landing.height());
     };
 
     Landing.prototype.bindButtons = function() {
@@ -124,6 +126,14 @@
         isResizable: true,
         isFitWidth: true
       });
+    };
+
+    Landing.prototype.peopleHeight = function() {
+      var h;
+
+      h = window.innerHeight - this.handleBar.height();
+      $('.people').height(h);
+      return console.log('people height should be: ' + h);
     };
 
     return Landing;

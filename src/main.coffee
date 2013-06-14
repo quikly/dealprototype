@@ -28,11 +28,13 @@ class Landing
     @bindButtons()
     $(window).resize (e) => 
       @resizeLanding()
+      @peopleHeight()
+    @peopleHeight()
     @resizeLanding()
 
   resizeLanding: (e) =>
     @landing.css({'height':($(window).height())+'px'});
-    console.log @landing.height()
+    
 
   bindButtons: =>
     @detailsBtn.bind 'click', (e) =>
@@ -88,6 +90,11 @@ class Landing
       isResizable: true,
       isFitWidth: true
     });
+
+  peopleHeight: =>
+    h = window.innerHeight - @handleBar.height()
+    $('.people').height(h)
+    console.log 'people height should be: ' + h
 
     
     
