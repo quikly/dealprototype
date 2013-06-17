@@ -8,8 +8,10 @@
     width: 204px;
     height: 204px;
     overflow: hidden;
+    position: relative;
     border: 8px solid #5d5d5d;
     border-radius: 516px;
+
     @include transform(translate3d(0px,0px,0px));
 
 
@@ -20,11 +22,25 @@
        -moz-box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
             box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
 
+    .wheel-red {
+      width: 204px;
+      height: 204px;
+      background: $redd;
+      //background: rgb(232,58,58);
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      border-radius: 516px;
+    }
+
     .price-window {
       width: 100%;
       position: relative;
       overflow: hidden;
       top: -20px; // offset by number of price childs 3*160
+      z-index: 2;
       
       // Tier is a child of price, placed here so price-next tier can extend it
       .tier { 
@@ -39,9 +55,14 @@
           @include leaguge-gothic;
       }
       
+      hr {
+        border-top: 1px solid #323232;
+        width: 60%;
+        position: relative;
+        margin: 0 auto;
+      }
       .price {
         padding-top: 25px;
-        border-top: 1px solid #323232;
         text-align: center;
         position: relative;
         z-index: 0;
@@ -123,7 +144,7 @@
     top: -20px;
   }
   50% {
-   top: 10px;
+   top: 8px;
   }
   100% {
     top: -20px;
@@ -136,12 +157,9 @@
 // border 
 
 .wheel-highlight {
-
   @include animation-name(borderHighlight);
-  @include animation-duration(2s);
+  @include animation-duration(1s);
   @include animation-timing-function(ease-in-out);
-  
-
 } 
 
 @include keyframes(borderHighlight) {
@@ -174,6 +192,42 @@
   }
 }
 
+// red bg of wheel
+.red-highlight {
+  @include animation-name(wheelRedHighlight);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease-in-out);
+}
+
+@include keyframes(wheelRedHighlight) {
+  0% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0;
+  }
+  41% {
+    opacity: 0.25;
+  }
+  60% {
+    opacity: 0;
+  }
+  61% {
+    opacity: 0.25;
+  }
+  80% {
+    opacity: 0;
+  }
+  81% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 // Price update 
 
@@ -181,21 +235,26 @@
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   @include animation-name(priceSliedOff);
-  @include animation-duration(0.25s);
-  @include animation-timing-function(ease-in);
+  @include animation-duration(0.5s);
+  @include animation-timing-function(ease-in-out);
   @include animation-fill-mode(forwards)
 } 
 
 
 @include keyframes(priceSliedOff) {
-  from{
-    @include transform(rotateX(0deg));
-    
+  0% {
+    @include transform(scale(1));
   }
-  to {
-    @include transform(rotateX(-90deg));
-    
+  25% {
+    @include transform(scale(1.2));
   }
+  35% {
+    @include transform(scale(1.2));
+  }
+  100% {
+    @include transform(scale(0));
+  }
+
 }
 
 
@@ -203,19 +262,23 @@
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   @include animation-name(priceSliedIn);
-  @include animation-duration(0.25s);
-  @include animation-timing-function(ease-out);
+  @include animation-duration(0.5s);
+  @include animation-timing-function(ease-in-out);
   @include animation-fill-mode(forwards)
 } 
 
 @include keyframes(priceSliedIn) {
-  from{
-    @include transform(rotateX(-90deg));
-    
+   0% {
+    @include transform(scale(0));
   }
-  to {
-    @include transform(rotateX(0deg));
-    
+  75% {
+    @include transform(scale(1.2));
+  }
+  85% {
+    @include transform(scale(1.2));
+  }
+  100% {
+    @include transform(scale(1));
   }
 }
 

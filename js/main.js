@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var bar, detail, detailsBtn, discount, dollar, handleBar, landing, mainWrap, new_price, returnBtn, shareBtn, wheel;
+    var bar, detail, detailsBtn, discount, dollar, handleBar, landing, mainWrap, new_price, next_price, returnBtn, shareBtn, wheel;
 
     detailsBtn = '';
 
@@ -20,8 +20,6 @@
 
     dollar = '';
 
-    new_price = '';
-
     discount = '';
 
     mainWrap = '';
@@ -29,6 +27,10 @@
     detail = '';
 
     landing = '';
+
+    new_price = '';
+
+    next_price = '';
 
     function Landing() {
       this.updatePrice = __bind(this.updatePrice, this);
@@ -66,7 +68,8 @@
 
         el = $(e.currentTarget);
         callback = function() {
-          return el.removeClass('wheel-highlight');
+          el.removeClass('wheel-highlight');
+          return $('.wheel-red').removeClass('red-highlight');
         };
         return setTimeout(callback, 2500);
       });
@@ -75,6 +78,7 @@
 
         el = $(e.currentTarget);
         el.html(_this.new_price);
+        $('.price-next .dollar').html(_this.next_price);
         callback = function() {
           el.removeClass('flipout');
           return el.addClass('flipin');
@@ -167,9 +171,11 @@
       return $('.people').height(h);
     };
 
-    Landing.prototype.updatePrice = function(new_price) {
+    Landing.prototype.updatePrice = function(new_price, next_price) {
       this.wheel.addClass('wheel-highlight');
+      $('.wheel-red').addClass('red-highlight');
       this.new_price = new_price;
+      this.next_price = next_price;
       this.dollar.removeClass('flipin').addClass('flipout');
     };
 

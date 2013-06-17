@@ -7,11 +7,13 @@ class Landing
   bar = ''
   wheel = ''
   dollar = ''
-  new_price = ''
   discount = ''
   mainWrap = ''
   detail = ''
   landing = ''
+
+  new_price = ''
+  next_price = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
@@ -43,13 +45,16 @@ class Landing
     @wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) -> 
       #console.log 'Wheel done'
       el = $(e.currentTarget)
-      callback = -> el.removeClass('wheel-highlight')
+      callback = -> 
+        el.removeClass('wheel-highlight')
+        $('.wheel-red').removeClass('red-highlight');
       setTimeout callback, 2500
     )
     @dollar.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) => 
       el = $(e.currentTarget)
       
       el.html(@new_price);
+      $('.price-next .dollar').html(@next_price);
       callback = -> 
         el.removeClass('flipout')
         el.addClass('flipin')
@@ -121,9 +126,11 @@ class Landing
     h = window.innerHeight - @handleBar.height()
     $('.people').height(h)
 
-  updatePrice: (new_price)=>
+  updatePrice: (new_price, next_price)=>
     @wheel.addClass('wheel-highlight')
+    $('.wheel-red').addClass('red-highlight');
     @new_price = new_price
+    @next_price = next_price
     @dollar.removeClass('flipin').addClass('flipout')
     
     return

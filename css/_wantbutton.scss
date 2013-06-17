@@ -23,7 +23,7 @@
   border: 2px solid #FFF;
   border-radius: 10px;
 
-
+  
   @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 ); /* IE6-9 */
 
