@@ -4,7 +4,7 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var bar, detail, detailsBtn, handleBar, landing, mainWrap, returnBtn, shareBtn;
+    var bar, detail, detailsBtn, discount, dollar, handleBar, landing, mainWrap, new_price, returnBtn, shareBtn, wheel;
 
     detailsBtn = '';
 
@@ -16,6 +16,14 @@
 
     bar = '';
 
+    wheel = '';
+
+    dollar = '';
+
+    new_price = '';
+
+    discount = '';
+
     mainWrap = '';
 
     detail = '';
@@ -23,6 +31,7 @@
     landing = '';
 
     function Landing() {
+      this.updatePrice = __bind(this.updatePrice, this);
       this.peopleHeight = __bind(this.peopleHeight, this);
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
@@ -36,6 +45,9 @@
       this.shareBtn = $('.share');
       this.handleBar = $('.handlebar');
       this.bar = $('.bar');
+      this.wheel = $('.wheel');
+      this.dollar = $('.dollar');
+      this.discount = $('.discount');
       this.mainWrap = $('#main-wrap');
       this.landing = $('.landing');
       this.detail = $('.detail');
@@ -49,6 +61,26 @@
       });
       this.peopleHeight();
       this.resizeLanding();
+      this.wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(e) {
+        var callback, el;
+
+        el = $(e.currentTarget);
+        callback = function() {
+          return el.removeClass('wheel-highlight');
+        };
+        return setTimeout(callback, 2500);
+      });
+      this.dollar.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(e) {
+        var callback, el;
+
+        el = $(e.currentTarget);
+        el.html(_this.new_price);
+        callback = function() {
+          el.removeClass('flipout');
+          return el.addClass('flipin');
+        };
+        return setTimeout(callback, 200);
+      });
     }
 
     Landing.prototype.resizeLanding = function(e) {
@@ -132,8 +164,13 @@
       var h;
 
       h = window.innerHeight - this.handleBar.height();
-      $('.people').height(h);
-      return console.log('people height should be: ' + h);
+      return $('.people').height(h);
+    };
+
+    Landing.prototype.updatePrice = function(new_price) {
+      this.wheel.addClass('wheel-highlight');
+      this.new_price = new_price;
+      this.dollar.removeClass('flipin').addClass('flipout');
     };
 
     return Landing;

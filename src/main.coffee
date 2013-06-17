@@ -5,6 +5,10 @@ class Landing
   shareBtn = ''
   handleBar = ''
   bar = ''
+  wheel = ''
+  dollar = ''
+  new_price = ''
+  discount = ''
   mainWrap = ''
   detail = ''
   landing = ''
@@ -16,6 +20,9 @@ class Landing
 
     @handleBar  = $('.handlebar')
     @bar        = $('.bar')
+    @wheel      = $('.wheel')
+    @dollar     = $('.dollar')
+    @discount   = $('.discount')
     @mainWrap   = $('#main-wrap')
     @landing    = $('.landing')
     @detail     = $('.detail')
@@ -31,6 +38,25 @@ class Landing
       @peopleHeight()
     @peopleHeight()
     @resizeLanding()
+
+    #right this better
+    @wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) -> 
+      #console.log 'Wheel done'
+      el = $(e.currentTarget)
+      callback = -> el.removeClass('wheel-highlight')
+      setTimeout callback, 2500
+    )
+    @dollar.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) => 
+      el = $(e.currentTarget)
+      
+      el.html(@new_price);
+      callback = -> 
+        el.removeClass('flipout')
+        el.addClass('flipin')
+      setTimeout callback, 200
+      
+    )
+
 
   resizeLanding: (e) =>
     @landing.css({'height':($(window).height())+'px'});
@@ -94,10 +120,18 @@ class Landing
   peopleHeight: =>
     h = window.innerHeight - @handleBar.height()
     $('.people').height(h)
-    console.log 'people height should be: ' + h
 
+  updatePrice: (new_price)=>
+    @wheel.addClass('wheel-highlight')
+    @new_price = new_price
+    @dollar.removeClass('flipin').addClass('flipout')
     
+    return
     
+
 
 $(document).ready ->
   window.landing = new Landing
+
+
+

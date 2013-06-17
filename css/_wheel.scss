@@ -44,6 +44,8 @@
         border-top: 1px solid #323232;
         text-align: center;
         position: relative;
+        z-index: 0;
+
 
         .dollar {
           width: 100%;
@@ -109,7 +111,7 @@
 
 .price-window {
 
- //@include animation-name(wheelbounce);
+  @include animation-name(wheelbounce);
   @include animation-duration(3s);
   @include animation-timing-function(ease-in-out);
   @include animation-iteration-count(infinite);
@@ -133,12 +135,12 @@
 
 // border 
 
-.wheel {
+.wheel-highlight {
 
   @include animation-name(borderHighlight);
   @include animation-duration(2s);
   @include animation-timing-function(ease-in-out);
-  @include animation-iteration-count(1);
+  
 
 } 
 
@@ -175,30 +177,47 @@
 
 // Price update 
 
-.slide-off {
-
+.price .dollar.flipout {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
   @include animation-name(priceSliedOff);
-  @include animation-duration(1.5s);
-  @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
-  @include animation-iteration-count(1);
-
+  @include animation-duration(0.25s);
+  @include animation-timing-function(ease-in);
+  @include animation-fill-mode(forwards)
 } 
 
+
 @include keyframes(priceSliedOff) {
-  0% {
-    @include transform(translate3d(0px,0px,0px));
+  from{
+    @include transform(rotateX(0deg));
+    
   }
-  50% {
-    @include transform(translate3d(180px,0px,0px));
-  }
-  51% {
-   @include transform(translate3d(-180px,0px,0px)); 
-  }
-  100% {
-    @include transform(translate3d(0px,0px,0px));
+  to {
+    @include transform(rotateX(-90deg));
+    
   }
 }
 
+
+.price .dollar.flipin {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  @include animation-name(priceSliedIn);
+  @include animation-duration(0.25s);
+  @include animation-timing-function(ease-out);
+  @include animation-fill-mode(forwards)
+} 
+
+@include keyframes(priceSliedIn) {
+  from{
+    @include transform(rotateX(-90deg));
+    
+  }
+  to {
+    @include transform(rotateX(0deg));
+    
+  }
+}
 
 
 
