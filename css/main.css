@@ -388,6 +388,11 @@ body {
     overflow: hidden;
     border: 8px solid #5d5d5d;
     border-radius: 516px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
     background-color: #4e4e4e;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e4e4e), color-stop(100%, black));
     background-image: -webkit-linear-gradient(#4e4e4e, black);
@@ -415,7 +420,8 @@ body {
       .wheel-outer .wheel .price-window .price {
         padding-top: 25px;
         border-top: 1px solid #323232;
-        text-align: center; }
+        text-align: center;
+        position: relative; }
         .wheel-outer .wheel .price-window .price .dollar {
           width: 100%;
           margin: 0 0 8px 0;
@@ -451,9 +457,6 @@ body {
           font-weight: 200; }
 
 .price-window {
-  -webkit-animation-name: wheelbounce;
-  -moz-animation-name: wheelbounce;
-  animation-name: wheelbounce;
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
   animation-duration: 3s;
@@ -505,6 +508,9 @@ body {
     top: -20px; } }
 
 .wheel {
+  -webkit-animation-name: borderHighlight;
+  -moz-animation-name: borderHighlight;
+  animation-name: borderHighlight;
   -webkit-animation-duration: 2s;
   -moz-animation-duration: 2s;
   animation-duration: 2s;
@@ -626,6 +632,72 @@ body {
 
   100% {
     border: 8px solid #5d5d5d; } }
+
+.slide-off {
+  -webkit-animation-name: priceSliedOff;
+  -moz-animation-name: priceSliedOff;
+  animation-name: priceSliedOff;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
+@-webkit-keyframes priceSliedOff {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+
+  50% {
+    -webkit-transform: translate3d(180px, 0px, 0px); }
+
+  51% {
+    -webkit-transform: translate3d(-180px, 0px, 0px); }
+
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0px); } }
+
+@-moz-keyframes priceSliedOff {
+  0% {
+    -moz-transform: translate3d(0px, 0px, 0px); }
+
+  50% {
+    -moz-transform: translate3d(180px, 0px, 0px); }
+
+  51% {
+    -moz-transform: translate3d(-180px, 0px, 0px); }
+
+  100% {
+    -moz-transform: translate3d(0px, 0px, 0px); } }
+
+@-o-keyframes priceSliedOff {
+  0% {
+    -o-transform: translate3d(0px, 0px, 0px); }
+
+  50% {
+    -o-transform: translate3d(180px, 0px, 0px); }
+
+  51% {
+    -o-transform: translate3d(-180px, 0px, 0px); }
+
+  100% {
+    -o-transform: translate3d(0px, 0px, 0px); } }
+
+@keyframes priceSliedOff {
+  0% {
+    transform: translate3d(0px, 0px, 0px); }
+
+  50% {
+    transform: translate3d(180px, 0px, 0px); }
+
+  51% {
+    transform: translate3d(-180px, 0px, 0px); }
+
+  100% {
+    transform: translate3d(0px, 0px, 0px); } }
 
 .pointer {
   background: url(../img/pointer.png) top left no-repeat;

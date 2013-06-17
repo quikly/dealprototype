@@ -10,6 +10,7 @@
     overflow: hidden;
     border: 8px solid #5d5d5d;
     border-radius: 516px;
+    @include transform(translate3d(0px,0px,0px));
 
 
     @include linear-gradient(#4e4e4e, #000, $fallback: #4e4e4e);
@@ -42,6 +43,7 @@
         padding-top: 25px;
         border-top: 1px solid #323232;
         text-align: center;
+        position: relative;
 
         .dollar {
           width: 100%;
@@ -107,7 +109,7 @@
 
 .price-window {
 
-  @include animation-name(wheelbounce);
+ //@include animation-name(wheelbounce);
   @include animation-duration(3s);
   @include animation-timing-function(ease-in-out);
   @include animation-iteration-count(infinite);
@@ -133,7 +135,7 @@
 
 .wheel {
 
-  //@include animation-name(borderHighlight);
+  @include animation-name(borderHighlight);
   @include animation-duration(2s);
   @include animation-timing-function(ease-in-out);
   @include animation-iteration-count(1);
@@ -170,6 +172,32 @@
   }
 }
 
+
+// Price update 
+
+.slide-off {
+
+  @include animation-name(priceSliedOff);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+  @include animation-iteration-count(1);
+
+} 
+
+@include keyframes(priceSliedOff) {
+  0% {
+    @include transform(translate3d(0px,0px,0px));
+  }
+  50% {
+    @include transform(translate3d(180px,0px,0px));
+  }
+  51% {
+   @include transform(translate3d(-180px,0px,0px)); 
+  }
+  100% {
+    @include transform(translate3d(0px,0px,0px));
+  }
+}
 
 
 
