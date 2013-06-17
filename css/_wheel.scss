@@ -102,6 +102,9 @@
 
 } // end wheel-outer
 
+
+// === Wheel Bounce Animation ===
+
 .price-window {
 
   @include animation-name(wheelbounce);
@@ -122,6 +125,53 @@
     top: -20px;
   }
 }
+
+
+// === Wheel change Animation ===
+
+// border 
+
+.wheel {
+
+  //@include animation-name(borderHighlight);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-iteration-count(1);
+
+} 
+
+@include keyframes(borderHighlight) {
+  0% {
+    border: 8px solid $redd;
+  }
+  20% {
+    border: 8px solid $redd;
+  }
+  40% {
+    border: 8px solid #5d5d5d;
+  }
+  41% {
+    border: 8px solid $redd;
+  }
+  60% {
+    border: 8px solid #5d5d5d;
+  }
+  61% {
+    border: 8px solid $redd;
+  }
+  80% {
+    border: 8px solid #5d5d5d;
+  }
+  81% {
+    border: 8px solid $redd;
+  }
+  100% {
+    border: 8px solid #5d5d5d;
+  }
+}
+
+
+
 
 
 

@@ -504,6 +504,129 @@ body {
   100% {
     top: -20px; } }
 
+.wheel {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
+@-webkit-keyframes borderHighlight {
+  0% {
+    border: 8px solid #e83a3a; }
+
+  20% {
+    border: 8px solid #e83a3a; }
+
+  40% {
+    border: 8px solid #5d5d5d; }
+
+  41% {
+    border: 8px solid #e83a3a; }
+
+  60% {
+    border: 8px solid #5d5d5d; }
+
+  61% {
+    border: 8px solid #e83a3a; }
+
+  80% {
+    border: 8px solid #5d5d5d; }
+
+  81% {
+    border: 8px solid #e83a3a; }
+
+  100% {
+    border: 8px solid #5d5d5d; } }
+
+@-moz-keyframes borderHighlight {
+  0% {
+    border: 8px solid #e83a3a; }
+
+  20% {
+    border: 8px solid #e83a3a; }
+
+  40% {
+    border: 8px solid #5d5d5d; }
+
+  41% {
+    border: 8px solid #e83a3a; }
+
+  60% {
+    border: 8px solid #5d5d5d; }
+
+  61% {
+    border: 8px solid #e83a3a; }
+
+  80% {
+    border: 8px solid #5d5d5d; }
+
+  81% {
+    border: 8px solid #e83a3a; }
+
+  100% {
+    border: 8px solid #5d5d5d; } }
+
+@-o-keyframes borderHighlight {
+  0% {
+    border: 8px solid #e83a3a; }
+
+  20% {
+    border: 8px solid #e83a3a; }
+
+  40% {
+    border: 8px solid #5d5d5d; }
+
+  41% {
+    border: 8px solid #e83a3a; }
+
+  60% {
+    border: 8px solid #5d5d5d; }
+
+  61% {
+    border: 8px solid #e83a3a; }
+
+  80% {
+    border: 8px solid #5d5d5d; }
+
+  81% {
+    border: 8px solid #e83a3a; }
+
+  100% {
+    border: 8px solid #5d5d5d; } }
+
+@keyframes borderHighlight {
+  0% {
+    border: 8px solid #e83a3a; }
+
+  20% {
+    border: 8px solid #e83a3a; }
+
+  40% {
+    border: 8px solid #5d5d5d; }
+
+  41% {
+    border: 8px solid #e83a3a; }
+
+  60% {
+    border: 8px solid #5d5d5d; }
+
+  61% {
+    border: 8px solid #e83a3a; }
+
+  80% {
+    border: 8px solid #5d5d5d; }
+
+  81% {
+    border: 8px solid #e83a3a; }
+
+  100% {
+    border: 8px solid #5d5d5d; } }
+
 .pointer {
   background: url(../img/pointer.png) top left no-repeat;
   background-size: 100% 100%;
