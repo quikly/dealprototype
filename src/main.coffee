@@ -90,9 +90,7 @@ class Landing
     @detail.waypoint( (direction) =>
       @returnBtn.toggleClass('collapse')
     , {
-        #context: '#main-wrap',
         offset: '78px'
-           #(-$(this).height())
     })
 
   onClick: (e, el) =>
