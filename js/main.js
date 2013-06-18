@@ -124,7 +124,6 @@
       var _this = this;
 
       return this.detail.waypoint(function(direction) {
-        console.log('FIXIE');
         return _this.returnBtn.toggleClass('collapse');
       }, {
         offset: '78px'
@@ -165,9 +164,11 @@
     };
 
     Landing.prototype.peopleHeight = function() {
-      var h;
+      var h, m, _ref;
 
       h = window.innerHeight - this.handleBar.height();
+      m = (_ref = $('.small').css('top')) != null ? _ref : 0;
+      h -= Math.abs(parseInt(m));
       return $('.people').height(h);
     };
 

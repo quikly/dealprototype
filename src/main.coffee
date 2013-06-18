@@ -88,7 +88,6 @@ class Landing
 
   initReturnWaypoint: ->
     @detail.waypoint( (direction) =>
-      console.log('FIXIE')
       @returnBtn.toggleClass('collapse')
     , {
         #context: '#main-wrap',
@@ -124,8 +123,11 @@ class Landing
 
   peopleHeight: =>
     h = window.innerHeight - @handleBar.height()
+    m = $('.small').css('top') ? 0  
+    h -= Math.abs(parseInt(m))
     $('.people').height(h)
-
+    
+    
   updatePrice: (new_price, next_price)=>
     @wheel.addClass('wheel-highlight')
     $('.wheel-red').addClass('red-highlight');

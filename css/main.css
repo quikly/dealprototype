@@ -118,9 +118,8 @@ body {
   overflow: hidden;
   padding-left: 200px; }
   .people .person {
-    width: 100%;
     position: relative;
-    margin: 10px 0 0 10px;
+    margin: 15px 0 0 10px;
     cursor: pointer; }
     .people .person .pic {
       position: relative;
@@ -182,7 +181,14 @@ body {
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
+    .handlebar .bar.small {
+      width: 620px;
+      margin: 0 auto;
+      position: relative;
+      top: -38px;
+      border-radius: 10px; }
     .handlebar .bar.collapse {
+      width: 100%;
       position: fixed;
       top: 0;
       left: 0;
@@ -1139,6 +1145,7 @@ body {
         width: 100%; }
 
 .item .front, .item .back {
+  min-height: 233px;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   -moz-transform-style: preserve-3d;

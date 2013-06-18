@@ -22,6 +22,7 @@
 } // item-container
 
 .item .front, .item .back {
+  min-height: 233px;
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   -moz-transform-style: preserve-3d;

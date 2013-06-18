@@ -15,8 +15,17 @@
     height: 80px;
     background-color: $ligthBlack;
     @include transform(translate3d(0,0,0));
+
+    &.small {
+      width: 620px;
+      margin: 0 auto;
+      position: relative;
+      top: -38px;
+      border-radius: 10px;
+    }
     
      &.collapse {
+      width: 100%;
       position: fixed;
       top: 0;
       left: 0;
