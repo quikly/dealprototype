@@ -232,8 +232,7 @@
 // Price update 
 
 .price .dollar.flipout {
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+  
   @include animation-name(priceSliedOff);
   @include animation-duration(0.5s);
   @include animation-timing-function(ease-in-out);
@@ -259,8 +258,7 @@
 
 
 .price .dollar.flipin {
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+  
   @include animation-name(priceSliedIn);
   @include animation-duration(0.5s);
   @include animation-timing-function(ease-in-out);

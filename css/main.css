@@ -773,8 +773,6 @@ body {
     opacity: 0; } }
 
 .price .dollar.flipout {
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
   -webkit-animation-name: priceSliedOff;
   -moz-animation-name: priceSliedOff;
   animation-name: priceSliedOff;
@@ -841,8 +839,6 @@ body {
     transform: scale(0); } }
 
 .price .dollar.flipin {
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
   -webkit-animation-name: priceSliedIn;
   -moz-animation-name: priceSliedIn;
   animation-name: priceSliedIn;
