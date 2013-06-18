@@ -89,7 +89,8 @@ body {
 .landing {
   width: 100%;
   min-width: 800px;
-  height: 800px; }
+  height: 800px;
+  overflow: hidden; }
   .landing.collapse {
     position: fixed;
     top: 0;
@@ -112,9 +113,9 @@ body {
 .people {
   position: relative;
   float: right;
-  left: 10px;
+  right: -10px;
   margin-top: 42px;
-  overflow-y: hidden;
+  overflow: hidden;
   padding-left: 200px; }
   .people .person {
     width: 100%;
@@ -131,8 +132,6 @@ body {
       border-radius: 100px;
       z-index: 500;
       box-shadow: 0px 0px 0px 3px #FFF;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
       -webkit-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
       -moz-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
       transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }

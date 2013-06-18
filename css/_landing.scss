@@ -15,6 +15,7 @@ body {
   width: 100%;
   min-width: 800px;
   height: 800px; 
+  overflow: hidden;
 
   &.collapse {
     position: fixed;
