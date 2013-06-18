@@ -553,40 +553,40 @@ body {
     top: -174px; }
 
   99% {
-    top: 40px; }
+    top: 46px; }
 
   100% {
-    top: -174px; } }
+    top: -170px; } }
 
 @-moz-keyframes wheelslide {
   0% {
     top: -174px; }
 
   99% {
-    top: 40px; }
+    top: 46px; }
 
   100% {
-    top: -174px; } }
+    top: -170px; } }
 
 @-o-keyframes wheelslide {
   0% {
     top: -174px; }
 
   99% {
-    top: 40px; }
+    top: 46px; }
 
   100% {
-    top: -174px; } }
+    top: -170px; } }
 
 @keyframes wheelslide {
   0% {
     top: -174px; }
 
   99% {
-    top: 40px; }
+    top: 46px; }
 
   100% {
-    top: -174px; } }
+    top: -170px; } }
 
 .wheel-highlight {
   -webkit-animation-name: borderHighlight;
