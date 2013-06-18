@@ -155,7 +155,6 @@
 
 
 .price-window.change {
-
   @include animation-name(wheelslide);
   @include animation-duration(1.5s);
   @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
