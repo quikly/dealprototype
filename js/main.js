@@ -67,23 +67,14 @@
         var callback, el;
 
         el = $(e.currentTarget);
+        $('#oldPrice').find('.dollar').html(_this.new_price);
+        $('.price-next').find('.dollar').html(_this.next_price);
+        $('.price-window').removeClass('change');
         callback = function() {
           el.removeClass('wheel-highlight');
-          return $('.wheel-red').removeClass('red-highlight');
+          return $('.price-window').css(window.landing.changePlayState('running'));
         };
-        return setTimeout(callback, 2500);
-      });
-      this.dollar.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(e) {
-        var callback, el;
-
-        el = $(e.currentTarget);
-        el.html(_this.new_price);
-        $('.price-next .dollar').html(_this.next_price);
-        callback = function() {
-          el.removeClass('flipout');
-          return el.addClass('flipin');
-        };
-        return setTimeout(callback, 200);
+        return setTimeout(callback, 500);
       });
     }
 
@@ -173,11 +164,22 @@
     };
 
     Landing.prototype.updatePrice = function(new_price, next_price) {
-      this.wheel.addClass('wheel-highlight');
-      $('.wheel-red').addClass('red-highlight');
       this.new_price = new_price;
       this.next_price = next_price;
-      this.dollar.removeClass('flipin').addClass('flipout');
+      $('#newPrice').find('.dollar').html(this.new_price);
+      $('.price-window').addClass('change');
+      this.wheel.addClass('wheel-highlight');
+    };
+
+    Landing.prototype.changePlayState = function(state) {
+      var prop;
+
+      prop = {
+        '-webkit-animation-play-state': state,
+        '-moz-animation-play-state': state,
+        'animation-play-state': state
+      };
+      return prop;
     };
 
     return Landing;

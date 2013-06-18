@@ -29,39 +29,39 @@ class Landing
     @landing    = $('.landing')
     @detail     = $('.detail')
     
+    # waypoint reg
     @initDetailWaypoint()
     @initReturnWaypoint()
 
+    # masonry reg
     @makeMason()
 
+    # listen for clicks
     @bindButtons()
+
+    # bind to resize
     $(window).resize (e) => 
       @resizeLanding()
       @peopleHeight()
+
+    # call resize functions on load
     @peopleHeight()
     @resizeLanding()
 
-    #right this better
-    @wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) -> 
-      #console.log 'Wheel done'
+    # ======= Animation Event Handlers =========
+
+    @wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) => 
       el = $(e.currentTarget)
+      $('#oldPrice').find('.dollar').html(@new_price)
+      $('.price-next').find('.dollar').html(@next_price)
+      $('.price-window').removeClass('change')
       callback = -> 
         el.removeClass('wheel-highlight')
-        $('.wheel-red').removeClass('red-highlight');
-      setTimeout callback, 2500
+        #$('.wheel-red').removeClass('red-highlight');
+        $('.price-window').css(window.landing.changePlayState('running'))
+      setTimeout callback, 500
     )
-    @dollar.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) => 
-      el = $(e.currentTarget)
-      
-      el.html(@new_price);
-      $('.price-next .dollar').html(@next_price);
-      callback = -> 
-        el.removeClass('flipout')
-        el.addClass('flipin')
-      setTimeout callback, 200
-      
-    )
-
+    
 
   resizeLanding: (e) =>
     @landing.css({'height':($(window).height())+'px'});
@@ -129,13 +129,24 @@ class Landing
     
     
   updatePrice: (new_price, next_price)=>
-    @wheel.addClass('wheel-highlight')
-    $('.wheel-red').addClass('red-highlight');
     @new_price = new_price
     @next_price = next_price
-    @dollar.removeClass('flipin').addClass('flipout')
-    
+    $('#newPrice').find('.dollar').html(@new_price)
+    $('.price-window').addClass('change')
+    @wheel.addClass('wheel-highlight')
+    #$('.wheel-red').addClass('red-highlight');
     return
+
+
+  changePlayState: (state)->
+    prop = 
+      '-webkit-animation-play-state': state
+      '-moz-animation-play-state': state
+      'animation-play-state': state
+
+    return prop
+    
+    
     
 
 

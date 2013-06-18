@@ -424,7 +424,7 @@ body {
       width: 100%;
       position: relative;
       overflow: hidden;
-      top: -20px;
+      top: -174px;
       z-index: 2; }
       .wheel-outer .wheel .price-window .tier {
         width: 100%;
@@ -440,12 +440,12 @@ body {
         border-top: 1px solid #323232;
         width: 60%;
         position: relative;
-        margin: 0 auto; }
+        margin: 15px auto 15px auto; }
       .wheel-outer .wheel .price-window .price {
-        padding-top: 25px;
         text-align: center;
         position: relative;
-        z-index: 0; }
+        z-index: 0;
+        padding: 10px 0 10px 0; }
         .wheel-outer .wheel .price-window .price .dollar {
           width: 100%;
           margin: 0 0 8px 0;
@@ -466,7 +466,7 @@ body {
       .wheel-outer .wheel .price-window .price-next {
         text-align: center;
         position: relative;
-        margin: 0 0 15px 0; }
+        margin: 0; }
         .wheel-outer .wheel .price-window .price-next .tier {
           line-height: 25px;
           display: inline; }
@@ -496,43 +496,97 @@ body {
 
 @-webkit-keyframes wheelbounce {
   0% {
-    top: -20px; }
+    top: -174px; }
 
   50% {
-    top: 8px; }
+    top: -160px; }
 
   100% {
-    top: -20px; } }
+    top: -174px; } }
 
 @-moz-keyframes wheelbounce {
   0% {
-    top: -20px; }
+    top: -174px; }
 
   50% {
-    top: 8px; }
+    top: -160px; }
 
   100% {
-    top: -20px; } }
+    top: -174px; } }
 
 @-o-keyframes wheelbounce {
   0% {
-    top: -20px; }
+    top: -174px; }
 
   50% {
-    top: 8px; }
+    top: -160px; }
 
   100% {
-    top: -20px; } }
+    top: -174px; } }
 
 @keyframes wheelbounce {
   0% {
-    top: -20px; }
+    top: -174px; }
 
   50% {
-    top: 8px; }
+    top: -160px; }
 
   100% {
-    top: -20px; } }
+    top: -174px; } }
+
+.price-window.change {
+  -webkit-animation-name: wheelslide;
+  -moz-animation-name: wheelslide;
+  animation-name: wheelslide;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1; }
+
+@-webkit-keyframes wheelslide {
+  0% {
+    top: -174px; }
+
+  99% {
+    top: 40px; }
+
+  100% {
+    top: -174px; } }
+
+@-moz-keyframes wheelslide {
+  0% {
+    top: -174px; }
+
+  99% {
+    top: 40px; }
+
+  100% {
+    top: -174px; } }
+
+@-o-keyframes wheelslide {
+  0% {
+    top: -174px; }
+
+  99% {
+    top: 40px; }
+
+  100% {
+    top: -174px; } }
+
+@keyframes wheelslide {
+  0% {
+    top: -174px; }
+
+  99% {
+    top: 40px; }
+
+  100% {
+    top: -174px; } }
 
 .wheel-highlight {
   -webkit-animation-name: borderHighlight;

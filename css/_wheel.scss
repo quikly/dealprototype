@@ -39,7 +39,7 @@
       width: 100%;
       position: relative;
       overflow: hidden;
-      top: -20px; // offset by number of price childs 3*160
+      top: -174px; // offset by number of price childs 3*160
       z-index: 2;
       
       // Tier is a child of price, placed here so price-next tier can extend it
@@ -59,14 +59,14 @@
         border-top: 1px solid #323232;
         width: 60%;
         position: relative;
-        margin: 0 auto;
+        margin: 15px auto 15px auto;
       }
+
       .price {
-        padding-top: 25px;
         text-align: center;
         position: relative;
         z-index: 0;
-
+        padding: 10px 0 10px 0;
 
         .dollar {
           width: 100%;
@@ -97,7 +97,7 @@
       .price-next {
         text-align: center;
         position: relative;
-        margin: 0 0 15px 0;
+        margin: 0;
 
         .tier {
           @extend tier !optional;
@@ -141,18 +141,39 @@
 
 @include keyframes(wheelbounce) {
   0% {
-    top: -20px;
+    top: -174px;
   }
   50% {
-   top: 8px;
+   top: -160px;
   }
   100% {
-    top: -20px;
+    top: -174px;
   }
 }
 
-
 // === Wheel change Animation ===
+
+
+.price-window.change {
+
+  @include animation-name(wheelslide);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+  @include animation-iteration-count(1);
+} 
+
+@include keyframes(wheelslide) {
+  0% {
+    top: -174px;
+  }
+  99% {
+    top: 40px;
+  }
+  100% {
+    top: -174px;
+  }
+}
+
 
 // border 
 
