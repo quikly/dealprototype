@@ -11,9 +11,8 @@
   .person {
     position: relative;
     margin: 15px 0 0 10px;
-    cursor: pointer;
     
-  
+    
     .pic {
       position: relative;
       top: 0;
@@ -48,16 +47,13 @@
     }
 
     &:hover {
-
       .pic {
         @include transform(translateX(-12px) scale(1.1));
-
       }
       .name {
         left: -120px;
       }
-
-    }
-
+    } // hover
   } // person
 } // people
+

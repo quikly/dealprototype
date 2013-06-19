@@ -119,8 +119,7 @@ body {
   padding-left: 200px; }
   .people .person {
     position: relative;
-    margin: 15px 0 0 10px;
-    cursor: pointer; }
+    margin: 15px 0 0 10px; }
     .people .person .pic {
       position: relative;
       top: 0;
@@ -1221,6 +1220,7 @@ body {
   left: 0;
   bottom: 0;
   background: #70c0d6;
+  pointer-events: none;
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
@@ -1248,6 +1248,7 @@ body {
   line-height: 84px;
   padding: 31px 21px 32px 21px;
   color: #70c0d6;
+  pointer-events: auto;
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out; }

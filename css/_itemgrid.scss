@@ -43,6 +43,7 @@
   left: 0;
   bottom:0;
   background: $turq;
+  pointer-events: none;
   @include transform(rotateY(-180deg));
 }
 
@@ -72,6 +73,7 @@
     line-height: 84px;
     padding: 31px 21px 32px 21px;
     color: $turq;
+    pointer-events: auto;
     @include transition (all 0.25s ease-out);
 
     &:hover {
