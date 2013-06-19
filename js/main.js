@@ -33,6 +33,7 @@
     next_price = '';
 
     function Landing() {
+      this.addPerson = __bind(this.addPerson, this);
       this.updatePrice = __bind(this.updatePrice, this);
       this.peopleHeight = __bind(this.peopleHeight, this);
       this.shareHover = __bind(this.shareHover, this);
@@ -180,6 +181,18 @@
         'animation-play-state': state
       };
       return prop;
+    };
+
+    Landing.prototype.addPerson = function(img) {
+      var offset, rmClass;
+
+      offset = '68px';
+      img = 'img/temp/scott.jpg';
+      $('.people').prepend('<div class="person new"><img class="pic" src="' + img + '"><h1 class="name">I&apos;m totally in!</h1></div>');
+      rmClass = function() {
+        return $('.person').first().removeClass('new');
+      };
+      setTimeout(rmClass, 250);
     };
 
     return Landing;

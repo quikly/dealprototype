@@ -118,8 +118,13 @@ body {
   overflow: hidden;
   padding-left: 200px; }
   .people .person {
+    height: 53px;
     position: relative;
-    margin: 15px 0 0 10px; }
+    margin: 15px 0 0 10px;
+    top: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
     .people .person .pic {
       position: relative;
       top: 0;
@@ -160,6 +165,11 @@ body {
       transform: translateX(-12px) scale(1.1); }
     .people .person:hover .name {
       left: -120px; }
+    .people .person.new {
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: -70px; }
 
 .handlebar {
   width: 100%;

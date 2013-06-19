@@ -135,7 +135,6 @@ class Landing
     #$('.wheel-red').addClass('red-highlight');
     return
 
-
   changePlayState: (state)->
     prop = 
       '-webkit-animation-play-state': state
@@ -143,6 +142,22 @@ class Landing
       'animation-play-state': state
 
     return prop
+
+  addPerson: (img)=>
+    #height of one person plus margin top
+    offset = '68px'
+    img = 'img/temp/scott.jpg'
+    #$('.people').css('padding-top': offset)
+    $('.people').prepend(
+        '<div class="person new"><img class="pic" src="'+img+'"><h1 class="name">I&apos;m totally in!</h1></div>'
+      )
+    
+    rmClass = -> 
+     # $('.people').css('padding-top': 0)
+      $('.person').first().removeClass('new')
+      
+    setTimeout rmClass, 250
+    return
     
     
     
