@@ -1,6 +1,9 @@
 body { 
   overflow-x: hidden;
 }
+.noscroll {
+  overflow-y: hidden;
+}
 
 .hero-img {
   width: 100%;
@@ -9,6 +12,10 @@ body {
   background: url(../img/hero_bg.jpg) center top no-repeat;
   background-size: cover;
   position: absolute;
+  @include transition (right 0.5s cubic-bezier(0.19, 1, 0.22, 1));
+  &.slide {
+    right: 300px;
+  }
 }
     
 .landing {
@@ -16,6 +23,8 @@ body {
   min-width: 800px;
   height: 800px; 
   overflow: hidden;
+  @include transition (right 0.5s cubic-bezier(0.19, 1, 0.22, 1));
+
 
   &.collapse {
     position: fixed;
@@ -23,6 +32,11 @@ body {
     height: 80px;
     min-height: 0px;
     z-index: 2000;
+  }
+
+  &.slide {
+    position: relative;
+    right: 300px;
   }
 }
 

@@ -4,13 +4,17 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var bar, detail, detailsBtn, discount, dollar, handleBar, landing, mainWrap, new_price, next_price, returnBtn, shareBtn, wheel;
+    var bar, detail, detailsBtn, discount, dollar, handleBar, isOpen, landing, navBtn, new_price, next_price, returnBtn, shareBtn, wheel;
 
     detailsBtn = '';
 
     returnBtn = '';
 
     shareBtn = '';
+
+    navBtn = '';
+
+    isOpen = false;
 
     handleBar = '';
 
@@ -21,8 +25,6 @@
     dollar = '';
 
     discount = '';
-
-    mainWrap = '';
 
     detail = '';
 
@@ -36,6 +38,7 @@
       this.addPerson = __bind(this.addPerson, this);
       this.updatePrice = __bind(this.updatePrice, this);
       this.peopleHeight = __bind(this.peopleHeight, this);
+      this.openNav = __bind(this.openNav, this);
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
       this.onDetail = __bind(this.onDetail, this);
@@ -46,12 +49,12 @@
       this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
       this.shareBtn = $('.share');
+      this.navBtn = $('#nav-btn');
       this.handleBar = $('.handlebar');
       this.bar = $('.bar');
       this.wheel = $('.wheel');
       this.dollar = $('.dollar');
       this.discount = $('.discount');
-      this.mainWrap = $('#main-wrap');
       this.landing = $('.landing');
       this.detail = $('.detail');
       this.initDetailWaypoint();
@@ -89,13 +92,18 @@
       var _this = this;
 
       this.detailsBtn.bind('click', function(e) {
-        return _this.onDetail(e, $(e.currentTarget));
+        if (_this.isOpen) {
+          return _this.onDetail(e, $(e.currentTarget));
+        }
       });
       this.returnBtn.bind('click', function(e) {
         return _this.onReturn(e, $(e.currentTarget));
       });
-      return this.shareBtn.hover(function(e) {
+      this.shareBtn.hover(function(e) {
         return _this.shareHover($(e.currentTarget));
+      });
+      return this.navBtn.bind('click', function(e) {
+        return _this.openNav(e, $(e.currentTarget));
       });
     };
 
@@ -142,6 +150,14 @@
 
     Landing.prototype.shareHover = function(el) {
       return $('.share-items').toggleClass('slide-down');
+    };
+
+    Landing.prototype.openNav = function(e, el) {
+      $('#nav').toggleClass('visible');
+      $('body').toggleClass('noscroll');
+      $('.hero-img').toggleClass('slide');
+      this.landing.toggleClass('slide');
+      return this.detail.toggleClass('slide');
     };
 
     Landing.prototype.makeMason = function() {

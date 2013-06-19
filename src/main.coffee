@@ -3,12 +3,14 @@ class Landing
   detailsBtn = ''
   returnBtn = ''
   shareBtn = ''
+  navBtn = ''
+  isOpen = false
+
   handleBar = ''
   bar = ''
   wheel = ''
   dollar = ''
   discount = ''
-  mainWrap = ''
   detail = ''
   landing = ''
 
@@ -19,15 +21,16 @@ class Landing
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
     @shareBtn   = $('.share')
+    @navBtn     = $('#nav-btn')
 
     @handleBar  = $('.handlebar')
     @bar        = $('.bar')
     @wheel      = $('.wheel')
     @dollar     = $('.dollar')
     @discount   = $('.discount')
-    @mainWrap   = $('#main-wrap')
     @landing    = $('.landing')
     @detail     = $('.detail')
+
     
     # waypoint reg
     @initDetailWaypoint()
@@ -62,18 +65,24 @@ class Landing
       setTimeout callback, 500
     )
     
-
   resizeLanding: (e) =>
     @landing.css({'height':($(window).height())+'px'});
     
 
   bindButtons: =>
+    # detail button
     @detailsBtn.bind 'click', (e) =>
-        @onDetail(e, $(e.currentTarget))
+        if @isOpen 
+          @onDetail(e, $(e.currentTarget))
+    # return button
     @returnBtn.bind 'click', (e) =>
         @onReturn(e, $(e.currentTarget))
+    #share button
     @shareBtn.hover (e) =>
         @shareHover($(e.currentTarget))
+    #nav button
+    @navBtn.bind 'click', (e) =>
+        @openNav(e, $(e.currentTarget))
 
 
   initDetailWaypoint: ->
@@ -110,6 +119,14 @@ class Landing
 
   shareHover: (el) =>
     $('.share-items').toggleClass('slide-down');
+
+  openNav: (e, el) =>
+    $('#nav').toggleClass('visible')
+    $('body').toggleClass('noscroll')
+    $('.hero-img').toggleClass('slide')
+    @landing.toggleClass('slide')
+    @detail.toggleClass('slide')
+
 
   makeMason: ->
     wall = new Masonry( document.getElementById('masonry'), {
