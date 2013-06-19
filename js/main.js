@@ -38,7 +38,7 @@
       this.peopleHeight = __bind(this.peopleHeight, this);
       this.shareHover = __bind(this.shareHover, this);
       this.onReturn = __bind(this.onReturn, this);
-      this.onClick = __bind(this.onClick, this);
+      this.onDetail = __bind(this.onDetail, this);
       this.bindButtons = __bind(this.bindButtons, this);
       this.resizeLanding = __bind(this.resizeLanding, this);
       var _this = this;
@@ -89,7 +89,7 @@
       var _this = this;
 
       this.detailsBtn.bind('click', function(e) {
-        return _this.onClick(e, $(e.currentTarget));
+        return _this.onDetail(e, $(e.currentTarget));
       });
       this.returnBtn.bind('click', function(e) {
         return _this.onReturn(e, $(e.currentTarget));
@@ -122,12 +122,12 @@
       });
     };
 
-    Landing.prototype.onClick = function(e, el) {
+    Landing.prototype.onDetail = function(e, el) {
       var href, offsetTop;
 
       e.preventDefault();
       href = el.attr('href');
-      offsetTop = $(href).offset().top - 80;
+      offsetTop = $(href).offset().top - $('.handlebar').height();
       return $('body').stop().animate({
         scrollTop: offsetTop
       }, 300);
@@ -192,7 +192,7 @@
       rmClass = function() {
         return $('.person').first().removeClass('new');
       };
-      setTimeout(rmClass, 250);
+      setTimeout(rmClass, 500);
     };
 
     return Landing;

@@ -69,7 +69,7 @@ class Landing
 
   bindButtons: =>
     @detailsBtn.bind 'click', (e) =>
-        @onClick(e, $(e.currentTarget))
+        @onDetail(e, $(e.currentTarget))
     @returnBtn.bind 'click', (e) =>
         @onReturn(e, $(e.currentTarget))
     @shareBtn.hover (e) =>
@@ -93,10 +93,10 @@ class Landing
         offset: '78px'
     })
 
-  onClick: (e, el) =>
+  onDetail: (e, el) =>
     e.preventDefault()
     href = el.attr('href')
-    offsetTop = $(href).offset().top-80;
+    offsetTop = $(href).offset().top - $('.handlebar').height()
     
     $('body').stop().animate({ 
         scrollTop: offsetTop
@@ -140,7 +140,6 @@ class Landing
       '-webkit-animation-play-state': state
       '-moz-animation-play-state': state
       'animation-play-state': state
-
     return prop
 
   addPerson: (img)=>
@@ -151,20 +150,13 @@ class Landing
     $('.people').prepend(
         '<div class="person new"><img class="pic" src="'+img+'"><h1 class="name">I&apos;m totally in!</h1></div>'
       )
-    
     rmClass = -> 
      # $('.people').css('padding-top': 0)
       $('.person').first().removeClass('new')
-      
-    setTimeout rmClass, 250
+    setTimeout rmClass, 500
     return
     
     
-    
-
-
 $(document).ready ->
   window.landing = new Landing
-
-
 

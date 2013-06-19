@@ -166,10 +166,10 @@ body {
     .people .person:hover .name {
       left: -120px; }
     .people .person.new {
-      height: 0;
+      height: 1px;
       position: absolute;
       top: 0;
-      right: -70px; }
+      left: 200px; }
 
 .handlebar {
   width: 100%;
