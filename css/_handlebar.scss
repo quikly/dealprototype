@@ -17,7 +17,7 @@
     @include transform(translate3d(0,0,0));
 
     &.small {
-      width: 620px;
+      width: 610px;
       margin: 0 auto;
       position: relative;
       top: -38px;
@@ -51,7 +51,7 @@
 .retail {
   font-size: 22px;
   font-weight: 600;
-  margin: 25px 0 0 0;
+  margin: 25px 0 0 10px;
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -72,7 +72,8 @@
       width: 100%;
       margin: 0 auto;
       position: relative;
-      top: -55px;
+      top: -35px;
+
       @include opensans-reg;
       @include transition (all 0.25s ease);
     }

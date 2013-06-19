@@ -96,7 +96,7 @@ class Landing
   onDetail: (e, el) =>
     e.preventDefault()
     href = el.attr('href')
-    offsetTop = $(href).offset().top - $('.handlebar').height()
+    offsetTop = $(href).offset().top-68
     
     $('body').stop().animate({ 
         scrollTop: offsetTop
@@ -148,7 +148,7 @@ class Landing
     img = 'img/temp/scott.jpg'
     #$('.people').css('padding-top': offset)
     $('.people').prepend(
-        '<div class="person new"><img class="pic" src="'+img+'"><h1 class="name">I&apos;m totally in!</h1></div>'
+        '<div class="person new"><img class="pic" src="'+img+'"><h1 class="name">I&apos;m in!</h1></div>'
       )
     rmClass = -> 
      # $('.people').css('padding-top': 0)

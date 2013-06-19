@@ -122,9 +122,9 @@ body {
     position: relative;
     margin: 15px 0 0 10px;
     top: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+    -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
     .people .person .pic {
       position: relative;
       top: 0;
@@ -140,15 +140,15 @@ body {
       transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
     .people .person .name {
       width: 100%;
-      min-width: 130px;
+      min-width: 60px;
       position: absolute;
       top: 12px;
-      left: 10px;
+      left: 5px;
       margin: 0;
       padding: 5px 8px;
       border-radius: 4px;
       font-family: 'Open Sans';
-      font-weight: 600;
+      font-weight: 700;
       font-size: 14px;
       line-height: 19px;
       background-color: #70c0d6;
@@ -158,13 +158,13 @@ body {
       -moz-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
       transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
     .people .person:hover .pic {
-      -webkit-transform: translateX(-12px) scale(1.1);
-      -moz-transform: translateX(-12px) scale(1.1);
-      -ms-transform: translateX(-12px) scale(1.1);
-      -o-transform: translateX(-12px) scale(1.1);
-      transform: translateX(-12px) scale(1.1); }
+      -webkit-transform: translateX(-20px) scale(1.1);
+      -moz-transform: translateX(-20px) scale(1.1);
+      -ms-transform: translateX(-20px) scale(1.1);
+      -o-transform: translateX(-20px) scale(1.1);
+      transform: translateX(-20px) scale(1.1); }
     .people .person:hover .name {
-      left: -120px; }
+      left: -95px; }
     .people .person.new {
       height: 1px;
       position: absolute;
@@ -191,7 +191,7 @@ body {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
     .handlebar .bar.small {
-      width: 620px;
+      width: 610px;
       margin: 0 auto;
       position: relative;
       top: -38px;
@@ -217,7 +217,7 @@ body {
   .wheel-wrap .retail {
     font-size: 22px;
     font-weight: 600;
-    margin: 25px 0 0 0;
+    margin: 25px 0 0 10px;
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -235,7 +235,7 @@ body {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -55px;
+    top: -35px;
     font-family: 'Open Sans';
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
@@ -344,7 +344,8 @@ body {
 .want-button {
   width: 180px;
   height: 60px;
-  margin-top: 8px;
+  margin-top: 10px;
+  margin-right: 5px;
   display: inline-block;
   vertical-align: top;
   padding-top: 16px;

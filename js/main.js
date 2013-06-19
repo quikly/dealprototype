@@ -127,7 +127,7 @@
 
       e.preventDefault();
       href = el.attr('href');
-      offsetTop = $(href).offset().top - $('.handlebar').height();
+      offsetTop = $(href).offset().top - 68;
       return $('body').stop().animate({
         scrollTop: offsetTop
       }, 300);
@@ -188,7 +188,7 @@
 
       offset = '68px';
       img = 'img/temp/scott.jpg';
-      $('.people').prepend('<div class="person new"><img class="pic" src="' + img + '"><h1 class="name">I&apos;m totally in!</h1></div>');
+      $('.people').prepend('<div class="person new"><img class="pic" src="' + img + '"><h1 class="name">I&apos;m in!</h1></div>');
       rmClass = function() {
         return $('.person').first().removeClass('new');
       };
