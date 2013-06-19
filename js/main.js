@@ -92,9 +92,7 @@
       var _this = this;
 
       this.detailsBtn.bind('click', function(e) {
-        if (_this.isOpen) {
-          return _this.onDetail(e, $(e.currentTarget));
-        }
+        return _this.onDetail(e, $(e.currentTarget));
       });
       this.returnBtn.bind('click', function(e) {
         return _this.onReturn(e, $(e.currentTarget));
@@ -134,11 +132,13 @@
       var href, offsetTop;
 
       e.preventDefault();
-      href = el.attr('href');
-      offsetTop = $(href).offset().top - 68;
-      return $('body').stop().animate({
-        scrollTop: offsetTop
-      }, 300);
+      if (!this.isOpen) {
+        href = el.attr('href');
+        offsetTop = $(href).offset().top - 68;
+        return $('body').stop().animate({
+          scrollTop: offsetTop
+        }, 300);
+      }
     };
 
     Landing.prototype.onReturn = function(e, el) {
@@ -153,6 +153,11 @@
     };
 
     Landing.prototype.openNav = function(e, el) {
+      if (this.isOpen) {
+        this.isOpen = false;
+      } else {
+        this.isOpen = true;
+      }
       $('#nav').toggleClass('visible');
       $('body').toggleClass('noscroll');
       $('.hero-img').toggleClass('slide');

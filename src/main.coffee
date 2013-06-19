@@ -71,8 +71,7 @@ class Landing
 
   bindButtons: =>
     # detail button
-    @detailsBtn.bind 'click', (e) =>
-        if @isOpen 
+    @detailsBtn.bind 'click', (e) => 
           @onDetail(e, $(e.currentTarget))
     # return button
     @returnBtn.bind 'click', (e) =>
@@ -104,12 +103,13 @@ class Landing
 
   onDetail: (e, el) =>
     e.preventDefault()
-    href = el.attr('href')
-    offsetTop = $(href).offset().top-68
-    
-    $('body').stop().animate({ 
-        scrollTop: offsetTop
-    }, 300)
+    if not @isOpen
+      href = el.attr('href')
+      offsetTop = $(href).offset().top-68
+      
+      $('body').stop().animate({ 
+          scrollTop: offsetTop
+      }, 300)
 
   onReturn: (e,el) =>
     e.preventDefault()
@@ -121,6 +121,11 @@ class Landing
     $('.share-items').toggleClass('slide-down');
 
   openNav: (e, el) =>
+    if @isOpen
+      @isOpen = false
+    else
+      @isOpen = true
+
     $('#nav').toggleClass('visible')
     $('body').toggleClass('noscroll')
     $('.hero-img').toggleClass('slide')
