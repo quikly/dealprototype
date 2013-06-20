@@ -1,37 +1,24 @@
 class Landing
-  
-  detailsBtn = ''
-  returnBtn = ''
-  shareBtn = ''
-  navBtn = ''
-  isOpen = false
 
-  handleBar = ''
-  bar = ''
-  wheel = ''
-  dollar = ''
-  discount = ''
-  detail = ''
-  landing = ''
-
-  new_price = ''
-  next_price = ''
   
   constructor: ->
     @detailsBtn = $('.details-btn')
     @returnBtn  = $('.return-btn')
     @shareBtn   = $('.share')
     @navBtn     = $('#nav-btn')
+    isOpen = false
 
     @handleBar  = $('.handlebar')
     @bar        = $('.bar')
     @wheel      = $('.wheel')
     @dollar     = $('.dollar')
-    @discount   = $('.discount')
     @landing    = $('.landing')
     @detail     = $('.detail')
 
-    
+    @new_price  = ''
+    @next_price = ''
+    @discount   = ''
+
     # waypoint reg
     @initDetailWaypoint()
     @initReturnWaypoint()
@@ -148,10 +135,12 @@ class Landing
     $('.people').height(h)
     
     
-  updatePrice: (new_price, next_price)=>
+  updatePrice: (new_price, next_price, discount)=>
     @new_price = new_price
     @next_price = next_price
+    @discount = discount
     $('#newPrice').find('.dollar').html(@new_price)
+    $('.percent').html(@discount);
     $('.price-window').addClass('change')
     @wheel.addClass('wheel-highlight')
     return

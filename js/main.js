@@ -4,36 +4,6 @@
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   Landing = (function() {
-    var bar, detail, detailsBtn, discount, dollar, handleBar, isOpen, landing, navBtn, new_price, next_price, returnBtn, shareBtn, wheel;
-
-    detailsBtn = '';
-
-    returnBtn = '';
-
-    shareBtn = '';
-
-    navBtn = '';
-
-    isOpen = false;
-
-    handleBar = '';
-
-    bar = '';
-
-    wheel = '';
-
-    dollar = '';
-
-    discount = '';
-
-    detail = '';
-
-    landing = '';
-
-    new_price = '';
-
-    next_price = '';
-
     function Landing() {
       this.addPerson = __bind(this.addPerson, this);
       this.updatePrice = __bind(this.updatePrice, this);
@@ -44,19 +14,23 @@
       this.onDetail = __bind(this.onDetail, this);
       this.bindButtons = __bind(this.bindButtons, this);
       this.resizeLanding = __bind(this.resizeLanding, this);
-      var _this = this;
+      var isOpen,
+        _this = this;
 
       this.detailsBtn = $('.details-btn');
       this.returnBtn = $('.return-btn');
       this.shareBtn = $('.share');
       this.navBtn = $('#nav-btn');
+      isOpen = false;
       this.handleBar = $('.handlebar');
       this.bar = $('.bar');
       this.wheel = $('.wheel');
       this.dollar = $('.dollar');
-      this.discount = $('.discount');
       this.landing = $('.landing');
       this.detail = $('.detail');
+      this.new_price = '';
+      this.next_price = '';
+      this.discount = '';
       this.initDetailWaypoint();
       this.initReturnWaypoint();
       this.makeMason();
@@ -185,10 +159,12 @@
       return $('.people').height(h);
     };
 
-    Landing.prototype.updatePrice = function(new_price, next_price) {
+    Landing.prototype.updatePrice = function(new_price, next_price, discount) {
       this.new_price = new_price;
       this.next_price = next_price;
+      this.discount = discount;
       $('#newPrice').find('.dollar').html(this.new_price);
+      $('.percent').html(this.discount);
       $('.price-window').addClass('change');
       this.wheel.addClass('wheel-highlight');
     };
