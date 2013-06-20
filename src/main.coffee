@@ -116,13 +116,13 @@ class Landing
       href = el.attr('href')
       offsetTop = $(href).offset().top-68
       
-      $('body').stop().animate({ 
+      $('body, html').stop().animate({ 
           scrollTop: offsetTop
       }, 300)
 
   onReturn: (e,el) =>
     e.preventDefault()
-    el.parent().parent().stop().animate({ 
+    $('body, html').stop().animate({ 
         scrollTop: 0
     }, 300)
 
@@ -136,7 +136,7 @@ class Landing
       @isOpen = true
     $('#nav').removeClass('invisible')
     $('#nav').toggleClass('visible')
-    $('body').toggleClass('noscroll')
+    $('body, html').toggleClass('noscroll')
     $('.hero-img').toggleClass('slide')
     @landing.toggleClass('slide')
     @detail.toggleClass('slide')

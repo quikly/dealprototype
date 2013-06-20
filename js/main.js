@@ -138,7 +138,7 @@
       if (!this.isOpen) {
         href = el.attr('href');
         offsetTop = $(href).offset().top - 68;
-        return $('body').stop().animate({
+        return $('body, html').stop().animate({
           scrollTop: offsetTop
         }, 300);
       }
@@ -146,7 +146,7 @@
 
     Landing.prototype.onReturn = function(e, el) {
       e.preventDefault();
-      return el.parent().parent().stop().animate({
+      return $('body, html').stop().animate({
         scrollTop: 0
       }, 300);
     };
@@ -163,7 +163,7 @@
       }
       $('#nav').removeClass('invisible');
       $('#nav').toggleClass('visible');
-      $('body').toggleClass('noscroll');
+      $('body, html').toggleClass('noscroll');
       $('.hero-img').toggleClass('slide');
       this.landing.toggleClass('slide');
       return this.detail.toggleClass('slide');
