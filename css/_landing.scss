@@ -19,9 +19,11 @@ body {
 }
     
 .landing {
+  position: relative;
   width: 100%;
   min-width: 800px;
   height: 800px; 
+  right: 0;
   overflow: hidden;
   @include transition (right 0.5s cubic-bezier(0.19, 1, 0.22, 1));
 
@@ -35,7 +37,7 @@ body {
   }
 
   &.slide {
-    position: relative;
+    
     right: 300px;
   }
 }

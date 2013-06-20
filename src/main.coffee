@@ -154,7 +154,6 @@ class Landing
     $('#newPrice').find('.dollar').html(@new_price)
     $('.price-window').addClass('change')
     @wheel.addClass('wheel-highlight')
-    #$('.wheel-red').addClass('red-highlight');
     return
 
   changePlayState: (state)->
@@ -168,12 +167,12 @@ class Landing
     #height of one person plus margin top
     offset = '68px'
     img = 'img/temp/scott.jpg'
-    #$('.people').css('padding-top': offset)
+   
     $('.people').prepend(
         '<div class="person new"><img class="pic" src="'+img+'"><h1 class="name">I&apos;m in!</h1></div>'
       )
+
     rmClass = -> 
-     # $('.people').css('padding-top': 0)
       $('.person').first().removeClass('new')
     setTimeout rmClass, 500
     return
