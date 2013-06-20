@@ -7,7 +7,6 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75); 
   
-  
   @include transition (all 0.3s ease-out 0.75s);
 
   .bar {
@@ -33,9 +32,8 @@
       z-index: 2000;
       border-radius: 0px;
     }
-  }
-
-} // End HandleBar
+  }// end bar
+} // end HandleBar
 
 .wheel-wrap {
   position:absolute;
@@ -48,37 +46,36 @@
   pointer-events: all;
   
 
-.retail {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 25px 0 0 10px;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
+  .retail {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 25px 0 0 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
 
-  @include opensans-reg;
+    @include opensans-reg;
 
-  // Used for Collapsed Animation
-  @include transform(scale(1));
+    // Used for Collapsed Animation
+    @include transform(scale(1));
 
-  .price {
-    color: $redd;
-    text-decoration: line-through;
-  }
-
-} // end retail 
-    .title {
-      font-size: 36px;
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
-      top: -35px;
-
-      @include opensans-reg;
-      @include transition (all 0.25s ease);
+    .price {
+      color: $redd;
+      text-decoration: line-through;
     }
-    
-} // end wheel wrap
+  } // end retail 
+
+  .title {
+    font-size: 36px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: -35px;
+
+    @include opensans-reg;
+    @include transition (all 0.25s ease);
+  }
+} // end wheel-wrap
 
 .terms {
   color: #FFF;
@@ -114,7 +111,6 @@
 }
 
 .wheel-wrap.collapse .title {
-  //@include transform(translateY(-135px));
   top: -195px;
   font-size: 28px;
 }

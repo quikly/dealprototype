@@ -14,15 +14,12 @@
 
     @include transform(translate3d(0px,0px,0px));
 
-
     @include linear-gradient(#4e4e4e, #000, $fallback: #4e4e4e);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 ); /* IE6-9 */
 
     -webkit-box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
        -moz-box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
             box-shadow: inset 0px 4px 10px rgba(0,0,0,0.4);
-
-    
 
     .price-window {
       width: 100%;
@@ -78,10 +75,9 @@
           .percent{
             color: #FFF;
           }
-
         } // close discount
-
       } //end price
+
 
       .price-next {
         text-align: center;
@@ -104,17 +100,15 @@
             @include opensans-light;
         }
 
-      }
-
-    } // end price-window
-
-  } // end wheel
+      }// end price-next
+    }// end price-window
+  }// end wheel
 
   // collapse animation 
   @include transition (all 0.25s ease);
   @include transform(scale(1));
 
-} // end wheel-outer
+}// end wheel-outer
 
 
 // === Wheel Bounce Animation ===
@@ -140,8 +134,8 @@
   }
 }
 
-// === Wheel change Animation ===
 
+// === Wheel change Animation ===
 
 .price-window.change {
   @include animation-name(wheelslide);
@@ -161,7 +155,6 @@
     top: -170px;
   }
 }
-
 
 // border 
 
@@ -200,96 +193,3 @@
     border: 8px solid #5d5d5d;
   }
 }
-
-// red bg of wheel
-.red-highlight {
-  @include animation-name(wheelRedHighlight);
-  @include animation-duration(1s);
-  @include animation-timing-function(ease-in-out);
-}
-
-@include keyframes(wheelRedHighlight) {
-  0% {
-    opacity: 0.25;
-  }
-  20% {
-    opacity: 0.25;
-  }
-  40% {
-    opacity: 0;
-  }
-  41% {
-    opacity: 0.25;
-  }
-  60% {
-    opacity: 0;
-  }
-  61% {
-    opacity: 0.25;
-  }
-  80% {
-    opacity: 0;
-  }
-  81% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-// Price update 
-
-.price .dollar.flipout {
-  
-  @include animation-name(priceSliedOff);
-  @include animation-duration(0.5s);
-  @include animation-timing-function(ease-in-out);
-  @include animation-fill-mode(forwards)
-} 
-
-
-@include keyframes(priceSliedOff) {
-  0% {
-    @include transform(scale(1));
-  }
-  25% {
-    @include transform(scale(1.2));
-  }
-  35% {
-    @include transform(scale(1.2));
-  }
-  100% {
-    @include transform(scale(0));
-  }
-
-}
-
-
-.price .dollar.flipin {
-  
-  @include animation-name(priceSliedIn);
-  @include animation-duration(0.5s);
-  @include animation-timing-function(ease-in-out);
-  @include animation-fill-mode(forwards)
-} 
-
-@include keyframes(priceSliedIn) {
-   0% {
-    @include transform(scale(0));
-  }
-  75% {
-    @include transform(scale(1.2));
-  }
-  85% {
-    @include transform(scale(1.2));
-  }
-  100% {
-    @include transform(scale(1));
-  }
-}
-
-
-
-
-

@@ -19,7 +19,7 @@
     border-radius: 5px;
     @include box-shadow(0px 6px 10px #000);
   }
-}
+} // end #nav
 
 #nav-callout {
   display: none;
@@ -86,7 +86,7 @@
     margin-top: 0;
     margin-right: 10px;
   }
-}
+} // end #nav-callout
 
 
 #nav, #nav-callout {

@@ -1,10 +1,11 @@
 body { 
   overflow-x: hidden;
 }
+// added to body when main nav open
 .noscroll {
   overflow-y: hidden;
 }
-
+// large Bg img
 .hero-img {
   width: 100%;
   height: 100%;
@@ -17,7 +18,8 @@ body {
     right: 300px;
   }
 }
-    
+
+// landing is the top container
 .landing {
   position: relative;
   width: 100%;
@@ -26,7 +28,6 @@ body {
   right: 0;
   overflow: hidden;
   @include transition (right 0.5s cubic-bezier(0.19, 1, 0.22, 1));
-
 
   &.collapse {
     position: fixed;
@@ -37,7 +38,6 @@ body {
   }
 
   &.slide {
-    
     right: 300px;
   }
 }
@@ -53,5 +53,4 @@ body {
   left: 50%;
   bottom: 0;
   margin-left: -70px;
-
 }

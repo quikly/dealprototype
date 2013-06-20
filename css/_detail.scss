@@ -25,7 +25,6 @@
     cursor: pointer;
     z-index: 2000;
     
-
     &.collapse {
       position: fixed;
       top: 80px;
@@ -34,8 +33,7 @@
       z-index: 2000;
       @include transform(translate3d(0,0,0));
     }
-
-  } //close return btn
+  } //end return-btn
 
   .info { 
     @include opensans-light;
@@ -43,7 +41,6 @@
     line-height: 34px;
     text-align: center;
     color: $darkBlack;
-
     width: 900px;
     margin: 50px auto 0 auto;
   }
@@ -62,8 +59,7 @@
       padding-top: 20px;
     }
 
-  }
-
-} // close detail
+  }// end want-button
+} // end detail
 
 

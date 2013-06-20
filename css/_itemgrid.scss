@@ -1,3 +1,4 @@
+
 .items-container {
   width: 100%;
   padding-top: 55px;
@@ -17,9 +18,9 @@
 
       img { width: 100%;}
 
-    } // item 
-  } //item-grid
-} // item-container
+    }// end item 
+  }// end item-grid
+}// end item-container
 
 .item .front, .item .back {
   min-height: 233px;
@@ -81,10 +82,8 @@
       background-color: $turq;
       border: 3px solid #FFF;
     }
-  }
-
-}
-
+  }// end more
+} // end back
 
 .item:hover .back {
   @include transform(rotateY(0deg));
@@ -93,7 +92,9 @@
 .item:hover .front {
   @include transform(rotateY(180deg));
 }
-// Masonry Animation
+
+
+// ======= Masonry Animation =========
 
 .masonry,
 .masonry .masonry-brick {
