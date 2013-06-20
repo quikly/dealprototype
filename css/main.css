@@ -1059,7 +1059,7 @@ body {
 .detail {
   position: relative;
   width: 100%;
-  min-width: 800px;
+  min-width: 760px;
   margin: 0 auto;
   display: inline-block;
   text-align: center;
@@ -1098,7 +1098,7 @@ body {
     line-height: 34px;
     text-align: center;
     color: #5d5d5d;
-    width: 900px;
+    max-width: 900px;
     margin: 50px auto 0 auto; }
   .detail .want-button {
     width: 300px;
@@ -1280,3 +1280,159 @@ body {
 
 .clearfix {
   *zoom: 1; }
+
+/* ==========================================================================
+   Animation VARS
+   ========================================================================== */
+.handlebar.intro {
+  -webkit-animation-name: handlebarIntro;
+  -moz-animation-name: handlebarIntro;
+  animation-name: handlebarIntro;
+  -webkit-animation-duration: 1.25s;
+  -moz-animation-duration: 1.25s;
+  animation-duration: 1.25s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  bottom: -380px; }
+
+@-webkit-keyframes handlebarIntro {
+  from {
+    bottom: -380px; }
+
+  to {
+    bottom: 0; } }
+
+@-moz-keyframes handlebarIntro {
+  from {
+    bottom: -380px; }
+
+  to {
+    bottom: 0; } }
+
+@-o-keyframes handlebarIntro {
+  from {
+    bottom: -380px; }
+
+  to {
+    bottom: 0; } }
+
+@keyframes handlebarIntro {
+  from {
+    bottom: -380px; }
+
+  to {
+    bottom: 0; } }
+
+/* ==========================================================================
+   People Animation 
+   ========================================================================== */
+.people.intro {
+  -webkit-animation-name: peopleIntro;
+  -moz-animation-name: peopleIntro;
+  animation-name: peopleIntro;
+  -webkit-animation-duration: 0.75s;
+  -moz-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  right: -120px; }
+
+@-webkit-keyframes peopleIntro {
+  from {
+    right: -120px; }
+
+  to {
+    right: -10px; } }
+
+@-moz-keyframes peopleIntro {
+  from {
+    right: -120px; }
+
+  to {
+    right: -10px; } }
+
+@-o-keyframes peopleIntro {
+  from {
+    right: -120px; }
+
+  to {
+    right: -10px; } }
+
+@keyframes peopleIntro {
+  from {
+    right: -120px; }
+
+  to {
+    right: -10px; } }
+
+/* ==========================================================================
+   Nav Intro Animation
+   ========================================================================== */
+.nav.intro {
+  -webkit-animation-name: navIntro;
+  -moz-animation-name: navIntro;
+  animation-name: navIntro;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  top: -100px; }
+
+@-webkit-keyframes navIntro {
+  from {
+    top: -100px; }
+
+  to {
+    top: 0; } }
+
+@-moz-keyframes navIntro {
+  from {
+    top: -100px; }
+
+  to {
+    top: 0; } }
+
+@-o-keyframes navIntro {
+  from {
+    top: -100px; }
+
+  to {
+    top: 0; } }
+
+@keyframes navIntro {
+  from {
+    top: -100px; }
+
+  to {
+    top: 0; } }

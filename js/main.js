@@ -132,6 +132,7 @@
       } else {
         this.isOpen = true;
       }
+      $('#nav').removeClass('invisible');
       $('#nav').toggleClass('visible');
       $('body').toggleClass('noscroll');
       $('.hero-img').toggleClass('slide');

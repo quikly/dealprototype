@@ -1,0 +1,86 @@
+
+
+/* ==========================================================================
+   Animation VARS
+   ========================================================================== */
+
+$handleOffset: -380px;
+$peopleBegin: -120px;
+$peopleEnd:  -10px;
+$navOffset: -100px;
+
+
+// ==========================================================================
+// Handle Bar Animation 
+// ========================================================================== //
+
+.handlebar.intro {
+  @include animation-name(handlebarIntro);
+  @include animation-duration(1.25s);
+  @include animation-delay(1s);
+  @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  bottom:  $handleOffset;
+} 
+
+@include keyframes(handlebarIntro) {
+  from {
+    bottom:  $handleOffset;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   People Animation 
+   ========================================================================== */
+
+.people.intro {
+  @include animation-name(peopleIntro);
+  @include animation-duration(0.75s);
+  @include animation-delay(1.5s);
+  @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  right: $peopleBegin;
+}
+
+@include keyframes(peopleIntro) {
+  from {
+    right:  $peopleBegin;
+  }
+  to {
+    right: $peopleEnd;
+  }
+}
+
+/* ==========================================================================
+   Nav Intro Animation
+   ========================================================================== */
+
+.nav.intro {
+  @include animation-name(navIntro);
+  @include animation-duration(0.5s);
+  @include animation-delay(1.5s);
+  @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  top: $navOffset;
+}
+
+@include keyframes(navIntro) {
+  from {
+    top:  $navOffset;
+  }
+  to {
+    top: 0;
+  }
+}
+
+
+
+
+
+

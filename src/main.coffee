@@ -112,7 +112,7 @@ class Landing
       @isOpen = false
     else
       @isOpen = true
-
+    $('#nav').removeClass('invisible')
     $('#nav').toggleClass('visible')
     $('body').toggleClass('noscroll')
     $('.hero-img').toggleClass('slide')
