@@ -4,7 +4,7 @@
    Animation VARS
    ========================================================================== */
 
-$handleOffset: -380px;
+$handleOffset: -400px;
 $peopleBegin: -120px;
 $peopleEnd:  -10px;
 $navOffset: -100px;
@@ -19,16 +19,15 @@ $navOffset: -100px;
   @include animation-duration(1.25s);
   @include animation-delay(1s);
   @include animation-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
-  @include animation-iteration-count(1);
   @include animation-fill-mode(forwards);
   bottom:  $handleOffset;
 } 
 
 @include keyframes(handlebarIntro) {
-  from {
+  0% {
     bottom:  $handleOffset;
   }
-  to {
+  100% {
     bottom: 0;
   }
 }

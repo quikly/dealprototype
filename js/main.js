@@ -5,6 +5,7 @@
 
   Landing = (function() {
     function Landing() {
+      this.animEndEvents = __bind(this.animEndEvents, this);
       this.addPerson = __bind(this.addPerson, this);
       this.updatePrice = __bind(this.updatePrice, this);
       this.peopleHeight = __bind(this.peopleHeight, this);
@@ -41,7 +42,7 @@
       });
       this.peopleHeight();
       this.resizeLanding();
-      this.wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(e) {
+      this.wheel.bind(this.animEndEvents(), function(e) {
         var callback, el;
 
         el = $(e.currentTarget);
@@ -53,6 +54,34 @@
           return $('.price-window').css(window.landing.changePlayState('running'));
         };
         return setTimeout(callback, 500);
+      });
+      $(".people").bind(this.animEndEvents(), function(e) {
+        var completedAnim;
+
+        completedAnim = e.originalEvent.animationName;
+        if (completedAnim === 'peopleIntro') {
+          $(e.currentTarget).removeClass('intro');
+        }
+        return $(_this).unbind(e);
+      });
+      $(".nav").bind(this.animEndEvents(), function(e) {
+        var completedAnim;
+
+        completedAnim = e.originalEvent.animationName;
+        if (completedAnim === 'navIntro') {
+          $(e.currentTarget).removeClass('intro');
+        }
+        return $(_this).unbind(e);
+      });
+      this.handleBar.bind(this.animEndEvents(), function(e) {
+        var completedAnim;
+
+        completedAnim = e.originalEvent.animationName;
+        if (completedAnim === 'handlebarIntro') {
+          $(e.currentTarget).removeClass('intro');
+        }
+        $(_this).unbind(e);
+        return $.waypoints('refresh');
       });
     }
 
@@ -170,17 +199,6 @@
       this.wheel.addClass('wheel-highlight');
     };
 
-    Landing.prototype.changePlayState = function(state) {
-      var prop;
-
-      prop = {
-        '-webkit-animation-play-state': state,
-        '-moz-animation-play-state': state,
-        'animation-play-state': state
-      };
-      return prop;
-    };
-
     Landing.prototype.addPerson = function(img) {
       var offset, rmClass;
 
@@ -191,6 +209,24 @@
         return $('.person').first().removeClass('new');
       };
       setTimeout(rmClass, 500);
+    };
+
+    Landing.prototype.animEndEvents = function() {
+      var endEvents;
+
+      endEvents = "animationend \nwebkitAnimationEnd \nMSAnimationEnd \noAnimationEnd";
+      return endEvents;
+    };
+
+    Landing.prototype.changePlayState = function(state) {
+      var prop;
+
+      prop = {
+        '-webkit-animation-play-state': state,
+        '-moz-animation-play-state': state,
+        'animation-play-state': state
+      };
+      return prop;
     };
 
     return Landing;

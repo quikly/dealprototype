@@ -40,18 +40,40 @@ class Landing
 
     # ======= Animation Event Handlers =========
 
-    @wheel.bind('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', (e) => 
+    @wheel.bind(@animEndEvents(), (e) => 
       el = $(e.currentTarget)
       $('#oldPrice').find('.dollar').html(@new_price)
       $('.price-next').find('.dollar').html(@next_price)
       $('.price-window').removeClass('change')
       callback = -> 
         el.removeClass('wheel-highlight')
-        #$('.wheel-red').removeClass('red-highlight');
         $('.price-window').css(window.landing.changePlayState('running'))
       setTimeout callback, 500
     )
-    
+
+    $(".people").bind(@animEndEvents(), (e) =>
+      completedAnim = e.originalEvent.animationName
+      $(e.currentTarget).removeClass('intro') if completedAnim is 'peopleIntro'
+      $(this).unbind(e)
+    )
+
+    $(".nav").bind(@animEndEvents(), (e) =>
+      completedAnim = e.originalEvent.animationName
+      $(e.currentTarget).removeClass('intro') if completedAnim is 'navIntro'
+      $(this).unbind(e)
+    )
+
+    @handleBar.bind(@animEndEvents(), (e) =>
+      completedAnim = e.originalEvent.animationName
+      $(e.currentTarget).removeClass('intro') if completedAnim is 'handlebarIntro'
+      $(this).unbind(e)
+      # refresh waypoints cause intor animation messed it up
+      $.waypoints('refresh')
+    )
+
+  # END CONSTRUCTOR ============================
+
+
   resizeLanding: (e) =>
     @landing.css({'height':($(window).height())+'px'});
     
@@ -145,13 +167,6 @@ class Landing
     @wheel.addClass('wheel-highlight')
     return
 
-  changePlayState: (state)->
-    prop = 
-      '-webkit-animation-play-state': state
-      '-moz-animation-play-state': state
-      'animation-play-state': state
-    return prop
-
   addPerson: (img)=>
     #height of one person plus margin top
     offset = '68px'
@@ -165,7 +180,26 @@ class Landing
       $('.person').first().removeClass('new')
     setTimeout rmClass, 500
     return
-    
+  
+
+  # ============= Helper Function ============================
+
+  animEndEvents: =>
+    endEvents = """
+                animationend 
+                webkitAnimationEnd 
+                MSAnimationEnd 
+                oAnimationEnd
+                """
+    return endEvents
+
+  changePlayState: (state)->
+    prop = 
+      '-webkit-animation-play-state': state
+      '-moz-animation-play-state': state
+      'animation-play-state': state
+    return prop
+
     
 $(document).ready ->
   window.landing = new Landing
