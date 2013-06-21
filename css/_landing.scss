@@ -39,6 +39,13 @@ body {
   &.slide {
     right: 300px;
   }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0 0 20px;
+  }
 }
 
 .details-btn {

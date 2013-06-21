@@ -279,6 +279,11 @@ body {
     z-index: 2000; }
   .landing.slide {
     right: 300px; }
+  .landing .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0 0 20px; }
 
 .details-btn {
   display: inline-block;
