@@ -12,50 +12,59 @@
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
     <body>
+      <nav data-preloaded="true" data-url="/user/navigation" id="nav" class="invisible">
+        <ul class="side-nav">
+          <li>
+            <span class="info">Hello Brandon!</span>
+            <img alt="Picture?width=100&amp;height=100" class="fbpic" src="img/temp/brandon.jpg">
+          </li>
+          <li><a href="/orders" class="strong" data-remote="true"><i class="icon icon-tag"></i> My Quiklys</a></li>
+          <li><a href="/user/profile" data-remote="true" class=""><i class="icon icon-user"></i> My Profile</a></li>
+          <li><a href="/credit_cards" data-remote="true" class=""><i class="icon icon-usd"></i> Credit Cards</a></li>
+          <li><a href="/page/faqs" target="_blank" class=""><i class="icon icon-question"></i> Help</a></li>
+          <li><a href="/signout" data-method="delete" rel="nofollow" tabindex="-1"><i class="icon icon-off"></i> Sign Out</a></li>
+      </ul>
+      </nav>
       <div class="hero-img"></div>
       <!-- landing -->
       <div class="landing">
-        <div class="people">
+        <div class="people intro">
           <div class="person">
             <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
+            <h1 class="name">I'm in!</h1>
+          </div>
+          <div class="person">
+            <img class="pic" src="img/temp/scott.jpg">
+            <h1 class="name">I'm in!</h1>
           </div>
           <div class="person">
             <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
+            <h1 class="name">I'm in!</h1>
+          </div>
+          <div class="person">
+            <img class="pic" src="img/temp/scott.jpg">
+            <h1 class="name">I'm in!</h1>
           </div>
           <div class="person">
             <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
+            <h1 class="name">I'm in!</h1>
+          </div>
+          <div class="person">
+            <img class="pic" src="img/temp/scott.jpg">
+            <h1 class="name">I'm in!</h1>
           </div>
           <div class="person">
             <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
+            <h1 class="name">I'm in!</h1>
           </div>
           <div class="person">
-            <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
+            <img class="pic" src="img/temp/scott.jpg">
+            <h1 class="name">I'm in!</h1>
           </div>
-          <div class="person">
-            <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
-          </div>
-          <div class="person">
-            <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
-          </div>
-          <div class="person">
-            <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
-          </div>
-          <div class="person">
-            <img class="pic" src="img/temp/brandon.jpg">
-            <h1 class="name">I'm totally in!</h1>
-          </div>
-        </div>
-        <nav class="nav">
+        </div><!-- end people -->
+        <nav class="nav intro">
           <a class="share" href="#"><span class="icon"></span>share</a>
-          <ul id="mobile-nav-btn" class="bars">
+          <ul id="nav-btn" class="bars">
             <li class="bar"></li>
             <li class="bar"></li>
             <li class="bar"></li>
@@ -66,46 +75,41 @@
             <li class="item-icon fb">facebook</li>
           </ul>
         </nav>
-        <div class="handlebar">
-          <div class="bar">
+        <div class="handlebar intro">
+          <div class="bar small">
             <div class="wheel-wrap">
               <h1 class="retail">Retail: <span class="price">$2,950</span></h1>
               <div class="wheel-outer">
                 <div class="pointer"></div>
                 <div class="wheel">
                   <div class="price-window">
+                    <div id="newPrice" class="price">
+                      <h1 class="tier">Current price</h1>
+                      <h2 class="dollar">$295</h2>
+                      <h3 class="discount">Discount: <span class="percent">90%</span></h3>
+                    </div>
+                    <hr>
                     <div class="price-next">
                       <h1 class="tier">Next</h1>
                       <h1 class="dollar">$2</h1>
                     </div>
                     <hr>
-                    <div class="price">
+                    <div id="oldPrice" class="price">
                       <h1 class="tier">Current price</h1>
                       <h2 class="dollar">$295</h2>
                       <h3 class="discount">Discount: <span class="percent">90%</span></h3>
                     </div>
-                  </div>
-
+                  </div><!-- end price window -->
                 </div>
-              </div>
+              </div><!-- end wheel-outer -->
               <a class="want-button" href="#">I Want In</a>
               <h1 class="title">Bon Jovi 2013 World Tour</h1>
-              
             </div>
-            <a class ="circlebtn right" href="#">
-              <h1 class="title">Fleetwood mac tour</h1>
-            </a>
-            <a class ="circlebtn left" href="#">
-              <h1 class="title">Fleetwood mac tour</h1>
-            </a>
-            
-          </div>
+          </div><!-- end bar -->
           <a href="#" class="terms">Terms of Service / Privacy Policy</a>
           <a href="#detail" class="details-btn"></a>
-        </div>
-
-      </div><!-- END ======== landing -->
-
+        </div><!-- end handlebar -->
+      </div><!-- end landing -->
       <div id="detail" class="detail">
         <a href="#" class="return-btn invisible">return</a>
         <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at nunc elit. Donec laoreet vulputate massa. Vestibulum non dignissim neque.</p> 
@@ -160,10 +164,9 @@
                 <a class="more" href="#">More</a>
               </div>
             </div>
-          </div>
-        </div>
-      </div><!-- END ======== detail -->
-
+          </div><!-- end item-grid -->
+        </div><!-- end item-container -->
+      </div><!-- end detail -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
       <script src="js/vendor/waypoints.js"></script>
