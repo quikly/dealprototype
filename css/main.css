@@ -265,7 +265,6 @@ body {
 .landing {
   position: relative;
   width: 100%;
-  min-width: 800px;
   height: 800px;
   right: 0;
   overflow: hidden;
