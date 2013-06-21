@@ -67,7 +67,7 @@ class Landing
       completedAnim = e.originalEvent.animationName
       $(e.currentTarget).removeClass('intro') if completedAnim is 'handlebarIntro'
       $(this).unbind(e)
-      # refresh waypoints cause intor animation messed it up
+      # refresh waypoints cause intro animation messed it up
       $.waypoints('refresh')
     )
 
