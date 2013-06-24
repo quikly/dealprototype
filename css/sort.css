@@ -4,10 +4,10 @@
 
 
 .list-wrap {
-  width: 55%;
+  width: 500px;
   margin: 0px auto;
   padding: 10px;
-  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
 }
 
 .list-email {

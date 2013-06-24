@@ -5,9 +5,13 @@
 
   Sorter = (function() {
     function Sorter() {
+      this.bindSubmit = __bind(this.bindSubmit, this);
+      this.bindCheckboxes = __bind(this.bindCheckboxes, this);
       this.bindSelectAll = __bind(this.bindSelectAll, this);
       this.bindTextField = __bind(this.bindTextField, this);      this.bindTextField();
       this.bindSelectAll();
+      this.bindCheckboxes();
+      this.bindSubmit();
       this.selectAll = false;
     }
 
@@ -27,9 +31,33 @@
     };
 
     Sorter.prototype.bindSelectAll = function() {
-      return $(".checkall").on('click', function(e) {
-        console.log(this.checked);
-        return $('#names').find(':checkbox').prop('checked', this.checked);
+      return $("#selectall").on('click', function(e) {
+        return $('.list-email label').find(':checkbox').prop('checked', this.checked);
+      });
+    };
+
+    Sorter.prototype.bindCheckboxes = function() {
+      return $('.list-email label').find(':checkbox').on('click', function(e) {
+        if ($('.list-email label').find(':checkbox:checked').length > 0) {
+          return $("#submit-btn").removeClass('disabled');
+        } else {
+          return $("#submit-btn").addClass('disabled');
+        }
+      });
+    };
+
+    Sorter.prototype.bindSubmit = function() {
+      var _this = this;
+
+      return $("#submit-btn").on('click', function(e) {
+        var sendTo;
+
+        e.preventDefault();
+        sendTo = [];
+        return $('.list-email label').find(':checkbox:checked').each(function(addresses) {
+          sendTo.push($(this).val());
+          return console.log(sendTo);
+        });
       });
     };
 

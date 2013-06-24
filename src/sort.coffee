@@ -3,7 +3,11 @@ class Sorter
   constructor: ->
     do @bindTextField
     do @bindSelectAll
+    do @bindCheckboxes
+    do @bindSubmit
+
     @selectAll = false
+
 
 
   bindTextField: =>
@@ -18,9 +22,26 @@ class Sorter
     )
 
   bindSelectAll: =>
-    $(".checkall").on('click', (e)->
-      console.log this.checked
-      $('#names').find(':checkbox').prop('checked', this.checked)
+    $("#selectall").on('click', (e)->
+      $('.list-email label').find(':checkbox').prop('checked', this.checked)
+    )
+
+  bindCheckboxes: =>
+    $('.list-email label').find(':checkbox').on('click', (e)->
+      if $('.list-email label').find(':checkbox:checked').length > 0
+        $("#submit-btn").removeClass('disabled')
+      else
+        $("#submit-btn").addClass('disabled')
+    )
+
+  bindSubmit: => 
+    $("#submit-btn").on('click', (e)=>
+      e.preventDefault()
+      sendTo = [] 
+      $('.list-email label').find(':checkbox:checked').each( (addresses)->
+        sendTo.push $(this).val()
+        console.log sendTo
+      )
     )
 
 $(document).ready ->
