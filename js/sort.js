@@ -12,15 +12,16 @@
     }
 
     Sorter.prototype.bindTextField = function() {
-      return $('#txtfld').bind('textchange', function(e) {
+      return $('#searchField').bind('textchange', function(e) {
         var currentText;
 
         currentText = $(this).val().toLowerCase();
+        console.log($('.controls').find("[data-name*='" + currentText + "']"));
         if (currentText !== '') {
-          $('#names li').hide();
-          return $("#names").find("[data-name*='" + currentText + "']").show();
+          $('.controls .checkbox').hide();
+          return $('.controls').find("[data-name*='" + currentText + "']").show();
         } else {
-          return $('#names li').show();
+          return $('.controls .checkbox').show();
         }
       });
     };

@@ -7,21 +7,71 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/sort.css">
   </head>
     <body>
       <div class="list-wrap"> 
-        <div class="input-wrap">
-          <input id="txtfld" type="textfield" /><br>
-          <input type="checkbox" class="checkall"> Check all
-        </div>
-        <ul id="names">
-          <li data-name="jonathan taylor jonathan@quikly.com"><input type="checkbox" />Jonathan Taylor</li>
-          <li data-name="scott meves scott@quikly.com"><input type="checkbox" />Scott Meves</li>
-          <li data-name="shawn gellar shawn@quikly.com"><input type="checkbox" />Shawn Gellar</li>
-          <li data-name="brandon gheen brandon@quikly.com"><input type="checkbox" />Brandon Gheen</li>
-        </ul>
+        <form class="form-horizontal">
+          <fieldset>
+
+          <!-- Form Name -->
+          <legend>Invite Your Friends to earn a head start</legend>
+
+          <!-- Prepended text-->
+          <div class="control-group">
+            <label class="control-label" for=""></label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-search"></i></span>
+                <input id="searchField" name="" class="input-large" placeholder="Search" type="text">
+              </div>
+            </div>
+          </div>
+
+          <!-- Multiple Checkboxes -->
+          <div class="control-group list-email">
+            <label class="control-label" for="checkboxes"></label>
+            <div class="controls">
+                <label class="checkbox" for="checkboxes-0" data-name="jonathan taylor jonathan@quikly.com">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-0" value="Jonathan Taylor">
+                  Jonathan Taylor
+                </label>
+                <label class="checkbox" for="checkboxes-1" data-name="scott meves scott@quikly.com">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-1" value="Scott Meves">
+                  Scott Meves
+                </label>
+                <label class="checkbox" for="checkboxes-2" data-name="shawn gellar shawn@quikly.com">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-2" value="Shawn Gellar">
+                  Shawn Gellar
+                </label>
+                <label class="checkbox" for="checkboxes-3" data-name="brandon gheen brandon@quikly.com">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-3" value="Brandon Gheen">
+                  Brandon Gheen
+                </label>
+                <label class="checkbox" for="checkboxes-4" data-name="brian rudolph brian@quikly.com">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-4" value="Brian Rudolph">
+                  Brian Rudolph
+                </label>
+                <label class="checkbox" for="checkboxes-5" data-name="steven rozanski steve@quikly.com">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-5" value="Steven Rozanski">
+                  Steven Rozanski
+                </label>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="control-group">
+            <label class="control-label" for="singlebutton"></label>
+            <div class="controls">
+              <button id="singlebutton" name="singlebutton" class="btn btn-info">Submit</button>
+            </div>
+          </div>
+
+          </fieldset>
+        </form>
       </div>
+
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
       <script src="js/vendor/jquery.textchange.js"></script>

@@ -1,35 +1,16 @@
-ul {
+.email-item {
   list-style-type: none;
-  padding: 10px;
 }
 
-ul li {
-  padding: 10px;
-  border-bottom: 1px solid #7f7f7f;
-}
-
-input[type=checkbox] {
-  margin-right: 10px;
-}
-
-input[type=textfield] {
-  width: 80%;
-  position: relative;
-  margin: 5px 0;
-}
-
-button {
-  margin: 0 auto;
-}
 
 .list-wrap {
-  width: 300px;
-  margin: 50px auto;
+  width: 55%;
+  margin: 0px auto;
   padding: 10px;
   background: #e8e8e8;
 }
 
-.input-wrap {
-  margin: 20px;
+.list-email {
+  min-height: 200px;
 }
 

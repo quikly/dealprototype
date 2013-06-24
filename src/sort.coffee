@@ -7,13 +7,14 @@ class Sorter
 
 
   bindTextField: =>
-    $('#txtfld').bind( 'textchange', (e)->
+    $('#searchField').bind( 'textchange', (e)->
       currentText = $(this).val().toLowerCase()
+      console.log $('.controls').find("[data-name*='" + currentText + "']")
       if currentText != ''
-        $('#names li').hide();
-        $("#names").find("[data-name*='" + currentText + "']").show()
+        $('.controls .checkbox').hide();
+        $('.controls').find("[data-name*='" + currentText + "']").show()
       else
-        $('#names li').show()
+        $('.controls .checkbox').show()
     )
 
   bindSelectAll: =>
