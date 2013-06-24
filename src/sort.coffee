@@ -24,6 +24,11 @@ class Sorter
   bindSelectAll: =>
     $("#selectall").on('click', (e)->
       $('.list-email label').find(':checkbox').prop('checked', this.checked)
+      if $('.list-email label').find(':checkbox:checked').length > 0
+        $("#submit-btn").removeClass('disabled')
+      else
+        $("#submit-btn").addClass('disabled')
+    
     )
 
   bindCheckboxes: =>

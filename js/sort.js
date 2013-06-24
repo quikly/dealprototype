@@ -32,7 +32,12 @@
 
     Sorter.prototype.bindSelectAll = function() {
       return $("#selectall").on('click', function(e) {
-        return $('.list-email label').find(':checkbox').prop('checked', this.checked);
+        $('.list-email label').find(':checkbox').prop('checked', this.checked);
+        if ($('.list-email label').find(':checkbox:checked').length > 0) {
+          return $("#submit-btn").removeClass('disabled');
+        } else {
+          return $("#submit-btn").addClass('disabled');
+        }
       });
     };
 
