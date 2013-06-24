@@ -5,18 +5,30 @@
 
   Sorter = (function() {
     function Sorter() {
+      this.bindSelectAll = __bind(this.bindSelectAll, this);
       this.bindTextField = __bind(this.bindTextField, this);      this.bindTextField();
+      this.bindSelectAll();
+      this.selectAll = false;
     }
 
     Sorter.prototype.bindTextField = function() {
       return $('#txtfld').bind('textchange', function(e) {
         var currentText;
 
-        console.log($(this).val());
         currentText = $(this).val();
-        $('#names li').hide();
-        $("#names").find("[data-name*='" + currentText + "']").show();
-        return console.log($("#names").find("[data-name*='" + currentText + "']"));
+        if (currentText !== '') {
+          $('#names li').hide();
+          return $("#names").find("[data-name*='" + currentText + "']").show();
+        } else {
+          return $('#names li').show();
+        }
+      });
+    };
+
+    Sorter.prototype.bindSelectAll = function() {
+      return $(".checkall").on('click', function(e) {
+        console.log(this.checked);
+        return $('#names').find(':checkbox').prop('checked', this.checked);
       });
     };
 

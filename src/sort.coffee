@@ -2,17 +2,25 @@ class Sorter
 
   constructor: ->
     do @bindTextField
+    do @bindSelectAll
+
+    @selectAll = false;
 
 
   bindTextField: =>
-
-
     $('#txtfld').bind( 'textchange', (e)->
-      console.log $(this).val()
       currentText = $(this).val()
-      $('#names li').hide();
-      $("#names").find("[data-name*='" + currentText + "']").show()
-      console.log $("#names").find("[data-name*='" + currentText + "']")
+      if currentText != ''
+        $('#names li').hide();
+        $("#names").find("[data-name*='" + currentText + "']").show()
+      else
+        $('#names li').show();
+    )
+
+  bindSelectAll: =>
+    $(".checkall").on('click', (e)->
+      console.log this.checked
+      $('#names').find(':checkbox').prop('checked', this.checked)
     )
 
 $(document).ready ->

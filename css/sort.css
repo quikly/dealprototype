@@ -1,3 +1,31 @@
 ul {
   list-style-type: none;
+  padding: 10px;
 }
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #7f7f7f;
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
+input[type=textfield] {
+  width: 80%;
+  margin: 20px;
+  position: relative;
+}
+
+button {
+  margin: 0 auto;
+}
+
+.list-wrap {
+  width: 300px;
+  margin: 50px auto;
+  
+  background: #e8e8e8;
+}
+
