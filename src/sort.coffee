@@ -3,18 +3,17 @@ class Sorter
   constructor: ->
     do @bindTextField
     do @bindSelectAll
-
-    @selectAll = false;
+    @selectAll = false
 
 
   bindTextField: =>
     $('#txtfld').bind( 'textchange', (e)->
-      currentText = $(this).val()
+      currentText = $(this).val().toLowerCase()
       if currentText != ''
         $('#names li').hide();
         $("#names").find("[data-name*='" + currentText + "']").show()
       else
-        $('#names li').show();
+        $('#names li').show()
     )
 
   bindSelectAll: =>

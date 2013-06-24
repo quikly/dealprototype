@@ -15,7 +15,7 @@
       return $('#txtfld').bind('textchange', function(e) {
         var currentText;
 
-        currentText = $(this).val();
+        currentText = $(this).val().toLowerCase();
         if (currentText !== '') {
           $('#names li').hide();
           return $("#names").find("[data-name*='" + currentText + "']").show();
