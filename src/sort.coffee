@@ -34,6 +34,7 @@ class Sorter
     $('#searchField').bind( 'textchange', (e)->
       currentText = $(this).val().toLowerCase()
       console.log $('.list-email').find("[data-name*='" + currentText + "']")
+      $('.scroll-box').scrollTop(0)
       if currentText != ''
         $('.list-email .checkbox').hide();
         $('.list-email').find("[data-name*='" + currentText + "']").show()
@@ -46,7 +47,6 @@ class Sorter
       $('#searchField').val('')
       $('#searchField').trigger('textchange');
     )
-
 
   bindSelectAll: =>
     $("#selectall").on('click', (e) ->

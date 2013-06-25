@@ -58,6 +58,7 @@
 
         currentText = $(this).val().toLowerCase();
         console.log($('.list-email').find("[data-name*='" + currentText + "']"));
+        $('.scroll-box').scrollTop(0);
         if (currentText !== '') {
           $('.list-email .checkbox').hide();
           return $('.list-email').find("[data-name*='" + currentText + "']").show();
