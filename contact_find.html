@@ -17,25 +17,25 @@
 
           <!-- Form Name -->
           <legend>Invite Your Friends to earn a head start</legend>
-
           <!-- Prepended text-->
           <div class="control-group">
-            <label class="control-label" for=""></label>
             <div class="controls">
-              <div class="input-prepend">
+              <div class="input-prepend input-append">
                 <span class="add-on"><i class="icon-search"></i></span>
                 <input id="searchField" name="" class="input-large" placeholder="Search" type="text">
-                <label class="checkbox" for="selectall">
-                  <input type="checkbox" name="selectall" id="selectall">
-                  Select All
-                </label>
+                <button id="clearfield" class="btn" type="button">x</button>
+                <div class="well well-small select-well">
+                  <label class="checkbox" for="selectall">
+                    <input type="checkbox" name="selectall" id="selectall">
+                    Select All
+                  </label>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Multiple Checkboxes -->
-          <div class="control-group ">
-            <label class="control-label" for="checkboxes"></label>  
+          <div class="control-group scroll-box">
             <div class="controls list-email">
               <!-- Render Email Contacts -->
             </div>
@@ -43,9 +43,9 @@
 
           <!-- Button -->
           <div class="control-group">
-            <label class="control-label" for="singlebutton"></label>
+            <hr>
             <div class="controls">
-              <button id="submit-btn" name="singlebutton" class="btn btn-info disabled">Submit</button>
+              <button id="submit-btn" name="singlebutton" class="btn btn-info disabled">Send Invites</button>
             </div>
           </div>
 

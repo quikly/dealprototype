@@ -8,6 +8,7 @@
       this.bindSubmit = __bind(this.bindSubmit, this);
       this.bindCheckboxes = __bind(this.bindCheckboxes, this);
       this.bindSelectAll = __bind(this.bindSelectAll, this);
+      this.bindClearField = __bind(this.bindClearField, this);
       this.bindTextField = __bind(this.bindTextField, this);
       this.renderContacts = __bind(this.renderContacts, this);
       var person;
@@ -26,6 +27,7 @@
       }).call(this);
       this.renderContacts();
       this.bindTextField();
+      this.bindClearField();
       this.bindSelectAll();
       this.bindCheckboxes();
       this.bindSubmit();
@@ -54,7 +56,7 @@
       return $('#searchField').bind('textchange', function(e) {
         var currentText;
 
-        currentText = $(this).val();
+        currentText = $(this).val().toLowerCase();
         console.log($('.list-email').find("[data-name*='" + currentText + "']"));
         if (currentText !== '') {
           $('.list-email .checkbox').hide();
@@ -62,6 +64,13 @@
         } else {
           return $('.list-email .checkbox').show();
         }
+      });
+    };
+
+    Sorter.prototype.bindClearField = function() {
+      return $('#clearfield').bind('click', function(e) {
+        $('#searchField').val('');
+        return $('#searchField').trigger('textchange');
       });
     };
 
@@ -80,6 +89,8 @@
       var _this = this;
 
       return $('.list-email .checkbox').find(':checkbox').on('click', function(e) {
+        $('#searchField').val('');
+        $('#searchField').trigger('textchange');
         if ($('.list-email .checkbox').find(':checkbox:checked').length > 0) {
           return $("#submit-btn").removeClass('disabled');
         } else {
@@ -140,6 +151,26 @@
             first_name: 'Steven',
             last_name: 'Rozanski',
             email: 'steve@quikly.com'
+          }, {
+            first_name: 'Christopher',
+            last_name: 'Ozment',
+            email: 'christopherozment@gmail.com'
+          }, {
+            first_name: 'John',
+            last_name: 'Solimine',
+            email: 'spikepress@spikepress.com'
+          }, {
+            first_name: 'Kyle',
+            last_name: 'Fletcher',
+            email: 'design@kylefletcher.com'
+          }, {
+            first_name: 'Rachel',
+            last_name: 'Blatt',
+            email: 'rachel.a.blatt@gmail.com'
+          }, {
+            first_name: 'Andrew',
+            last_name: 'Pabon',
+            email: 'pabon.andrew@gmail.com'
           }
         ]
       };

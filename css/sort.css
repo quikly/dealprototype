@@ -4,7 +4,7 @@
 
 
 .list-wrap {
-  width: 500px;
+  width: 400px;
   margin: 0px auto;
   padding: 10px;
   border: 1px solid #e8e8e8;
@@ -13,4 +13,17 @@
 .list-email {
   min-height: 200px;
 }
+.scroll-box {
+  height: 150px;
+  overflow-y: scroll;
+  border: 1px solid #e9e9e9;
+  border-radius: 6px;
+}
 
+.select-well {
+  margin-top: 10px;
+}
+
+.form-horizontal .controls {
+  margin-left: 20px;
+}

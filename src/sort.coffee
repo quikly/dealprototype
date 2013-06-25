@@ -9,9 +9,12 @@ class Sorter
     do @renderContacts
 
     do @bindTextField
+    do @bindClearField
     do @bindSelectAll
+    
     do @bindCheckboxes
     do @bindSubmit
+
 
     @selectAll = false
 
@@ -27,10 +30,9 @@ class Sorter
         </label>
         ')
 
-
   bindTextField: =>
     $('#searchField').bind( 'textchange', (e)->
-      currentText = $(this).val()
+      currentText = $(this).val().toLowerCase()
       console.log $('.list-email').find("[data-name*='" + currentText + "']")
       if currentText != ''
         $('.list-email .checkbox').hide();
@@ -38,6 +40,13 @@ class Sorter
       else
         $('.list-email .checkbox').show()
     )
+
+  bindClearField: =>
+    $('#clearfield').bind('click', (e)->
+      $('#searchField').val('')
+      $('#searchField').trigger('textchange');
+    )
+
 
   bindSelectAll: =>
     $("#selectall").on('click', (e) ->
@@ -50,14 +59,14 @@ class Sorter
 
   bindCheckboxes: =>
     $('.list-email .checkbox').find(':checkbox').on('click', (e)=>
-      
+      $('#searchField').val('')
+      $('#searchField').trigger('textchange');
       if $('.list-email .checkbox').find(':checkbox:checked').length > 0
         $("#submit-btn").removeClass('disabled')
       else
         $("#submit-btn").addClass('disabled')
     )
    
-
   bindSubmit: => 
     $("#submit-btn").on('click', (e)=>
       e.preventDefault()
@@ -102,7 +111,27 @@ class Sorter
           },{
           first_name:'Steven'
           last_name:'Rozanski'
-          email:'steve@quikly.com'} 
+          email:'steve@quikly.com'
+          },{
+          first_name:'Christopher'
+          last_name:'Ozment'
+          email:'christopherozment@gmail.com'
+          },{
+          first_name:'John'
+          last_name:'Solimine'
+          email:'spikepress@spikepress.com'
+          },{
+          first_name:'Kyle'
+          last_name:'Fletcher'
+          email:'design@kylefletcher.com'
+          },{
+          first_name:'Rachel'
+          last_name:'Blatt'
+          email:'rachel.a.blatt@gmail.com'
+          },{
+          first_name:'Andrew'
+          last_name:'Pabon'
+          email:'pabon.andrew@gmail.com'} 
         ]
     }
 
