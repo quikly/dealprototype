@@ -43,7 +43,7 @@
       for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
         contact = _ref[i];
         _results.push(el.append('\
-        <label class="checkbox" for="checkboxes-' + i + '" data-name="' + contact.first_name + ' ' + contact.last_name + ' ' + contact.email + '">\
+        <label class="checkbox" for="checkboxes-' + i + '" data-name="' + contact.first_name + contact.last_name + contact.email + '">\
           <input type="checkbox" name="checkboxes" id="checkboxes-' + i + '" value="' + i + '">\
           ' + contact.first_name + ' ' + contact.last_name + '\
         </label>\
@@ -57,7 +57,6 @@
         var currentText;
 
         currentText = $(this).val().toLowerCase();
-        console.log($('.list-email').find("[data-name*='" + currentText + "']"));
         $('.scroll-box').scrollTop(0);
         if (currentText !== '') {
           $('.list-email .checkbox').hide();
@@ -159,7 +158,7 @@
           }, {
             first_name: 'John',
             last_name: 'Solimine',
-            email: 'spikepress@spikepress.com'
+            email: 'john@spikepress.com'
           }, {
             first_name: 'Kyle',
             last_name: 'Fletcher',

@@ -21,10 +21,9 @@ class Sorter
 
   renderContacts: =>
     el = $('.list-email')
-    
     for contact, i in @contacts
       el.append('
-        <label class="checkbox" for="checkboxes-'+i+'" data-name="'+contact.first_name+' '+contact.last_name+' '+contact.email+'">
+        <label class="checkbox" for="checkboxes-'+i+'" data-name="'+contact.first_name+contact.last_name+contact.email+'">
           <input type="checkbox" name="checkboxes" id="checkboxes-'+i+'" value="'+i+'">
           '+contact.first_name+' '+contact.last_name+'
         </label>
@@ -33,7 +32,6 @@ class Sorter
   bindTextField: =>
     $('#searchField').bind( 'textchange', (e)->
       currentText = $(this).val().toLowerCase()
-      console.log $('.list-email').find("[data-name*='" + currentText + "']")
       $('.scroll-box').scrollTop(0)
       if currentText != ''
         $('.list-email .checkbox').hide();
@@ -119,7 +117,7 @@ class Sorter
           },{
           first_name:'John'
           last_name:'Solimine'
-          email:'spikepress@spikepress.com'
+          email:'john@spikepress.com'
           },{
           first_name:'Kyle'
           last_name:'Fletcher'
