@@ -8,12 +8,69 @@
       this.bindSubmit = __bind(this.bindSubmit, this);
       this.bindCheckboxes = __bind(this.bindCheckboxes, this);
       this.bindSelectAll = __bind(this.bindSelectAll, this);
-      this.bindTextField = __bind(this.bindTextField, this);      this.bindTextField();
+      this.bindTextField = __bind(this.bindTextField, this);
+      this.renderContacts = __bind(this.renderContacts, this);
+      var person;
+
+      this.bindTextField();
       this.bindSelectAll();
       this.bindCheckboxes();
       this.bindSubmit();
       this.selectAll = false;
+      this.userContacts = {
+        dealID: 2,
+        contacts: [
+          {
+            first_name: 'Jonathan',
+            last_name: 'Taylor',
+            email: '<jonathan@quikly.com>'
+          }, {
+            first_name: 'Scott',
+            last_name: 'Meves',
+            email: '<scott@quikly.com>'
+          }, {
+            first_name: 'Shawn',
+            last_name: 'Gellar',
+            email: '<shawn@quikly.com>'
+          }, {
+            first_name: 'Scott',
+            last_name: 'Meves',
+            email: '<scott@quikly.com>'
+          }
+        ]
+      };
+      this.contacts = (function() {
+        var _i, _len, _ref, _results;
+
+        _ref = this.userContacts.contacts;
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          person = _ref[_i];
+          _results.push(person);
+        }
+        return _results;
+      }).call(this);
+      this.renderContacts();
     }
+
+    Sorter.prototype.renderContacts = function() {
+      var contact, el, i, _i, _len, _ref, _results;
+
+      el = $('.list-email');
+      _ref = this.contacts;
+      _results = [];
+      for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+        contact = _ref[i];
+        console.log(i);
+        _results.push(el.append('\
+        <label class="checkbox" for="checkboxes-0" data-name="' + contact.first_name + ' ' + contact.last_name + ' ' + contact.email + '">\
+          <input type="checkbox" name="checkboxes" id="checkboxes-0" value="' + contact.email + '">\
+          ' + contact.first_name + ' ' + contact.last_name + '\
+        </label>\
+        '));
+      }
+      return _results;
+    };
 
     Sorter.prototype.bindTextField = function() {
       return $('#searchField').bind('textchange', function(e) {
