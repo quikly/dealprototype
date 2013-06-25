@@ -12,33 +12,7 @@
       this.renderContacts = __bind(this.renderContacts, this);
       var person;
 
-      this.bindTextField();
-      this.bindSelectAll();
-      this.bindCheckboxes();
-      this.bindSubmit();
-      this.selectAll = false;
-      this.userContacts = {
-        dealID: 2,
-        contacts: [
-          {
-            first_name: 'Jonathan',
-            last_name: 'Taylor',
-            email: '<jonathan@quikly.com>'
-          }, {
-            first_name: 'Scott',
-            last_name: 'Meves',
-            email: '<scott@quikly.com>'
-          }, {
-            first_name: 'Shawn',
-            last_name: 'Gellar',
-            email: '<shawn@quikly.com>'
-          }, {
-            first_name: 'Scott',
-            last_name: 'Meves',
-            email: '<scott@quikly.com>'
-          }
-        ]
-      };
+      this.userContacts = this.spoofData();
       this.contacts = (function() {
         var _i, _len, _ref, _results;
 
@@ -51,6 +25,11 @@
         return _results;
       }).call(this);
       this.renderContacts();
+      this.bindTextField();
+      this.bindSelectAll();
+      this.bindCheckboxes();
+      this.bindSubmit();
+      this.selectAll = false;
     }
 
     Sorter.prototype.renderContacts = function() {
@@ -61,10 +40,9 @@
       _results = [];
       for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
         contact = _ref[i];
-        console.log(i);
         _results.push(el.append('\
-        <label class="checkbox" for="checkboxes-0" data-name="' + contact.first_name + ' ' + contact.last_name + ' ' + contact.email + '">\
-          <input type="checkbox" name="checkboxes" id="checkboxes-0" value="' + contact.email + '">\
+        <label class="checkbox" for="checkboxes-' + i + '" data-name="' + contact.first_name + ' ' + contact.last_name + ' ' + contact.email + '">\
+          <input type="checkbox" name="checkboxes" id="checkboxes-' + i + '" value="' + i + '">\
           ' + contact.first_name + ' ' + contact.last_name + '\
         </label>\
         '));
@@ -76,21 +54,21 @@
       return $('#searchField').bind('textchange', function(e) {
         var currentText;
 
-        currentText = $(this).val().toLowerCase();
-        console.log($('.controls').find("[data-name*='" + currentText + "']"));
+        currentText = $(this).val();
+        console.log($('.list-email').find("[data-name*='" + currentText + "']"));
         if (currentText !== '') {
-          $('.controls .checkbox').hide();
-          return $('.controls').find("[data-name*='" + currentText + "']").show();
+          $('.list-email .checkbox').hide();
+          return $('.list-email').find("[data-name*='" + currentText + "']").show();
         } else {
-          return $('.controls .checkbox').show();
+          return $('.list-email .checkbox').show();
         }
       });
     };
 
     Sorter.prototype.bindSelectAll = function() {
       return $("#selectall").on('click', function(e) {
-        $('.list-email label').find(':checkbox').prop('checked', this.checked);
-        if ($('.list-email label').find(':checkbox:checked').length > 0) {
+        $('.list-email .checkbox').find(':checkbox').prop('checked', this.checked);
+        if ($('.list-email .checkbox').find(':checkbox:checked').length > 0) {
           return $("#submit-btn").removeClass('disabled');
         } else {
           return $("#submit-btn").addClass('disabled');
@@ -99,8 +77,10 @@
     };
 
     Sorter.prototype.bindCheckboxes = function() {
-      return $('.list-email label').find(':checkbox').on('click', function(e) {
-        if ($('.list-email label').find(':checkbox:checked').length > 0) {
+      var _this = this;
+
+      return $('.list-email .checkbox').find(':checkbox').on('click', function(e) {
+        if ($('.list-email .checkbox').find(':checkbox:checked').length > 0) {
           return $("#submit-btn").removeClass('disabled');
         } else {
           return $("#submit-btn").addClass('disabled');
@@ -112,15 +92,57 @@
       var _this = this;
 
       return $("#submit-btn").on('click', function(e) {
-        var sendTo;
+        var people, sendTo;
 
         e.preventDefault();
-        sendTo = [];
-        return $('.list-email label').find(':checkbox:checked').each(function(addresses) {
-          sendTo.push($(this).val());
-          return console.log(sendTo);
+        people = _this.contacts;
+        sendTo = {
+          deaID: _this.userContacts.dealID,
+          contacts: []
+        };
+        $('.list-email label').find(':checkbox:checked').each(function(addresses) {
+          return sendTo.contacts.push(people[$(this).val()]);
         });
+        return console.log(sendTo);
       });
+    };
+
+    /* 
+    ======= REMOVE THIS FAKE DATA =======
+    */
+
+
+    Sorter.prototype.spoofData = function() {
+      return {
+        dealID: 2,
+        contacts: [
+          {
+            first_name: 'Jonathan',
+            last_name: 'Taylor',
+            email: 'jonathan@quikly.com'
+          }, {
+            first_name: 'Scott',
+            last_name: 'Meves',
+            email: 'scott@quikly.com'
+          }, {
+            first_name: 'Shawn',
+            last_name: 'Gellar',
+            email: 'shawn@quikly.com'
+          }, {
+            first_name: 'Brandon',
+            last_name: 'Gheen',
+            email: 'brandon@quikly.com'
+          }, {
+            first_name: 'Brian',
+            last_name: 'Rudolph',
+            email: 'brian@quikly.com'
+          }, {
+            first_name: 'Steven',
+            last_name: 'Rozanski',
+            email: 'steve@quikly.com'
+          }
+        ]
+      };
     };
 
     return Sorter;
