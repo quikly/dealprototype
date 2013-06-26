@@ -158,7 +158,7 @@
           }, {
             first_name: 'John',
             last_name: 'Solimine',
-            email: 'john@spikepress.com'
+            email: 'spikepress@spikepress.com'
           }, {
             first_name: 'Kyle',
             last_name: 'Fletcher',
