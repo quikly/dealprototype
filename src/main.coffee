@@ -38,7 +38,7 @@ class Landing
     @peopleHeight()
     @resizeLanding()
 
-    $('#myModal').modal({show: false})
+    $('#myModal').modal({show: true})
 
     # ======= Animation Event Handlers =========
 

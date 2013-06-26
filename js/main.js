@@ -43,7 +43,7 @@
       this.peopleHeight();
       this.resizeLanding();
       $('#myModal').modal({
-        show: false
+        show: true
       });
       this.wheel.bind(this.animEndEvents(), function(e) {
         var callback, el;
