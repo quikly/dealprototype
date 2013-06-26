@@ -64,7 +64,7 @@
 
     .fine-copy {
       color: $discountGrey;
-      
+
     }
 
     .type-num-wrap {
@@ -106,7 +106,8 @@
     color: #FFF;
     border: none;
     border-radius: 10px;
-    @include linear-gradient(#70c0d6, #4e9eb8, $fallback: #4e9eb8);
+    @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
+    //@include linear-gradient(#70c0d6, #4e9eb8, $fallback: #4e9eb8);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 ); /* IE6-9 */
   }
 

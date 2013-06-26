@@ -401,7 +401,7 @@ body {
   .wheel-wrap .retail {
     font-size: 22px;
     font-weight: 600;
-    margin: 25px 0 0 10px;
+    margin: 18px 0 0 10px;
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -541,10 +541,8 @@ body {
   box-sizing: border-box;
   /* Opera/IE 8+ */
   font-size: 26px;
-  text-shadow: 1px 1px 0px rgba(25, 78, 93, 0.5);
   filter: dropshadow(color=#194e5d, offx=1, offy=1);
   color: #FFF;
-  border: 2px solid #FFF;
   border-radius: 10px;
   background-color: #82d5ec;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
@@ -553,6 +551,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82d5ec', endColorstr='#54adcb',GradientType=0 );
   /* IE6-9 */
   font-family: 'Open Sans';
+  font-weight: 600;
   -webkit-transition: -moz-transform 1s ease-in 0.25s;
   -moz-transition: -moz-transform 1s ease-in 0.25s;
   transition: -moz-transform 1s ease-in 0.25s;
@@ -562,8 +561,6 @@ body {
   -o-transform: scale(1);
   transform: scale(1); }
   .want-button:hover {
-    border: 4px solid;
-    padding-top: 14px;
     background-color: #82d5ec;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #48889e));
     background-image: -webkit-linear-gradient(#82d5ec, #48889e);
@@ -1108,11 +1105,9 @@ body {
     height: 75px;
     font-size: 34px;
     padding-top: 20px;
-    border: 6px solid #FFF;
     position: relative;
     top: 35px; }
     .detail .want-button:hover {
-      border: 6px solid #FFF;
       padding-top: 20px; }
 
 .items-container {
@@ -1569,9 +1564,9 @@ body {
     color: #FFF;
     border: none;
     border-radius: 10px;
-    background-color: #4e9eb8;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #70c0d6), color-stop(100%, #4e9eb8));
-    background-image: -webkit-linear-gradient(#70c0d6, #4e9eb8);
-    background-image: linear-gradient(#70c0d6, #4e9eb8);
+    background-color: #82d5ec;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
+    background-image: -webkit-linear-gradient(#82d5ec, #54adcb);
+    background-image: linear-gradient(#82d5ec, #54adcb);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 );
     /* IE6-9 */ }
