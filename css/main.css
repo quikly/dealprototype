@@ -1503,32 +1503,41 @@ body {
 /* ==========================================================================
    Quikly Modal specific Styles
    ========================================================================== */
-.opt-in .title {
-  font-family: 'Open Sans';
-  font-size: 30px;
-  line-height: 40px;
-  text-align: center; }
-.opt-in .body {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-style: italic;
-  font-size: 20px;
-  text-align: center; }
-.opt-in .button {
-  width: 132px;
-  height: 77px;
-  margin-top: 10px;
-  margin-right: 5px;
-  display: inline-block;
-  font-family: 'Open Sans';
-  font-weight: 600;
-  font-size: 26px;
-  color: #FFF;
+.opt-in {
   border: none;
-  border-radius: 10px;
-  background-color: #4e9eb8;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #70c0d6), color-stop(100%, #4e9eb8));
-  background-image: -webkit-linear-gradient(#70c0d6, #4e9eb8);
-  background-image: linear-gradient(#70c0d6, #4e9eb8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 );
-  /* IE6-9 */ }
+  box-shadow: none; }
+  .opt-in .title {
+    font-family: 'Open Sans';
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center; }
+  .opt-in .body {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center; }
+  .opt-in .modal-verify {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 550px;
+    margin: 0 auto;
+    padding: 25px; }
+  .opt-in .button {
+    width: 132px;
+    height: 77px;
+    margin-top: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 26px;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    background-color: #4e9eb8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #70c0d6), color-stop(100%, #4e9eb8));
+    background-image: -webkit-linear-gradient(#70c0d6, #4e9eb8);
+    background-image: linear-gradient(#70c0d6, #4e9eb8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 );
+    /* IE6-9 */ }
