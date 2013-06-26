@@ -28,7 +28,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 2000;
+      z-index: 1030;
       border-radius: 0px;
     }
   }// end bar
@@ -70,6 +70,7 @@
     margin: 0 auto;
     position: relative;
     top: -35px;
+    color: #fff;
 
     @include opensans-reg;
     @include transition (all 0.25s ease);

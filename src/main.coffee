@@ -38,6 +38,8 @@ class Landing
     @peopleHeight()
     @resizeLanding()
 
+    $('#myModal').modal({show: false})
+
     # ======= Animation Event Handlers =========
 
     @wheel.bind(@animEndEvents(), (e) => 

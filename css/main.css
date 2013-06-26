@@ -276,7 +276,7 @@ body {
     top: 0;
     height: 80px;
     min-height: 0px;
-    z-index: 2000; }
+    z-index: 1000; }
   .landing.slide {
     right: 300px; }
   .landing .logo {
@@ -295,7 +295,8 @@ body {
   position: absolute;
   left: 50%;
   bottom: 0;
-  margin-left: -70px; }
+  margin-left: -70px;
+  z-index: 1000; }
 
 .people {
   position: relative;
@@ -385,7 +386,7 @@ body {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 2000;
+      z-index: 1030;
       border-radius: 0px; }
 
 .wheel-wrap {
@@ -419,6 +420,7 @@ body {
     margin: 0 auto;
     position: relative;
     top: -35px;
+    color: #fff;
     font-family: 'Open Sans';
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
@@ -1080,13 +1082,13 @@ body {
     width: 140px;
     height: 30px;
     cursor: pointer;
-    z-index: 2000; }
+    z-index: 1030; }
     .detail .return-btn.collapse {
       position: fixed;
       top: 80px;
       left: 50%;
       margin-left: -70px;
-      z-index: 2000;
+      z-index: 1030;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);

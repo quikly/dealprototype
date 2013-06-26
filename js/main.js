@@ -42,6 +42,9 @@
       });
       this.peopleHeight();
       this.resizeLanding();
+      $('#myModal').modal({
+        show: false
+      });
       this.wheel.bind(this.animEndEvents(), function(e) {
         var callback, el;
 
