@@ -35,15 +35,16 @@
     }
 
     Sorter.prototype.renderContacts = function() {
-      var contact, el, i, _i, _len, _ref, _results;
+      var contact, dataName, el, i, _i, _len, _ref, _results;
 
       el = $('.list-email');
       _ref = this.contacts;
       _results = [];
       for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
         contact = _ref[i];
+        dataName = contact.first_name.toLowerCase() + ' ' + contact.last_name.toLowerCase() + ' ' + contact.email.toLowerCase();
         _results.push(el.append('\
-        <label class="checkbox" for="checkboxes-' + i + '" data-name="' + contact.first_name + contact.last_name + contact.email + '">\
+        <label class="checkbox" for="checkboxes-' + i + '" data-name="' + dataName + '">\
           <input type="checkbox" name="checkboxes" id="checkboxes-' + i + '" value="' + i + '">\
           ' + contact.first_name + ' ' + contact.last_name + '\
         </label>\
@@ -60,7 +61,7 @@
         $('.scroll-box').scrollTop(0);
         if (currentText !== '') {
           $('.list-email .checkbox').hide();
-          return $('.list-email').find("[data-name*='" + currentText + "']").show();
+          return $('.list-email').find('[data-name*="' + currentText + '"]').show();
         } else {
           return $('.list-email .checkbox').show();
         }
@@ -158,7 +159,7 @@
           }, {
             first_name: 'John',
             last_name: 'Solimine',
-            email: 'spikepress@spikepress.com'
+            email: 'spikepressspikepress.com'
           }, {
             first_name: 'Kyle',
             last_name: 'Fletcher',
