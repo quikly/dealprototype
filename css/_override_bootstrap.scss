@@ -30,18 +30,67 @@
     text-align: center;
   }
 
-  .body {
+  .info {
     @include opensans-italic;
     font-size: 20px;
     text-align: center;
   }
 
   .modal-verify {
-    border-radius: 10px;
-    background-color: #fff;
     width: 550px;
     margin: 0 auto;
     padding:25px;
+
+    &.top {
+      border-top-right-radius: 10px;
+      border-top-left-radius:  10px;
+      background-color: #fff;
+    }
+
+    &.bottom {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius:  10px;
+      background-color: $mediumBlack;
+    }
+
+    .details {
+      width: 72.3327306%;
+      font-size: 16px;
+      line-height: 22px;
+      @include opensans-semi;
+
+      .yellow {color: $yellow}
+    }
+
+    .fine-copy {
+      color: $discountGrey;
+      
+    }
+
+    .type-num-wrap {
+      display: inline-block;
+      width: 360px;
+      height: 77px;
+      background: $darkWhite;
+      border-radius: 5px;
+      padding: 0 18px;
+
+    }
+
+    input[type="text"] {
+      border: none;
+      color: $darkBlack;
+      font-size: 24px;
+      line-height: 20px;
+      background: none;
+      height: auto;
+      padding: 0;
+      margin: 30px 0 25px 0;
+      
+      @include opensans-reg;  
+      @include box-shadow(none);
+    }
+
   }
 
   .button {
