@@ -5,7 +5,7 @@
 .modal {
   background: none;
   width: 690px;
-  margin-left: -360px;
+  margin-left: -345px;
 }
 
 .modal-header {
@@ -13,6 +13,28 @@
   padding: 50px 20px 25px 20px;
 }
 
+.button {
+    width:  132px;
+    height: 77px;
+    margin-top: 10px;
+    margin-right: 5px;
+    display: inline-block;
+    
+    @include opensans-semi;
+
+    font-size:  26px; 
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
+    //@include linear-gradient(#70c0d6, #4e9eb8, $fallback: #4e9eb8);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 ); /* IE6-9 */
+
+    &:hover {
+      background: #82d5ec;
+    }
+
+  }
 
 
 /* ==========================================================================
@@ -34,82 +56,81 @@
     @include opensans-italic;
     font-size: 20px;
     text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.modal-verify {
+  width: 550px;
+  margin: 0 auto;
+  padding:25px;
+
+  &.top {
+    border-top-right-radius: 10px;
+    border-top-left-radius:  10px;
+    background-color: #fff;
   }
 
-  .modal-verify {
-    width: 550px;
-    margin: 0 auto;
-    padding:25px;
-
-    &.top {
-      border-top-right-radius: 10px;
-      border-top-left-radius:  10px;
-      background-color: #fff;
-    }
-
-    &.bottom {
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius:  10px;
-      background-color: $mediumBlack;
-    }
-
-    .details {
-      width: 72.3327306%;
-      font-size: 16px;
-      line-height: 22px;
-      @include opensans-semi;
-
-      .yellow {color: $yellow}
-    }
-
-    .fine-copy {
-      color: $discountGrey;
-
-    }
-
-    .type-num-wrap {
-      display: inline-block;
-      width: 360px;
-      height: 77px;
-      background: $darkWhite;
-      border-radius: 5px;
-      padding: 0 18px;
-
-    }
-
-    input[type="text"] {
-      border: none;
-      color: $darkBlack;
-      font-size: 24px;
-      line-height: 20px;
-      background: none;
-      height: auto;
-      padding: 0;
-      margin: 30px 0 25px 0;
-      
-      @include opensans-reg;  
-      @include box-shadow(none);
-    }
-
+  &.bottom {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius:  10px;
+    background-color: $mediumBlack;
   }
 
-  .button {
-    width:  132px;
-    height: 77px;
-    margin-top: 10px;
-    margin-right: 5px;
+  .type-num-wrap {
     display: inline-block;
-    
+    width: 360px;
+    height: 77px;
+    background: $darkWhite;
+    border-radius: 5px;
+    padding: 0 18px;
+  }
+
+  input[type="text"] {
+    border: none;
+    color: $darkBlack;
+    font-size: 24px;
+    line-height: 20px;
+    background: none;
+    height: auto;
+    padding: 0;
+    margin: 30px 0 25px 0;
+
+    @include opensans-reg;
+    @include box-shadow(none);
+  }
+
+  .verify-checkbox {
+    float: left;
+    margin-right: 30px;
+    margin-left: 5px;
+  }
+
+  .details {
+    float: left;
+    width: 75%;
+    font-size: 16px;
+    line-height: 22px;
     @include opensans-semi;
 
-    font-size:  26px; 
-    color: #FFF;
-    border: none;
-    border-radius: 10px;
-    @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
-    //@include linear-gradient(#70c0d6, #4e9eb8, $fallback: #4e9eb8);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 ); /* IE6-9 */
+    .yellow {color: $yellow}
   }
 
-}// opt-in
+  .details-legal {
+    color: $discountGrey;
+    font-size: 14px;
+    @include opensans-reg;
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+      font-style: italic;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }// details-legal
+}// modal verify
+
 

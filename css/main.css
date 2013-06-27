@@ -1489,11 +1489,32 @@ body {
 .modal {
   background: none;
   width: 690px;
-  margin-left: -360px; }
+  margin-left: -345px; }
 
 .modal-header {
   border-bottom: 3px solid #7a7a7a;
   padding: 50px 20px 25px 20px; }
+
+.button {
+  width: 132px;
+  height: 77px;
+  margin-top: 10px;
+  margin-right: 5px;
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 26px;
+  color: #FFF;
+  border: none;
+  border-radius: 10px;
+  background-color: #82d5ec;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
+  background-image: -webkit-linear-gradient(#82d5ec, #54adcb);
+  background-image: linear-gradient(#82d5ec, #54adcb);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 );
+  /* IE6-9 */ }
+  .button:hover {
+    background: #82d5ec; }
 
 /* ==========================================================================
    Quikly Modal specific Styles
@@ -1511,62 +1532,59 @@ body {
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
-    text-align: center; }
-  .opt-in .modal-verify {
-    width: 550px;
-    margin: 0 auto;
-    padding: 25px; }
-    .opt-in .modal-verify.top {
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
-      background-color: #fff; }
-    .opt-in .modal-verify.bottom {
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      background-color: #414141; }
-    .opt-in .modal-verify .details {
-      width: 72.3327306%;
-      font-size: 16px;
-      line-height: 22px;
-      font-family: 'Open Sans';
-      font-weight: 600; }
-      .opt-in .modal-verify .details .yellow {
-        color: #ffe57e; }
-    .opt-in .modal-verify .fine-copy {
-      color: #9d9d9d; }
-    .opt-in .modal-verify .type-num-wrap {
-      display: inline-block;
-      width: 360px;
-      height: 77px;
-      background: #e9e9e9;
-      border-radius: 5px;
-      padding: 0 18px; }
-    .opt-in .modal-verify input[type="text"] {
-      border: none;
-      color: #5d5d5d;
-      font-size: 24px;
-      line-height: 20px;
-      background: none;
-      height: auto;
-      padding: 0;
-      margin: 30px 0 25px 0;
-      font-family: 'Open Sans';
-      box-shadow: none; }
-  .opt-in .button {
-    width: 132px;
-    height: 77px;
-    margin-top: 10px;
-    margin-right: 5px;
+    text-align: center;
+    margin-bottom: 30px; }
+
+.modal-verify {
+  width: 550px;
+  margin: 0 auto;
+  padding: 25px; }
+  .modal-verify.top {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #fff; }
+  .modal-verify.bottom {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #414141; }
+  .modal-verify .type-num-wrap {
     display: inline-block;
-    font-family: 'Open Sans';
-    font-weight: 600;
-    font-size: 26px;
-    color: #FFF;
+    width: 360px;
+    height: 77px;
+    background: #e9e9e9;
+    border-radius: 5px;
+    padding: 0 18px; }
+  .modal-verify input[type="text"] {
     border: none;
-    border-radius: 10px;
-    background-color: #82d5ec;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82d5ec), color-stop(100%, #54adcb));
-    background-image: -webkit-linear-gradient(#82d5ec, #54adcb);
-    background-image: linear-gradient(#82d5ec, #54adcb);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 );
-    /* IE6-9 */ }
+    color: #5d5d5d;
+    font-size: 24px;
+    line-height: 20px;
+    background: none;
+    height: auto;
+    padding: 0;
+    margin: 30px 0 25px 0;
+    font-family: 'Open Sans';
+    box-shadow: none; }
+  .modal-verify .verify-checkbox {
+    float: left;
+    margin-right: 30px;
+    margin-left: 5px; }
+  .modal-verify .details {
+    float: left;
+    width: 75%;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Open Sans';
+    font-weight: 600; }
+    .modal-verify .details .yellow {
+      color: #ffe57e; }
+  .modal-verify .details-legal {
+    color: #9d9d9d;
+    font-size: 14px;
+    font-family: 'Open Sans'; }
+    .modal-verify .details-legal a {
+      text-decoration: underline;
+      color: inherit;
+      font-style: italic; }
+      .modal-verify .details-legal a:hover {
+        color: #ffe57e; }
