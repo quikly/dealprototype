@@ -1,0 +1,76 @@
+//<i class="sprite sprite-chevron_lft"></i>
+//<i class="sprite sprite-chevron_rgt"></i>
+//<i class="sprite sprite-details_btn"></i>
+//<i class="sprite sprite-fb-icon"></i>
+//<i class="sprite sprite-phone_icon"></i>
+//<i class="sprite sprite-pintr-icon"></i>
+//<i class="sprite sprite-pointer"></i>
+//<i class="sprite sprite-return_btn"></i>
+//<i class="sprite sprite-share_icon"></i>
+//<i class="sprite sprite-twt-icon"></i>
+
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-chevron_lft {
+    width: 14px;
+    height: 96px;
+    background-position: -5px -5px;
+}
+
+.sprite-chevron_rgt {
+    width: 14px;
+    height: 96px;
+    background-position: -29px -5px;
+}
+
+.sprite-details_btn {
+    width: 280px;
+    height: 62px;
+    background-position: -5px -111px;
+}
+
+.sprite-fb-icon {
+    width: 24px;
+    height: 48px;
+    background-position: -53px -5px;
+}
+
+.sprite-phone-icon {
+    width: 28px;
+    height: 48px;
+    background-position: -87px -5px;
+}
+
+.sprite-pintr-icon {
+    width: 24px;
+    height: 48px;
+    background-position: -125px -5px;
+}
+
+.sprite-pointer {
+    width: 100px;
+    height: 74px;
+    background-position: -159px -5px;
+}
+
+.sprite-return_btn {
+    width: 280px;
+    height: 62px;
+    background-position: -5px -183px;
+}
+
+.sprite-share_icon {
+    width: 72px;
+    height: 32px;
+    background-position: -269px -5px;
+}
+
+.sprite-twt-icon {
+    width: 24px;
+    height: 48px;
+    background-position: -269px -47px;
+}
