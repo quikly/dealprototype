@@ -10,7 +10,7 @@
 
 .modal-header {
   border-bottom: 3px solid $modalHrGrey;
-  padding: 50px 20px 25px 20px;
+  padding: 30px 20px 25px 20px;
 }
 
 .button {  
@@ -27,7 +27,6 @@
     &:hover {
       background: #82d5ec;
     }
-
   }
 
 
@@ -37,7 +36,35 @@
 
 .opt-in {
   border: none;
+  text-align: center;
   @include box-shadow(none);
+
+  .status-pill {
+    background-color: #FFF;
+    border-radius: 18px;
+    padding: 12px 18px 4px 18px;
+    margin: 0 auto;
+    display: inline-block;
+    
+    .sprite-bug {
+      background-image: url(../img/fraud-bug.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 23px;
+      height: 22px;
+    }
+
+    .status {
+      @include opensans-semi;
+      vertical-align: top;
+      display:inline-block;
+      font-size: 19px;
+      line-height: 23px;
+      color: $darkBlack;
+      margin: 0;
+      padding: 0;
+    }
+  }
 
   .title {
     @include opensans-reg;
@@ -68,7 +95,6 @@
     .button {
       width:  132px;
       height: 77px;
-      
       display: inline-block;
     }
   }
@@ -126,6 +152,7 @@
     font-size: 16px;
     line-height: 22px;
     @include opensans-semi;
+    text-align: left;
 
     .yellow {color: $yellow}
   }
