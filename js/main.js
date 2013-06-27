@@ -43,6 +43,9 @@
       this.peopleHeight();
       this.resizeLanding();
       $('#verify-modal').modal({
+        show: false
+      });
+      $('#invite-modal').modal({
         show: true
       });
       this.wheel.bind(this.animEndEvents(), function(e) {

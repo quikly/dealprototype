@@ -6,35 +6,6 @@
   background: none;
   width: 690px;
   margin-left: -345px;
-}
-
-.modal-header {
-  border-bottom: 3px solid $modalHrGrey;
-  padding: 30px 20px 25px 20px;
-}
-
-.button {  
-    @include opensans-semi;
-
-    font-size:  26px; 
-    color: #FFF;
-    border: none;
-    border-radius: 10px;
-    @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
-    //@include linear-gradient(#70c0d6, #4e9eb8, $fallback: #4e9eb8);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 ); /* IE6-9 */
-
-    &:hover {
-      background: #82d5ec;
-    }
-  }
-
-
-/* ==========================================================================
-   Quikly Modal specific Styles
-   ========================================================================== */
-
-.opt-in {
   border: none;
   text-align: center;
   @include box-shadow(none);
@@ -54,6 +25,14 @@
       height: 22px;
     }
 
+    .sprite-clock {
+      background-image: url(../img/fraud-bug.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 23px;
+      height: 22px;
+    }
+
     .status {
       @include opensans-semi;
       vertical-align: top;
@@ -65,6 +44,11 @@
       padding: 0;
     }
   }
+}
+
+.modal-header {
+  border-bottom: 3px solid $modalHrGrey;
+  padding: 30px 20px 25px 20px;
 
   .title {
     @include opensans-reg;
@@ -72,6 +56,10 @@
     line-height: 40px;
     text-align: center;
   }
+}
+
+.modal-body {
+  overflow-y: visible;
 
   .info {
     @include opensans-italic;
@@ -81,97 +69,44 @@
   }
 }
 
-.modal-verify {
-  width: 550px;
+.modal-wrap {
   margin: 0 auto;
   padding:25px;
+  border-radius: 10px;
+  background-color: #fff;
 
   &.top {
+    width: 550px;
     border-top-right-radius: 10px;
     border-top-left-radius:  10px;
-    background-color: #fff;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius:  0;
     text-align: center;
-
-    .button {
-      width:  132px;
-      height: 77px;
-      display: inline-block;
-    }
   }
 
   &.bottom {
+    width: 550px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius:  10px;
+    border-top-right-radius: 0;
+    border-top-left-radius:  0;
     background-color: $mediumBlack;
   }
+  
+}// modal wrap
 
-  .type-num-wrap {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    width: 365px;
-    height: 77px;
-    background: $darkWhite;
-    border-radius: 5px;
-    padding: 0 18px;
-    margin: 0 8px 0 0;
+.button {  
+  @include opensans-semi;
+
+  font-size:  26px; 
+  color: #FFF;
+  border: none;
+  border-radius: 10px;
+  @include linear-gradient(#82d5ec, #54adcb, $fallback: #82d5ec);
+  //@include linear-gradient(#70c0d6, #4e9eb8, $fallback: #4e9eb8);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70c0d6', endColorstr='#4e9eb8',GradientType=0 ); /* IE6-9 */
+
+  &:hover {
+    background: #82d5ec;
   }
-
-  .phone-wrap {
-    display: inline-block;
-    padding: 10px 18px 10px 0 ;
-    margin-right: 15px;
-    margin-top: 5px;
-    border-right: 3px solid #fff;
-  }
-
-  input[type="text"] {
-    border: none;
-    color: $darkBlack;
-    font-size: 24px;
-    text-align: left;
-    vertical-align: top;
-    background: none;
-    height: auto;
-    padding: 0;
-    margin-top: 30px;
-
-    @include opensans-reg;
-    @include box-shadow(none);
-  }
-
-  .verify-checkbox {
-    float: left;
-    margin-right: 30px;
-    margin-left: 5px;
-  }
-
-  .details {
-    float: left;
-    width: 75%;
-    font-size: 16px;
-    line-height: 22px;
-    @include opensans-semi;
-    text-align: left;
-
-    .yellow {color: $yellow}
-  }
-
-  .details-legal {
-    color: $discountGrey;
-    font-size: 14px;
-    @include opensans-reg;
-
-    a {
-      text-decoration: underline;
-      color: inherit;
-      font-style: italic;
-
-      &:hover {
-        color: $yellow;
-      }
-    }
-  }// details-legal
-}// modal verify
-
-
+}

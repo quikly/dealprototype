@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Verify Modal specific Styles
+   ========================================================================== */
+
+.verify {
+
+  .type-num-wrap {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 365px;
+    height: 77px;
+    background: $darkWhite;
+    border-radius: 5px;
+    padding: 0 18px;
+    margin: 0 8px 0 0;
+  }
+
+  .phone-wrap {
+    display: inline-block;
+    padding: 10px 18px 10px 0 ;
+    margin-right: 15px;
+    margin-top: 5px;
+    border-right: 3px solid #fff;
+  }
+
+  input[type="text"] {
+    border: none;
+    color: $darkBlack;
+    font-size: 24px;
+    text-align: left;
+    vertical-align: top;
+    background: none;
+    height: auto;
+    padding: 0;
+    margin-top: 30px;
+
+    @include opensans-reg;
+    @include box-shadow(none);
+  }
+
+  .button {
+    width:  132px;
+    height: 77px;
+    display: inline-block;
+  }
+
+  .verify-checkbox {
+    float: left;
+    margin-right: 30px;
+    margin-left: 5px;
+  }
+
+  .details {
+    float: left;
+    width: 75%;
+    font-size: 16px;
+    line-height: 22px;
+    @include opensans-semi;
+    text-align: left;
+
+    .yellow {color: $yellow}
+  }
+
+  .details-legal {
+    color: $discountGrey;
+    font-size: 14px;
+    @include opensans-reg;
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+      font-style: italic;
+
+      &:hover {color: $yellow;}
+    }
+
+  }// details-legal
+}// verify 
+
+
+/* ==========================================================================
+   Invite Modal specific Styles
+   ========================================================================== */
+
+.invite {
+
+  .button {
+
+    width:  240px;
+    height: 55px;
+  }
+
+}
+
+
+
+
+

@@ -38,7 +38,9 @@ class Landing
     @peopleHeight()
     @resizeLanding()
 
-    $('#verify-modal').modal({show: true})
+    $('#verify-modal').modal({show: false})
+    $('#invite-modal').modal({show: true})
+    
 
     # ======= Animation Event Handlers =========
 
