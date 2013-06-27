@@ -59,7 +59,7 @@
 }
 
 .modal-body {
-  overflow-y: visible;
+  overflow: visible;
 
   .info {
     @include opensans-italic;
@@ -74,6 +74,7 @@
   padding:25px;
   border-radius: 10px;
   background-color: #fff;
+  display: inline-block;
 
   &.top {
     width: 550px;
@@ -92,7 +93,6 @@
     border-top-left-radius:  0;
     background-color: $mediumBlack;
   }
-  
 }// modal wrap
 
 .button {  

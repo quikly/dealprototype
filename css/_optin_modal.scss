@@ -84,6 +84,15 @@
    ========================================================================== */
 
 .invite {
+  .modal-wrap {
+    width: 436px;
+  }
+  .status-pill .status {
+    color: $modalHrGrey;
+    font-style: italic;
+    @include opensans-italic;
+
+  }
 
   .button {
 

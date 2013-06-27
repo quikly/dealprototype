@@ -1587,7 +1587,7 @@ body {
     text-align: center; }
 
 .modal-body {
-  overflow-y: visible; }
+  overflow: visible; }
   .modal-body .info {
     font-family: 'Open Sans';
     font-weight: 400;
@@ -1600,7 +1600,8 @@ body {
   margin: 0 auto;
   padding: 25px;
   border-radius: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: inline-block; }
   .modal-wrap.top {
     width: 550px;
     border-top-right-radius: 10px;
@@ -1695,6 +1696,14 @@ body {
 /* ==========================================================================
    Invite Modal specific Styles
    ========================================================================== */
+.invite .modal-wrap {
+  width: 436px; }
+.invite .status-pill .status {
+  color: #7a7a7a;
+  font-style: italic;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: italic; }
 .invite .button {
   width: 240px;
   height: 55px; }
