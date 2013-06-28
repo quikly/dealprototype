@@ -127,9 +127,11 @@
     font-size: 18px;
     width:  240px;
     height: 55px;
+    text-align: left;
 
     &.done {
       color: $middleBlack;
+      text-align: center;
       @include linear-gradient($darkWhite, #c1c1c1, $fallback: $darkWhite);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkWhite', endColorstr='#c1c1c1',GradientType=0 ); /* IE6-9 */
       
@@ -137,6 +139,28 @@
        background: $darkWhite;
       }
     }// done 
+
+    .sprite-envelope {
+      background-image: url(../img/envelope.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: text-bottom;
+      width: 25px;
+      height: 28px;
+      margin: 0 15px;
+    }
+
+    .sprite-fb-blue {
+      background-image: url(../img/fb-blue.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: text-bottom;
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      margin: 0 13px 0 15px;
+    }
+
   }// button
 
 
@@ -145,7 +169,7 @@
     vertical-align: top;
     margin: 0 6px 0 0;
     width: 241px;
-    height: 160px;
+    height: 155px;
     border: 6px solid $modalHrGrey;
     border-radius: 14px;
     @include linear-gradient(#4e4e4e, #000, $fallback: #4e4e4e);
@@ -160,12 +184,43 @@
     .title {
       color: #FFF;
       font-size: 25px;
+      line-height: 32px;
       font-weight: 300;
       margin: 0;
       padding: 0;
       text-align: center;
       text-transform: uppercase;
+    }
 
+    .time {
+      color: #7f7f7f;
+      display: inline-block;
+
+      .number{
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 90px;
+        letter-spacing: 2px;
+        display: block;
+        margin: 0;
+      }
+      .place {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+    .colon {
+      vertical-align: top;
+      display: inline-block;
+      
+      color: #7f7f7f;
+      line-height: 63px;
+      font-size: 90px;
+      font-weight: 300;
+      @include opensans-bold;
     }
 
   }// earnd-time 
