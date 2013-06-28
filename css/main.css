@@ -1543,7 +1543,7 @@ body {
    ========================================================================== */
 .modal {
   background: none;
-  width: 690px;
+  width: 700px;
   margin-left: -345px;
   border: none;
   text-align: center;
@@ -1560,12 +1560,13 @@ body {
       display: inline-block;
       width: 23px;
       height: 22px; }
-    .modal .status-pill .sprite-clock {
-      background-image: url(../img/fraud-bug.png);
+    .modal .status-pill .sprite-circ-check {
+      background-image: url(../img/circ-check.gif);
       background-repeat: no-repeat;
       display: inline-block;
-      width: 23px;
-      height: 22px; }
+      width: 25px;
+      height: 24px;
+      margin-right: 6px; }
     .modal .status-pill .status {
       font-family: 'Open Sans';
       font-weight: 600;
@@ -1694,16 +1695,75 @@ body {
       color: #ffe57e; }
 
 /* ==========================================================================
-   Invite Modal specific Styles
+   Invite Options Modal Styles
    ========================================================================== */
+.invite .modal-body {
+  padding: 15px 0; }
 .invite .modal-wrap {
-  width: 436px; }
+  width: 436px;
+  margin: 0;
+  padding: 25px 0; }
+  .invite .modal-wrap hr {
+    height: 3px;
+    margin: 20px;
+    background: #e9e9e9;
+    border: none; }
+  .invite .modal-wrap .info {
+    color: #7a7a7a;
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-weight: 600; }
 .invite .status-pill .status {
   color: #7a7a7a;
   font-style: italic;
+  font-size: 18px;
   font-family: 'Open Sans';
   font-weight: 400;
   font-style: italic; }
+.invite .status .callout {
+  margin-right: 6px;
+  color: #70c0d6;
+  font-style: normal;
+  font-family: 'Open Sans';
+  font-weight: 700; }
 .invite .button {
+  font-size: 18px;
   width: 240px;
   height: 55px; }
+  .invite .button.done {
+    color: #4b4b4b;
+    background-color: #e9e9e9;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #c1c1c1));
+    background-image: -webkit-linear-gradient(#e9e9e9, #c1c1c1);
+    background-image: linear-gradient(#e9e9e9, #c1c1c1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$darkWhite', endColorstr='#c1c1c1',GradientType=0 );
+    /* IE6-9 */ }
+    .invite .button.done:hover {
+      background: #e9e9e9; }
+.invite .earned-time {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 6px 0 0;
+  width: 241px;
+  height: 160px;
+  border: 6px solid #7a7a7a;
+  border-radius: 14px;
+  background-color: #4e4e4e;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e4e4e), color-stop(100%, black));
+  background-image: -webkit-linear-gradient(#4e4e4e, black);
+  background-image: linear-gradient(#4e4e4e, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 );
+  /* IE6-9 */ }
+.invite .earned-time {
+  font-family: 'League Gothic';
+  font-weight: 300;
+  letter-spacing: 1px; }
+  .invite .earned-time .title {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase; }

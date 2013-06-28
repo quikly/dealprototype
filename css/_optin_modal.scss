@@ -80,29 +80,98 @@
 
 
 /* ==========================================================================
-   Invite Modal specific Styles
+   Invite Options Modal Styles
    ========================================================================== */
 
 .invite {
+
+  .modal-body {
+    padding: 15px 0;
+  }
+
   .modal-wrap {
     width: 436px;
-  }
+    margin: 0;
+    padding: 25px 0;
+
+    hr {
+      height: 3px;
+      margin: 20px;
+      background: $darkWhite;
+      border: none;
+    }
+
+    .info {
+      color: $modalHrGrey;
+      font-size: 16px;
+      font-style: normal;
+      @include opensans-semi;
+    }
+  }// close modal wrap
+
   .status-pill .status {
     color: $modalHrGrey;
     font-style: italic;
+    font-size: 18px;
     @include opensans-italic;
+  }
 
+  .status .callout {
+    margin-right: 6px;
+    color: $turq;
+    font-style: normal;
+    @include opensans-bold;
   }
 
   .button {
-
+    font-size: 18px;
     width:  240px;
     height: 55px;
+
+    &.done {
+      color: $middleBlack;
+      @include linear-gradient($darkWhite, #c1c1c1, $fallback: $darkWhite);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkWhite', endColorstr='#c1c1c1',GradientType=0 ); /* IE6-9 */
+      
+      &:hover {
+       background: $darkWhite;
+      }
+    }// done 
+  }// button
+
+
+  .earned-time {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px 0 0;
+    width: 241px;
+    height: 160px;
+    border: 6px solid $modalHrGrey;
+    border-radius: 14px;
+    @include linear-gradient(#4e4e4e, #000, $fallback: #4e4e4e);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 ); /* IE6-9 */
   }
 
+  .earned-time {
+    font-family: 'League Gothic';
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    .title {
+      color: #FFF;
+      font-size: 25px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+
+    }
+
+  }// earnd-time 
+
+
 }
-
-
 
 
 

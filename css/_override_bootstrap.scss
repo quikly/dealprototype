@@ -4,7 +4,7 @@
 
 .modal {
   background: none;
-  width: 690px;
+  width: 700px;
   margin-left: -345px;
   border: none;
   text-align: center;
@@ -25,12 +25,13 @@
       height: 22px;
     }
 
-    .sprite-clock {
-      background-image: url(../img/fraud-bug.png);
+    .sprite-circ-check {
+      background-image: url(../img/circ-check.gif);
       background-repeat: no-repeat;
       display: inline-block;
-      width: 23px;
-      height: 22px;
+      width: 25px;
+      height: 24px;
+      margin-right: 6px;
     }
 
     .status {
@@ -60,6 +61,7 @@
 
 .modal-body {
   overflow: visible;
+
 
   .info {
     @include opensans-italic;
