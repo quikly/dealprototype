@@ -1578,6 +1578,9 @@ body {
       margin: 0;
       padding: 0; }
 
+.modal.fade.in {
+  top: 5%; }
+
 .modal-header {
   border-bottom: 3px solid #7a7a7a;
   padding: 30px 20px 25px 20px; }
@@ -1697,118 +1700,162 @@ body {
 /* ==========================================================================
    Invite Options Modal Styles
    ========================================================================== */
-.invite .modal-body {
-  padding: 15px 0; }
-.invite .modal-wrap {
-  width: 436px;
-  margin: 0;
-  padding: 25px 0; }
-  .invite .modal-wrap hr {
-    height: 3px;
-    margin: 20px;
-    background: #e9e9e9;
-    border: none; }
-  .invite .modal-wrap .info {
+.invite {
+  /* ==========================================================================
+     Earned Time modal
+     ========================================================================== */ }
+  .invite .modal-body {
+    padding: 15px 0; }
+  .invite .modal-wrap {
+    width: 436px;
+    margin: 0;
+    padding: 25px 0; }
+    .invite .modal-wrap hr {
+      height: 3px;
+      margin: 20px;
+      background: #e9e9e9;
+      border: none; }
+    .invite .modal-wrap .info {
+      display: inline-block;
+      margin-right: 60px;
+      color: #7a7a7a;
+      font-size: 16px;
+      font-style: normal;
+      font-family: 'Open Sans';
+      font-weight: 600; }
+  .invite .status-pill .status {
     color: #7a7a7a;
-    font-size: 16px;
+    font-style: italic;
+    font-size: 18px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: italic; }
+  .invite .status .callout {
+    margin-right: 6px;
+    color: #70c0d6;
     font-style: normal;
     font-family: 'Open Sans';
-    font-weight: 600; }
-.invite .status-pill .status {
-  color: #7a7a7a;
-  font-style: italic;
-  font-size: 18px;
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-style: italic; }
-.invite .status .callout {
-  margin-right: 6px;
-  color: #70c0d6;
-  font-style: normal;
-  font-family: 'Open Sans';
-  font-weight: 700; }
-.invite .button {
-  font-size: 18px;
-  width: 240px;
-  height: 55px;
-  text-align: left; }
-  .invite .button.done {
-    color: #4b4b4b;
-    text-align: center;
-    background-color: #e9e9e9;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #c1c1c1));
-    background-image: -webkit-linear-gradient(#e9e9e9, #c1c1c1);
-    background-image: linear-gradient(#e9e9e9, #c1c1c1);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$darkWhite', endColorstr='#c1c1c1',GradientType=0 );
-    /* IE6-9 */ }
-    .invite .button.done:hover {
-      background: #e9e9e9; }
-  .invite .button .sprite-envelope {
-    background-image: url(../img/envelope.png);
+    font-weight: 700; }
+  .invite .button {
+    font-size: 18px;
+    width: 240px;
+    height: 55px;
+    text-align: left;
+    margin-right: 80px; }
+    .invite .button.done {
+      color: #4b4b4b;
+      text-align: center;
+      margin: 0;
+      background-color: #e9e9e9;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9e9e9), color-stop(100%, #c1c1c1));
+      background-image: -webkit-linear-gradient(#e9e9e9, #c1c1c1);
+      background-image: linear-gradient(#e9e9e9, #c1c1c1);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$darkWhite', endColorstr='#c1c1c1',GradientType=0 );
+      /* IE6-9 */ }
+      .invite .button.done:hover {
+        background: #e9e9e9; }
+    .invite .button .sprite-envelope {
+      background-image: url(../img/envelope.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: text-bottom;
+      width: 25px;
+      height: 28px;
+      margin: 0 15px; }
+    .invite .button .sprite-fb-blue {
+      background-image: url(../img/fb-blue.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: text-bottom;
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      margin: 0 13px 0 15px; }
+  .invite .sprite-clocky {
+    background-image: url(../img/clocky.png);
     background-repeat: no-repeat;
     display: inline-block;
-    vertical-align: text-bottom;
-    width: 25px;
-    height: 28px;
-    margin: 0 15px; }
-  .invite .button .sprite-fb-blue {
-    background-image: url(../img/fb-blue.png);
-    background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: text-bottom;
     width: 24px;
     height: 24px;
     margin-right: 6px;
     margin: 0 13px 0 15px; }
-.invite .earned-time {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 6px 0 0;
-  width: 241px;
-  height: 155px;
-  border: 6px solid #7a7a7a;
-  border-radius: 14px;
-  background-color: #4e4e4e;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e4e4e), color-stop(100%, black));
-  background-image: -webkit-linear-gradient(#4e4e4e, black);
-  background-image: linear-gradient(#4e4e4e, black);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 );
-  /* IE6-9 */ }
-.invite .earned-time {
-  font-family: 'League Gothic';
-  font-weight: 300;
-  letter-spacing: 1px; }
-  .invite .earned-time .title {
-    color: #FFF;
-    font-size: 25px;
-    line-height: 32px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    text-transform: uppercase; }
-  .invite .earned-time .time {
-    color: #7f7f7f;
-    display: inline-block; }
-    .invite .earned-time .time .number {
-      font-weight: normal;
-      font-size: 100px;
-      line-height: 90px;
-      letter-spacing: 2px;
-      display: block;
-      margin: 0; }
-    .invite .earned-time .time .place {
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 16px;
-      text-transform: uppercase;
-      margin: 0; }
-  .invite .earned-time .colon {
-    vertical-align: top;
+  .invite .sprite-person-plus {
+    background-image: url(../img/person-plus.png);
+    background-repeat: no-repeat;
     display: inline-block;
-    color: #7f7f7f;
-    line-height: 63px;
-    font-size: 90px;
+    width: 28px;
+    height: 22px;
+    margin-right: 6px;
+    margin: 0 13px 0 15px; }
+  .invite .sprite-thumb-up {
+    background-image: url(../img/thumb-up.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 21px;
+    margin-right: 6px;
+    margin: 0 13px 0 15px; }
+  .invite .share-icon {
+    width: 78px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 3px; }
+    .invite .share-icon .title {
+      margin: 0;
+      color: #7a7a7a;
+      font-family: 'League Gothic';
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 16px;
+      text-transform: uppercase; }
+  .invite .earned-time {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px 0 0;
+    width: 241px;
+    border: 6px solid #7a7a7a;
+    border-radius: 14px;
+    background-color: #4e4e4e;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e4e4e), color-stop(100%, black));
+    background-image: -webkit-linear-gradient(#4e4e4e, black);
+    background-image: linear-gradient(#4e4e4e, black);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 );
+    /* IE6-9 */ }
+  .invite .earned-time {
+    font-family: 'League Gothic';
     font-weight: 300;
-    font-family: 'Open Sans';
-    font-weight: 700; }
+    letter-spacing: 1px; }
+    .invite .earned-time .title {
+      color: #FFF;
+      font-size: 25px;
+      line-height: 32px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase; }
+    .invite .earned-time .time {
+      color: #7f7f7f;
+      display: inline-block; }
+      .invite .earned-time .time .number {
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 90px;
+        letter-spacing: 2px;
+        display: block;
+        margin: 0; }
+      .invite .earned-time .time .place {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin: 0; }
+    .invite .earned-time .colon {
+      vertical-align: top;
+      display: inline-block;
+      color: #7f7f7f;
+      line-height: 63px;
+      font-size: 90px;
+      font-weight: 300;
+      font-family: 'Open Sans';
+      font-weight: 700; }

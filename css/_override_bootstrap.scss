@@ -47,6 +47,10 @@
   }
 }
 
+// push modal closer to top
+.modal.fade.in{top:5%;}
+
+
 .modal-header {
   border-bottom: 3px solid $modalHrGrey;
   padding: 30px 20px 25px 20px;

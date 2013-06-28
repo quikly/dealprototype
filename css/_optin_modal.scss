@@ -102,6 +102,8 @@
     }
 
     .info {
+      display: inline-block;
+      margin-right: 60px;
       color: $modalHrGrey;
       font-size: 16px;
       font-style: normal;
@@ -128,10 +130,12 @@
     width:  240px;
     height: 55px;
     text-align: left;
+    margin-right: 80px;
 
     &.done {
       color: $middleBlack;
       text-align: center;
+      margin: 0;
       @include linear-gradient($darkWhite, #c1c1c1, $fallback: $darkWhite);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkWhite', endColorstr='#c1c1c1',GradientType=0 ); /* IE6-9 */
       
@@ -160,16 +164,67 @@
       margin-right: 6px;
       margin: 0 13px 0 15px;
     }
-
   }// button
 
+  .sprite-clocky {
+      background-image: url(../img/clocky.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      margin: 0 13px 0 15px;
+  } 
+
+  .sprite-person-plus {
+      background-image: url(../img/person-plus.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 28px;
+      height: 22px;
+      margin-right: 6px;
+      margin: 0 13px 0 15px;
+  }
+
+  .sprite-thumb-up {
+      background-image: url(../img/thumb-up.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 24px;
+      height: 21px;
+      margin-right: 6px;
+      margin: 0 13px 0 15px;
+  }
+
+  .share-icon {
+     width: 78px;
+     display: inline-block;
+     vertical-align: top;
+     margin-top: 3px;
+    
+    .title {
+      margin: 0;
+      color: #7a7a7a;
+      font-family: 'League Gothic';
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+
+  }
+
+
+/* ==========================================================================
+   Earned Time modal
+   ========================================================================== */
 
   .earned-time {
     display: inline-block;
     vertical-align: top;
     margin: 0 6px 0 0;
     width: 241px;
-    height: 155px;
+    
     border: 6px solid $modalHrGrey;
     border-radius: 14px;
     @include linear-gradient(#4e4e4e, #000, $fallback: #4e4e4e);
