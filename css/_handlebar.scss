@@ -11,7 +11,7 @@
   .bar {
     width: 100%;
     height: 80px;
-    background-color: $ligthBlack;
+    background-color: $lightBlack;
     @include transform(translate3d(0,0,0));
 
     &.small {
@@ -59,7 +59,7 @@
     @include transform(scale(1));
 
     .price {
-      color: $redd;
+      color: $red;
       text-decoration: line-through;
     }
   } // end retail 
