@@ -1,32 +1,37 @@
+// font variables
+$helvetica:     "helvetica neue", helvetica, sans-serif;
+$opensans:      "open sans", $helvetica;
+$gothic:        "League Gothic", impact, tahoma, $helvetica;
+$courier:       "Courier New", courier, monospace;
+$facebook-font: "lucida grande", tahoma, verdana, arial, sans-serif;
 
 // font family mixins
-
 @mixin opensans-reg {
-  font-family: 'Open Sans';
+  font-family: $opensans;
 }
 
 @mixin opensans-light {
-  font-family: 'Open Sans';
+  font-family: $opensans;
   font-weight: 200;
 }
 
 @mixin opensans-semi {
-  font-family: 'Open Sans';
+  font-family: $opensans;
   font-weight: 600;
 }
 
 @mixin opensans-bold {
-  font-family: 'Open Sans';
+  font-family: $opensans;
   font-weight: 700;
 }
 
 @mixin opensans-italic {
-  font-family: 'Open Sans';
+  font-family: $opensans;
   font-weight: 400;
   font-style: italic;
 }
 
 @mixin leaguge-gothic {
-    font-family: 'League Gothic';
-    font-weight: 200; 
+  font-family: $gothic;
+  font-weight: 200; 
 }
