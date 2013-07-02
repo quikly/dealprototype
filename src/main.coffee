@@ -174,7 +174,7 @@ class Landing
   addPerson: (img)=>
     #height of one person plus margin top
     offset = '68px'
-    img = 'img/temp/scott.jpg'
+    img = 'images/temp/scott.jpg'
    
     $('.people').prepend(
         '<div class="person new"><img class="pic" src="'+img+'"><h1 class="name">I&apos;m in!</h1></div>'

@@ -8,7 +8,7 @@
    Colors
    ========================================================================== */
 .sprite {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(../images/spritesheet.png);
   background-repeat: no-repeat;
   display: block; }
 
@@ -308,7 +308,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  background: url(../img/hero_bg.jpg) center top no-repeat;
+  background: url(../images/hero_bg.jpg) center top no-repeat;
   background-size: cover;
   position: absolute;
   -webkit-transition: right 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -342,7 +342,7 @@ body {
 
 .details-btn {
   display: inline-block;
-  background: url(../img/details_btn.png);
+  background: url(../images/details_btn.png);
   background-size: 140px 30px;
   width: 140px;
   height: 30px;
@@ -556,7 +556,7 @@ body {
     transition: all 0.25s 0.15s cubic-bezier(0.19, 1, 0.22, 1); }
   .circlebtn.right {
     float: right;
-    background: url(../img/chevron_rgt.png) #343434 no-repeat;
+    background: url(../images/chevron_rgt.png) #343434 no-repeat;
     background-position: 60% 0%;
     right: 16px; }
     .circlebtn.right .title {
@@ -567,7 +567,7 @@ body {
       top: 0px; }
   .circlebtn.left {
     float: left;
-    background: url(../img/chevron_lft.png) #343434 no-repeat;
+    background: url(../images/chevron_lft.png) #343434 no-repeat;
     background-position: 12px 0px;
     left: 16px; }
     .circlebtn.left .title {
@@ -949,7 +949,7 @@ body {
     border: 8px solid #5d5d5d; } }
 
 .pointer {
-  background: url(../img/pointer.png) top left no-repeat;
+  background: url(../images/pointer.png) top left no-repeat;
   background-size: 100% 100%;
   width: 50px;
   height: 37px;
@@ -1030,7 +1030,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e4e4e', endColorstr='#000',GradientType=0 );
     /* IE6-9 */ }
     .nav .share .icon {
-      background: url(../img/share_icon.png) top left no-repeat;
+      background: url(../images/share_icon.png) top left no-repeat;
       background-size: 36px 16px;
       background-position: 0px 0px;
       width: 18px;
@@ -1095,7 +1095,7 @@ body {
     width: 24px;
     height: 24px;
     border-radius: 2px;
-    background: url(../img/social_icons.png) top left no-repeat;
+    background: url(../images/social_icons.png) top left no-repeat;
     background-size: 72px 48px;
     text-indent: -9999px;
     display: inline-block;
@@ -1129,7 +1129,7 @@ body {
     position: relative;
     text-indent: -9999px;
     margin: 0 auto;
-    background: url(../img/return_btn.png) top center no-repeat;
+    background: url(../images/return_btn.png) top center no-repeat;
     background-size: 140px 30px;
     width: 140px;
     height: 30px;
@@ -1555,13 +1555,13 @@ body {
     margin: 0 auto;
     display: inline-block; }
     .modal .status-pill .sprite-bug {
-      background-image: url(../img/fraud-bug.png);
+      background-image: url(../images/fraud-bug.png);
       background-repeat: no-repeat;
       display: inline-block;
       width: 23px;
       height: 22px; }
     .modal .status-pill .sprite-circ-check {
-      background-image: url(../img/circ-check.gif);
+      background-image: url(../images/circ-check.gif);
       background-repeat: no-repeat;
       display: inline-block;
       width: 25px;
@@ -1755,7 +1755,7 @@ body {
       .invite .button.done:hover {
         background: #e9e9e9; }
     .invite .button .sprite-envelope {
-      background-image: url(../img/envelope.png);
+      background-image: url(../images/envelope.png);
       background-repeat: no-repeat;
       display: inline-block;
       vertical-align: text-bottom;
@@ -1763,7 +1763,7 @@ body {
       height: 28px;
       margin: 0 15px; }
     .invite .button .sprite-fb-blue {
-      background-image: url(../img/fb-blue.png);
+      background-image: url(../images/fb-blue.png);
       background-repeat: no-repeat;
       display: inline-block;
       vertical-align: text-bottom;
@@ -1772,7 +1772,7 @@ body {
       margin-right: 6px;
       margin: 0 13px 0 15px; }
   .invite .sprite-clocky {
-    background-image: url(../img/clocky.png);
+    background-image: url(../images/clocky.png);
     background-repeat: no-repeat;
     display: inline-block;
     width: 24px;
@@ -1780,7 +1780,7 @@ body {
     margin-right: 6px;
     margin: 0 13px 0 15px; }
   .invite .sprite-person-plus {
-    background-image: url(../img/person-plus.png);
+    background-image: url(../images/person-plus.png);
     background-repeat: no-repeat;
     display: inline-block;
     width: 28px;
@@ -1788,7 +1788,7 @@ body {
     margin-right: 6px;
     margin: 0 13px 0 15px; }
   .invite .sprite-thumb-up {
-    background-image: url(../img/thumb-up.png);
+    background-image: url(../images/thumb-up.png);
     background-repeat: no-repeat;
     display: inline-block;
     width: 24px;

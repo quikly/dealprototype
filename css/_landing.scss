@@ -10,7 +10,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  background: url(../img/hero_bg.jpg) center top no-repeat;
+  background: url(../images/hero_bg.jpg) center top no-repeat;
   background-size: cover;
   position: absolute;
   @include transition (right 0.5s cubic-bezier(0.19, 1, 0.22, 1));
@@ -50,7 +50,7 @@ body {
 
 .details-btn {
   display: inline-block;
-  background: url(../img/details_btn.png);
+  background: url(../images/details_btn.png);
   background-size: 140px 30px;
   width: 140px;
   height: 30px;
