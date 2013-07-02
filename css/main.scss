@@ -19,23 +19,6 @@
    Main Styles
    ========================================================================== */
 
-@import "boiler_reset";
-@import "sidenav";
-@import "landing";
-@import "people";
-@import "handlebar";
-@import "circlebutton";
-@import "wantbutton";
-@import "wheel";  
-@import "pointer";
-@import "nav";
-@import "detail"; 
-@import "itemgrid";
-@import "media_queries";
-@import "helpers";
-@import "intro_anim";
-@import "footer";
-@import "override_bootstrap";
-@import "optin_modal";
+@import "global/boiler_reset";
 
-
+@import "deals/deals";
