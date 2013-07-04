@@ -45,6 +45,10 @@ body {
     top: 0;
     left: 0;
     margin: 20px 0 0 20px;
+    img {
+      max-height: 120px;
+      max-width: 240px;
+    }
   }
 }
 
